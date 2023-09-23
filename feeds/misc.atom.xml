@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sahil's Blog - misc</title><link href="https://sahil-sagwekar2652.github.io/" rel="alternate"></link><link href="https://sahil-sagwekar2652.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://sahil-sagwekar2652.github.io/</id><updated>2023-08-28T12:54:00+05:30</updated><entry><title>Practical Productivity Hacks</title><link href="https://sahil-sagwekar2652.github.io/practical-productivity-hacks.html" rel="alternate"></link><published>2023-08-28T12:54:00+05:30</published><updated>2023-08-28T12:54:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-08-28:/practical-productivity-hacks.html</id><summary type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not go on that tangent. Here, I will share some hacks which are popular and also some which I have devised on my own which will help you increase your productivity and get things done faster.&lt;/p&gt;
+&lt;p&gt;So let's dive in!&lt;/p&gt;
+&lt;h1 id="heading-1-breaking-the-instant-gratification-cycle"&gt;1. &lt;strong&gt;Breaking the Instant Gratification Cycle&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://unsplash.com/photos/tLZhFRLj6nY"&gt;&lt;img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2070&amp;amp;q=80"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="heading-httpsemojipediaorgmobile-phonecounter-social-media-addiction"&gt;&lt;a href="https://emojipedia.org/mobile-phone"&gt;📱&lt;/a&gt;Counter Social Media Addiction&lt;/h3&gt;
+&lt;p&gt;Ever find yourself lost in the quicksand of social media's dopamine rush? It's a universal struggle. From those mesmerizing YouTube shorts to the captivating world of Instagram reels, it's all about those lightning-fast dopamine hits. But here's the savvy twist: use social media with intent. If it's not adding real value, recalibrate. Instagram's tricky waters can leave you high and dry unless you're a creator.&lt;/p&gt;
+&lt;p&gt;YouTube is unavoidable due to it being the largest video search engine. But YouTube courses are free only if you are willing to pay attention. &lt;a href="https://unhook.app/"&gt;&lt;strong&gt;Unhook.app&lt;/strong&gt;&lt;/a&gt; is a great browser extension that hides the YouTube recommendations feed and the watch next column.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://x.com"&gt;X.com&lt;/a&gt; is in my opinion the best social media for developers, where 'Learning in Public' takes center stage. You will find a lot of people supporting you on your journey and also reaching out to you for opportunities. Just remember, time is precious.&lt;/p&gt;
+&lt;h3 id="heading-httpswwwgooglecomurlsatandamprctjandampqandampesrcsandampsourcewebandampcdandampved2ahukewip2sz3xv-aaxwsdpuhhcy1ajiqfnoecb8qaqandampurlhttps3a2f2femojipediaorg2fglobe-with-meridiansandampusgaovvaw38sx0alarvhrwur8fqa09sandampopi89978449-plus-pro-tip"&gt;&lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwip2sz3xv-AAxWsdPUHHcY1AJIQFnoECB8QAQ&amp;amp;url=https%3A%2F%2Femojipedia.org%2Fglobe-with-meridians&amp;amp;usg=AOvVaw38sx0AlaRVHRWUR8Fqa09s&amp;amp;opi=89978449"&gt;🌐&lt;/a&gt; &lt;strong&gt;Plus, Pro Tip:&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Navigate the content maze with RSS feeds. Stay at the forefront with news, blogs, and even YouTube channels. Yes, Hashnode blogs too!&lt;/p&gt;
+&lt;p&gt;The game-changer? Setting up a desktop RSS feed reader. &lt;strong&gt;Thunderbird&lt;/strong&gt; email client takes the lead, especially for our Linux aficionados. I use it too. Here is a video on how to set up RSS feeds on Thunderbird -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/rF3Yrguwy0M?si=8FPhCaGIOVhrRk28"&gt;Setup RSS on Thunderbird&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://authory.com/blog/create-a-youtube-rss-feed-with-vastly-increased-limits"&gt;Find RSS links for YouTube channels&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id="heading-2-the-power-of-putting-pen-to-paper"&gt;2. &lt;strong&gt;The Power of Putting Pen to Paper&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;a href="https://unsplash.com/photos/6qThS1x6P6A"&gt;&lt;img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1572273869941-45732d6f581c?ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2069&amp;amp;q=80"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The oldest trick, timeless and unfailingly effective put pen to paper. Writing down your goals means writing them down on a piece of paper, preferably a diary or journal, the magic is in the tactile connection. Although this in itself is a good practice; what's better is maintaining a journal.&lt;/p&gt;
+&lt;p&gt;Daily journaling ideally consists of writing down goals for the day and then writing a summary of what you achieved and what the next set of goals are at the end of the day. This journal, a mirror to your journey, nurtures accountability and tangible growth.&lt;/p&gt;
+&lt;h1 id="heading-3-embrace-full-screen-mode"&gt;3. &lt;strong&gt;Embrace Full-Screen Mode&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;We have all been guilty of tab-hopping. I often find myself switching through tabs and windows with my fingers constantly on Ctrl+Tab and Alt+Tab. If you are someone like me who gets distracted easily by other open tabs and applications, you need to start using full-screen mode.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multi-tasking is an illusion.&lt;/strong&gt; The human brain works similarly to a single-core CPU in this aspect. You cannot handle two processes at the same time, you can only switch between tasks. For us humans, switching between tasks can be very counter-productive.&lt;/p&gt;
+&lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1693233003752/04bc3bfd-473e-422d-804a-16ea75e7971c.png"&gt;&lt;/p&gt;
+&lt;p&gt;So whether you're deep into coding or surfing the web, embrace full-screen bliss. It's my go-to secret to obliterate visual clutter. I'm using full-screen even as I write this blog ;)&lt;/p&gt;
+&lt;h1 id="heading-4-action-beats-theory-just-write-code"&gt;4. 👨💻&lt;strong&gt;Action Beats Theory:&lt;/strong&gt; Just Write Code&lt;/h1&gt;
+&lt;p&gt;::: {.embed-wrapper}
+::: {.embed-loading}
+::: {.loadingRow}
+:::&lt;/p&gt;
+&lt;p&gt;::: {.loadingRow}
+:::
+:::&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN"&gt;https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN&lt;/a&gt;
+:::&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The hardest part about learning to code is writing the actual code.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Find ways to force yourself to read less, watch less and write code more. Start working on a project and learn on the go. &lt;strong&gt;Counterintuitive? Absolutely. The truth? The learning journey knows no finish line.&lt;/strong&gt; I was a person who used to think that I needed to master all the technologies before starting a project. But I realized that there is no end to learning.&lt;br&gt;
+You will find yourself at the same spot from where you began even after spending weeks 'learning'.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Announce that you are working on a project publicly.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Participate in hackathons and competitions.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="heading-httpsemojipediaorghigh-voltagea-high-octane-hackathon-delivers-more-knowledge-in-two-days-than-months-of-theoretical-pursuit"&gt;&lt;a href="https://emojipedia.org/high-voltage"&gt;&lt;/a&gt;A high-octane hackathon delivers more knowledge in two days than months of theoretical pursuit.&lt;/h4&gt;
+&lt;h4 id="heading-let-go-of-any-hesitations-open-your-ide-and-just-start-coding"&gt;Let go of any hesitations, open your IDE and just start coding!&lt;/h4&gt;</content><category term="misc"></category></entry><entry><title>Understanding the Essentials of Prompt Engineering: A Beginner's Guide</title><link href="https://sahil-sagwekar2652.github.io/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html" rel="alternate"></link><published>2023-04-07T14:40:00+05:30</published><updated>2023-04-07T14:40:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-04-07:/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html</id><summary type="html">&lt;h2 id="heading-introduction-to-prompt-engineering"&gt;Introduction to Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering is a process that involves creating prompts or inputs for natural language processing models. These prompts are used to generate responses that are relevant to the given input. The process of prompt engineering is essential to the development of intelligent systems that can …&lt;/p&gt;</summary><content type="html">&lt;h2 id="heading-introduction-to-prompt-engineering"&gt;Introduction to Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering is a process that involves creating prompts or inputs for natural language processing models. These prompts are used to generate responses that are relevant to the given input. The process of prompt engineering is essential to the development of intelligent systems that can understand human language.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering involves designing a set of prompts that can be used to train natural language processing models. These prompts can be in the form of questions, statements, or any other input that might be relevant to a particular application. The goal of prompt engineering is to create a set of prompts that will generate accurate and relevant responses from the model.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680877662852/348858ad-103f-4162-9905-f125b7754fa2.jpeg"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-what-is-gpt"&gt;What is GPT ?&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;GPT, or Generative Pre-trained Transformer, is a type of natural language processing model that has recently gained popularity. GPT is a language model that is pre-trained on a large dataset of text. The model is trained to generate text similar to the text it was trained on.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-applications-of-prompt-engineering"&gt;Applications of Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering has a wide range of applications in various fields. One of the most prominent applications of prompt engineering is &lt;strong&gt;chatbots&lt;/strong&gt;. Chatbots are computer programs that use natural language processing to interact with users. Prompt engineering is used to train chatbots to respond to user queries.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Another application of prompt engineering is in language translation. Language translation systems use prompts to generate translations of text from one language to another. Prompt engineering is used to train these systems to generate accurate translations.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-the-benefits-of-prompt-engineering"&gt;The Benefits of Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering has several benefits, including:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Accuracy&lt;/strong&gt;: Prompt engineering can help improve the accuracy of natural language processing models. By training the model on a set of relevant prompts, it can generate more accurate responses.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;: Prompt engineering can help make natural language processing models more efficient. By training the model on a set of relevant prompts, it can generate responses more quickly.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Flexibility&lt;/strong&gt;: Prompt engineering allows for flexibility in using natural language processing models. By creating a set of relevant prompts, the model can be trained to respond to a wide range of inputs. So instead of having a do-it-all program, we can narrow down our requirements to get more precise responses.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680878303596/af000487-e2ac-4a30-aa4f-36430f31b9ad.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-how-to-get-started-with-prompt-engineering-a-beginners-guide"&gt;How to Get Started with Prompt Engineering: A Beginner's Guide&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Getting started with prompt engineering can be overwhelming for beginners. Here are some tips on how to get started:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Choose a tool&lt;/strong&gt;: There are several tools available for practicing your prompt engineering skills, including GPT-3, Chat Sonic, and many more. Choose a tool that suits your needs.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Define your prompts&lt;/strong&gt;: Define a set of relevant prompts for your application. These prompts will be used to train the model.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Train the model&lt;/strong&gt;: Use your set of prompts to train the model. This process can take some time, but it is essential to generating accurate responses.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-tips-for-creating-effective-prompts"&gt;Tips for Creating Effective Prompts&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To create effective prompts, consider the following:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Be specific&lt;/strong&gt;: The prompts should be specific to your application.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Be concise&lt;/strong&gt;: The prompts should be concise and easy to understand.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Use natural language&lt;/strong&gt;: The prompts should be written in natural language to make them more relevant to users.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-the-future-of-prompt-engineering"&gt;The Future of Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The future of prompt engineering is promising. As the demand for intelligent systems continues to grow, the need for individuals who can efficiently prompt language models will increase. As it is widely said that "AI won't take away your job, but people who use AI will."&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-conclusion"&gt;Conclusion&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Prompt engineering is a critical part of learning to utilize Generative AI. It is used to train models to generate accurate and relevant responses to user inputs. By understanding the essentials of prompt engineering, beginners can get started with developing intelligent systems that can understand and respond to human language.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>Create an HTTP server in Python</title><link href="https://sahil-sagwekar2652.github.io/create-an-http-server-in-python.html" rel="alternate"></link><published>2023-03-29T12:19:00+05:30</published><updated>2023-03-29T12:19:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-03-29:/create-an-http-server-in-python.html</id><summary type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Whenever we hear the word server, an image of a big bulky computer with lots of cables and no display pops up in our mind. But technically any computer can be a server. A server is just a computer that is 'serving' accessible data on a network.&lt;/p&gt;
+&lt;p&gt;In this …&lt;/p&gt;</summary><content type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Whenever we hear the word server, an image of a big bulky computer with lots of cables and no display pops up in our mind. But technically any computer can be a server. A server is just a computer that is 'serving' accessible data on a network.&lt;/p&gt;
+&lt;p&gt;In this blog post, we will learn how to create a simple HTTP server in Python.&lt;/p&gt;
+&lt;h2 id="heading-how-does-a-server-work"&gt;How does a server work?&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Spider Man How Does That Work Exactly GIF - Spider Man How Does That Work Exactly How Does It Work GIFs" class="image--center mx-auto" src="https://media.tenor.com/W7C6o9zgj_QAAAAC/spider-man-how-does-that-work-exactly.gif"&gt;&lt;/p&gt;
+&lt;p&gt;A server works by listening on a specific port for incoming connections from clients. Generally, multiple services which all connect to the Internet are running simultaneously on a server. In simple terms, the port number is used to identify the service to which the request is being made. For example, port 80 is usually used for HTTP (HyperText Transfer Protocol), which is the protocol for web communication.&lt;/p&gt;
+&lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680070124220/7fc9b86b-45ff-4499-9e0b-f527452e5138.png"&gt;&lt;/p&gt;
+&lt;p&gt;When a client connects to a server on a port, the server accepts the connection and creates a socket, which is an endpoint for communication between the two parties. The client and the server then exchange messages using the protocol of the service. For example, for HTTP, the client sends an HTTP request message, which contains information such as the method (GET, POST, etc.), the path (the URL of the resource), and the headers (additional information). The server then processes the request and sends back an &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"&gt;HTTP response message&lt;/a&gt;, which contains information such as the status code (200 OK, 404 Not Found, etc.), the headers, and the body (the content of the resource).&lt;/p&gt;
+&lt;h2 id="heading-how-to-create-a-server-using-the-httpserver-module-in-python"&gt;How to create a server using the http.server module in Python?&lt;/h2&gt;
+&lt;h3 id="heading-method-1"&gt;Method 1&lt;/h3&gt;
+&lt;p&gt;This is the fastest way to get your server up and running and also to local data to other devices on your local network.&lt;br&gt;
+To achieve this we run the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m http.server# Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This command will host the contents of the current directory on localhost i.e. 127.0.0.1 and default port 8000.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="That Was Fast GIF - Fast GIFs" class="image--center mx-auto" src="https://media.tenor.com/stcVUHuVy5IAAAAS/fast.gif"&gt;&lt;/p&gt;
+&lt;p&gt;We can also access the server from another device that is connected to the same network as our server device. To do this, we need to find out the IP address of our server device. For example, on Windows, we can use the &lt;code&gt;ipconfig&lt;/code&gt; command in a command prompt, and on Linux or macOS, we can use the &lt;code&gt;ifconfig&lt;/code&gt; command in a terminal. We need to note down the IP address that is shown for our network adapter.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;local&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kd"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;number&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Double"&gt;192.168.1.206&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9999&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Serving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HTTP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Double"&gt;192.168.1.206&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9999&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//192.168.1.206:9999/) ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The above command will host the content of the current directory on the &lt;a href="http://192.168.1.206:9999/"&gt;http://192.168.1.206:9999/&lt;/a&gt; URL and will be accessible to all the devices on the local network.&lt;/p&gt;
+&lt;h3 id="heading-method-2"&gt;Method 2&lt;/h3&gt;
+&lt;p&gt;To create a slightly more customized server using Python, we can use the built-in http.server module. This module provides classes for handling HTTP requests and responses. We can use the &lt;code&gt;HTTPServer&lt;/code&gt; class to create a server object, and the &lt;code&gt;BaseHTTPRequestHandler&lt;/code&gt; class to define how to handle requests.&lt;/p&gt;
+&lt;p&gt;To use the http.server module, we need to import it into our Python script. Then, we need to create a subclass of &lt;code&gt;BaseHTTPRequestHandler&lt;/code&gt; and override the &lt;code&gt;do_GET&lt;/code&gt; method. This method is called when the server receives a &lt;a href="http://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET.html#:~:text=The%20HTTP%20GET%20method%20requests%20a%20representation%20of,GET%20should%20only%20retrieve%20data.%20Syntax%20GET%20%2Findex.html"&gt;GET request&lt;/a&gt; from a client. We can write our logic for handling the request inside this method. For example, we can send back some HTML code to display on the client's browser.&lt;/p&gt;
+&lt;p&gt;Next, we need to create an instance of HTTPServer and pass it two arguments: a tuple of an empty string and a port number, and our handler class. The empty string means that the server will listen on all available IP addresses, and the port number is the port where the server will run. We can choose any port number that is not already in use by another program. Finally, we need to call the serve_forever method on the server object to start the server.&lt;/p&gt;
+&lt;p&gt;Here is an example of how to create a simple HTTP server in Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Import the http.server moduleimport http.server# Create a subclass of BaseHTTPRequestHandlerclass MyHandler(http.server.BaseHTTPRequestHandler):# Override the do_GET methoddef do_GET(self):    # Send a 200 OK response    self.send_response(200)    # Send headers    self.send_header(&amp;quot;Content-type&amp;quot;, &amp;quot;text/html&amp;quot;)    self.end_headers()    # Write some HTML code    self.wfile.write(b&amp;quot;&amp;lt;h1&amp;gt;Hello from Python!&amp;lt;/h1&amp;gt;&amp;quot;)# Create an instance of HTTPServerserver = http.server.HTTPServer((&amp;quot;&amp;quot;, 8000), MyHandler)# Start the serverserver.serve_forever()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;To run this script, we need to save it as a .py file and execute it in a terminal or command prompt. For example, if we save it as &lt;a href="http://server.py"&gt;server.py&lt;/a&gt;, we can run it with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python server.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This will start the server on port 8000. To access the server from a web browser, we need to enter the URL &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt; or &lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;. This will display the HTML code that we wrote in the do_GET method. If we enter the IP address of the server then, we can enter the URL http://\&amp;lt;ip_address&amp;gt;:8000 in a web browser on another device, where \&amp;lt;ip_address&amp;gt; is the IP address of our server device. This is how we can create a simple HTTP server in Python using http.server module. We can customize our handler class to handle different types of requests and send different types of responses.&lt;/p&gt;
+&lt;h3 id="heading-testing-the-output"&gt;Testing the output&lt;/h3&gt;
+&lt;p&gt;You can test the output by simply opening the link on you browser or by using curl, which is a command line program to make a request to the server from the command line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;curl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//0.0.0.0:8000/curl http://&amp;lt;ip_address&amp;gt;:&amp;lt;port_number&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>Starting your coding journey might not be as hard as you think…</title><link href="https://sahil-sagwekar2652.github.io/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html" rel="alternate"></link><published>2023-01-31T13:12:00+05:30</published><updated>2023-01-31T13:12:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-01-31:/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start your coding adventure.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="heading-it-is-easy-to-start-programming"&gt;&lt;strong&gt;It is easy to start programming&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you dont mind sitting in front of a computer and staring at your code for long hours then programming just might be your thing ;)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Programming is just like maths in some ways. The only things you need to start doing mathematics are a pen, a piece of paper and your brain. Likewise, a computer of any form factor (even your smartphone) and your brain are all you need to start coding. There is no need for any swanky new setup. Any computer which runs reasonably smoothly will be enough for you to start coding. Tools like Replit make it easy for newcomers to start without setting up a coding environment. Replit is even available as an app for Android.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It would help if you start with a goal. But even if you dont have a goal you should do your homework and find out which path suits you the best.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The best way to learn to code is through projects. If you start learning the language you may find it boring on the other hand if you start working on a project and learn the language on-the-go chances are you will find yourself learning a new language and its applications simultaneously.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;What sources you refer to solely depends on your taste but there is one thing you should keep in mind and that is .&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="heading-tutorial-hell"&gt;&lt;strong&gt;Tutorial hell&lt;/strong&gt; 💀&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you feel like learning through books is more like your thing then there are plenty of great books to pick from. Even then YouTube is likely to be your first choice to look for content while learning new topics and skills. But remember, while using free services the product is the user. You could find yourself in Tutorial hell, which means you are stuck watching tutorial upon tutorial from the recommendations without learning anything substantial. The YouTube algorithm is made in a way that coaxes you into watching more and more videos.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Remember, &lt;strong&gt;real learning&lt;/strong&gt; happens when through hands-on projects. Not only do you need a good roadmap, but also an environment where you can learn and apply your skills at the same time. This brings us to the next point .&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="heading-benefits-of-paid-platforms"&gt;&lt;strong&gt;Benefits of paid platforms&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It is totally fine if you choose to use YouTube as your primary source of learning, there are a ton of amazing courses on YouTube which are free. But still, they might feel incomplete. Paid courses on Platforms like Codedamn, Udemy or Coursera have courses that have carefully curated content that is regularly updated. Codedamn even provides you with virtual code playgrounds to practice your skills.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Still, it is recommended that you try out free content on free platforms before committing to a paid course. There are many domains in programming. Web development, Data Science, AI, Machine learning, Game Development, and Mobile development are some popular domains. You should try and get your hands dirty in at least two different domains to understand which one is for you.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="heading-do-you-need-to-learn-maths-to-start-coding"&gt;&lt;strong&gt;Do you need to learn Maths to start coding?&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The answer is no.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Having a good grasp of maths would never hurt anybody but its not necessary if you are just starting. What you need to learn is the skill of &lt;strong&gt;Logic Building&lt;/strong&gt; and &lt;strong&gt;Problem Solving&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Computers were invented to solve complex problems and do tedious, repetitive tasks for humans. Learning how to use conditions and loops to emulate real-life scenarios and solve real-world problems is a part of Logic Building. These skills can only be attained through practice and more practice!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If your goal is to be a Data Scientist or an AI/ML engineer then mathematics becomes a necessary part of your skill set.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h1 id="heading-consistency-is-the-best-virtue-of-a-programmer"&gt;&lt;strong&gt;Consistency is the best virtue of a programmer&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Just like Honesty is the best policy, Consistency is the best virtue of a programmer.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Learning to code is difficult. At times you may get stuck on a problem for hours and feel like giving up your coding adventure altogether. It happens to all of us. But you must remind yourself that getting stuck and facing problems is all a part of the journey.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;It often happens to me that I feel like there is no way to solve an error, but when I look at it again the next day I find out that it was just a silly mistake! It is during times like these you learn the most crucial skill as a programmer which is How to GOOGLE effectively.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Yes, you read that correctly, searching for ways to solve an error is a big part of a programmers job. If you come across an error there is an almost 100% chance that someone has already faced and solved that error. The best website for this purpose is StackOverflow. Almost every error you come across will have its solution on StackOverflow.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2 id="heading-to-conclude-there-is-hardly-anything-you-need-to-start-coding-just-down-a-cup-of-coffee-and-go-for-it"&gt;&lt;strong&gt;To conclude, there is hardly anything you need to start coding. Just down a cup of coffee and go for it!&lt;/strong&gt;&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>My contributions @ KWoC 2022</title><link href="https://sahil-sagwekar2652.github.io/my-contributions-kwoc-2022.html" rel="alternate"></link><published>2023-01-08T20:41:00+05:30</published><updated>2023-01-08T20:41:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-01-08:/my-contributions-kwoc-2022.html</id><summary type="html">&lt;h3 id="heading-ps-i-got-selected-as-a-top-contributorhttpsgithubcomkossiitkgppublic-filesblobmasterkwoc2022-certificatesstudentsahil-sagwekar2652pdf"&gt;P.S. I got selected as a &lt;a href="https://github.com/kossiitkgp/public-files/blob/master/KWoC/2022-Certificates/Student/sahil-sagwekar2652.pdf"&gt;top contributor&lt;/a&gt; 🎉&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-introduction"&gt;Introduction&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As a new open-source contributor, participating in the Kharagpur winter of code 2022 event was an incredibly valuable experience for me. I had the opportunity to work on an open-source project and make meaningful contributions to their codebase …&lt;/p&gt;</summary><content type="html">&lt;h3 id="heading-ps-i-got-selected-as-a-top-contributorhttpsgithubcomkossiitkgppublic-filesblobmasterkwoc2022-certificatesstudentsahil-sagwekar2652pdf"&gt;P.S. I got selected as a &lt;a href="https://github.com/kossiitkgp/public-files/blob/master/KWoC/2022-Certificates/Student/sahil-sagwekar2652.pdf"&gt;top contributor&lt;/a&gt; 🎉&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-introduction"&gt;Introduction&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;As a new open-source contributor, participating in the Kharagpur winter of code 2022 event was an incredibly valuable experience for me. I had the opportunity to work on an open-source project and make meaningful contributions to their codebase.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-projects-i-worked-on"&gt;Projects I worked on&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/sadbro/pydirman"&gt;Pydirman&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-list-of-pull-requests-made-by-me"&gt;List of pull requests made by me&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sadbro/pydirman/pull/13"&gt;https://github.com/sadbro/pydirman/pull/13&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sadbro/pydirman/pull/14"&gt;https://github.com/sadbro/pydirman/pull/14&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sadbro/pydirman/pull/15"&gt;https://github.com/sadbro/pydirman/pull/15&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://github.com/sadbro/pydirman/pull/18"&gt;https://github.com/sadbro/pydirman/pull/18&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-summary"&gt;Summary&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I work on Linux and use the command line all the time. This is probably the reason I gravitated towards Pydirman because it is a command-line application for Linux systems.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The first issue I faced with the project was with the installation. The project was initially developed only for Debian Linux. So naturally, my first step was to port the project for Arch Linux (my working distro). I had to replace the bash commands with the package manager for Arch Linux. Features like user input for required packages and optimising the path of the installed files were added and a single setup.py was created.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Once I had the project installed I started using the project on a daily basis. Which exposed some bugs and inadequacies. The default text editor used was nano, which is a command line text editor. The command line text editor which is most popular is 'vim'. So I modified the code so that users can use their choice of text editor by specifying it in the '.pydirman.config' configuration file. Another issue concerned with the 'test' command was fixed within this same pull request.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The next pull request I've updated the README.md to reflect the changes in the project. Also added the support for python debugger, this will enable the user to use the python debugger inside the Pydirman 'test' interface. Added support to execute .pyw python files alongside normal .py files. Finally created an uninstall.py file which removes all the installed files.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-future-work"&gt;Future Work&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Making a separate terminal emulator with python tkinter to display the 'test' interface.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adding support for the 'u - open USB drive' command for other distros.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;
+(referenced in the Issues tab)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Working on other projects like: &lt;a href="https://github.com/exitflynn/DeGrasse"&gt;DeGrasse - Python Discord Bot Using NASA Space API's and more&lt;/a&gt;, &lt;a href="https://github.com/proffapt/code-runner"&gt;Code Runner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{=html}
+&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id="heading-learnings"&gt;Learnings&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;One of the most important things I learned during my time as a KWoC participant was the importance of effective communication. I also learned the importance of asking for help when needed, as there were always team members and mentors available to support me.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I also gained valuable experience in project management and time management, as I had to juggle my KWoC commitments with my other responsibilities.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry></feed>
