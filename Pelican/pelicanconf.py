@@ -25,7 +25,7 @@ LINKS = (
 
 # Social widget
 SOCIAL = (
-    ("linkedin", "https://www.linkedin.com/in/username"),
+    ("linkedin", "https://www.linkedin.com/in/sahil-sagwekar-0b955b223/"),
     ("github", "https://github.com/sahil-sagwekar2652"),
     ("twitter", "https://twitter.com/sagwekar_sahil"),
 )
