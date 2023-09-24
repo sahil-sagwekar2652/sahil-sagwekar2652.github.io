@@ -1,5 +1,6 @@
 Title: Understanding the Essentials of Prompt Engineering: A Beginner's Guide
 Date: 2023-04-07 14:40
+Category: Artificial Intelligence
 Author: Sahil Sagwekar
 Slug: understanding-the-essentials-of-prompt-engineering-a-beginners-guide
 

@@ -1,5 +1,6 @@
 Title: Create an HTTP server in Python
 Date: 2023-03-29 12:19
+Category: Python
 Author: Sahil Sagwekar
 Slug: create-an-http-server-in-python
 
@@ -36,7 +37,7 @@ How to create a server using the http.server module in Python? {#heading-how-to-
 ### Method 1 {#heading-method-1}
 
 
-This is the fastest way to get your server up and running and also to local data to other devices on your local network.  
+This is the fastest way to get your server up and running and also to local data to other devices on your local network.
 To achieve this we run the following command:
 
 
@@ -92,5 +93,3 @@ You can test the output by simply opening the link on you browser or by using cu
 
 
     # e.g. curl http://0.0.0.0:8000/curl http://<ip_address>:<port_number>
-
-
