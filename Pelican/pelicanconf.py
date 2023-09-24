@@ -47,7 +47,14 @@ DISPLAY_PAGES_ON_MENU = True
 
 TWITTER_USERNAME = "sagwekar_sahil"
 
-MENUITEMS = (("Blog", SITEURL),)
+MENUITEMS = (
+    ("Blog", "https://sahil-sagwekar2652.github.io"),
+    ("About", "https://sahil-sagwekar2652.github.io/authors.html"),
+    (
+        "Resume",
+        "https://drive.google.com/file/d/1rXOBr8sOUBVSKtQ0aIw3gD1TF7fBghQ-/view?usp=drive_link",
+    ),
+)
 
 
 # CSS_FILE = "/home/sahil/Sahil/blog/Pelican/pelican-themes/pelican-blue/static/css/style.css"
