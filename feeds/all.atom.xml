@@ -1,15 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Sahil's Blog</title><link href="https://sahil-sagwekar2652.github.io/" rel="alternate"></link><link href="https://sahil-sagwekar2652.github.io/feeds/all.atom.xml" rel="self"></link><id>https://sahil-sagwekar2652.github.io/</id><updated>2023-08-28T12:54:00+05:30</updated><entry><title>Practical Productivity Hacks</title><link href="https://sahil-sagwekar2652.github.io/practical-productivity-hacks.html" rel="alternate"></link><published>2023-08-28T12:54:00+05:30</published><updated>2023-08-28T12:54:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-08-28:/practical-productivity-hacks.html</id><summary type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not go on that tangent. Here, I will share some hacks which are popular and also some which I have devised on my own which will help you increase your productivity and get things done faster.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Sahil's Blog</title><link href="https://sahil-sagwekar2652.github.io/" rel="alternate"></link><link href="https://sahil-sagwekar2652.github.io/feeds/all.atom.xml" rel="self"></link><id>https://sahil-sagwekar2652.github.io/</id><updated>2023-09-28T08:34:00+05:30</updated><entry><title>Make your own static blog using Pelican</title><link href="https://sahil-sagwekar2652.github.io/make-your-own-static-blog-using-pelican.html" rel="alternate"></link><published>2023-09-28T08:34:00+05:30</published><updated>2023-09-28T08:34:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-09-28:/make-your-own-static-blog-using-pelican.html</id><summary type="html">&lt;p&gt;In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and demonstrate how you can host it on GitHub Pages, all within a matter of minutes. Whether you're a novice or a seasoned developer, this guide will help you establish a minimal setup. And if you're itching to take your blog further, don't worry - Pelican makes customization astonishingly easy.&lt;/p&gt;
+&lt;p&gt;Now, let's dive into the world of Pelican and start building your static blog from scratch.&lt;/p&gt;
+&lt;p&gt;&lt;img alt src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826784018/231ae782-8abb-4738-a61a-c8abc648a0e1.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Step 1&lt;/h3&gt;
+&lt;p&gt;Create a directory named &lt;code&gt;blog&lt;/code&gt; and then create another &lt;code&gt;Pelican&lt;/code&gt; directory inside it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;blog/ Pelican
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;cd&lt;/code&gt; into the Pelican directory and start by creating a Python virtual environment using the tool of your choice and installing the pelican package from pip.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="cp"&gt;../blog/Pelican $ python -m venv venv../blog/Pelican $ source venv/bin/activate(venv) ../blog/Pelican $ python -m pip install pelican&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;The default content source format supported by Pelican is .rst (reStructured text). If you plan on using Markdown then you need to install the following package too.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pip&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;install&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ss"&gt;&amp;quot;pelican[markdown]&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;Step 2&lt;/h3&gt;
+&lt;p&gt;Pelican has a &lt;code&gt;pelican-quickstart&lt;/code&gt; script which will help us to setup the basic settings interactively. It will also generate the desired directory structure for us. So let's start by using it. Here is an example -&lt;/p&gt;
+&lt;p&gt;&lt;img alt src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826741531/c44349a2-3f8b-4561-85dd-65cc62c47399.png"&gt;&lt;/p&gt;
+&lt;p&gt;Great! Now you have your pelican blog set up locally. Your file structure should now look like this -&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;blog/ Pelican     content        (pages)     output     tasks.py     Makefile     pelicanconf.py       # Main settings file     publishconf.py       # Settings to use when ready to publish
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You need to add a 'Metadata' section at the start of every content file. The metadata format for markdown content is as below -&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;My&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;titleDate&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;03&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="n"&gt;Modified&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;2010&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;05&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;PythonTags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;publishingSlug&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;postAuthors&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Alexis&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Metaireau&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Conan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DoyleSummary&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Short&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;feedsThis&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;my&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;You can now start writing up some amazing articles inside the &lt;code&gt;blog/Pelican/content&lt;/code&gt; directory.&lt;/p&gt;
+&lt;h3&gt;Step 3 - Importing an existing blog (optional)&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;You can skip this step if you don't wish to import your data from blogging platforms like Medium, WordPress, Tumblr etc.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Detailed documentation for this step can be found at &lt;a href="https://docs.getpelican.com/en/latest/importer.html"&gt;https://docs.getpelican.com/en/latest/importer.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here we'll look at how to import your pre-existing medium.com blog as I feel it's one of the most used platforms&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;We will use the &lt;code&gt;pelican-import&lt;/code&gt; tool to import our data from medium. &lt;code&gt;pelican-import&lt;/code&gt; requires some additional dependencies which can be installed through the following steps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;feedparser
+    &lt;code&gt;pip install feedparser&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pandoc
+See the &lt;a href="https://pandoc.org/installing.html"&gt;Pandoc site&lt;/a&gt; for operating-system-specific installation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Medium supports RSS feeds. Refer to &lt;a href="https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics"&gt;this&lt;/a&gt; article for supported RSS feeds.&lt;/p&gt;
+&lt;p&gt;For importing blogs from a profile, use the following command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;feed&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="o"&gt;//&lt;/span&gt;&lt;span class="n"&gt;medium&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;feed&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nd"&gt;@username&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;I have used markdown as the format in the above example, the default is reStructured Text.&lt;/p&gt;
+&lt;p&gt;The content will now be imported into the &lt;code&gt;blog/Pelican/content&lt;/code&gt; directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Step 4&lt;/h3&gt;
+&lt;p&gt;The default site generated by Pelican is plain HTML. Who likes to read plain HTML? No one. So let's spruce up our blog with a UI theme. (If you generate your content using Step 3, you might have a theme installed by default.)&lt;/p&gt;
+&lt;p&gt;Pelican has a large collection of community-maintained themes to choose from. To use these themes, we need to clone the themes repository locally.&lt;/p&gt;
+&lt;p&gt;Before we do that, make sure to create a git repository in the &lt;code&gt;blog&lt;/code&gt; directory. Create a &lt;code&gt;.gitignore&lt;/code&gt; file and add the following lines to it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Pelican/pelican-themesPelican/venv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now let's clone the pelican-themes repo. Run the following command inside the &lt;code&gt;blog/Pelican&lt;/code&gt; directory.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;git clone --recursive https://github.com/getpelican/pelican-themes ./pelican-themes
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We will use &lt;code&gt;pelican-themes&lt;/code&gt; command to install a new theme. Here, I'm installing the &lt;a href="https://github.com/Parbhat/pelican-blue"&gt;Pelican blue&lt;/a&gt; theme.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;pelican-themes -i ./pelican-themes/pelican-blue
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we need to add this theme to our &lt;code&gt;pelicanconf.py&lt;/code&gt; settings file. Note that every theme might have different settings which should be mentioned in the respective theme's GitHub repo. Copy the settings mentioned in the &lt;a href="https://github.com/Parbhat/pelican-blue"&gt;Pelican blue&lt;/a&gt; repo README. The theme should look like this - &lt;a href="https://sahil-sagwekar.github.io"&gt;https://sahil-sagwekar.github.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886054892/9b910376-ea80-48ca-8dd0-fe1e72821e53.png"&gt;&lt;/p&gt;
+&lt;p&gt;To test the blog locally, use the &lt;code&gt;make devserver&lt;/code&gt; command. It will host your site at &lt;code&gt;localhost:8000&lt;/code&gt; by default and automatically regenerate on changes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; - Blank lines in the original blog post might result in some artifacts in the markdown content, make sure to check the files before publishing.&lt;/p&gt;
+&lt;h3&gt;Step 5&lt;/h3&gt;
+&lt;p&gt;Let's publish the site using GitHub pages so that anyone in the world can read your blog.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open the &lt;code&gt;publishconf.py&lt;/code&gt; file and make sure that the &lt;code&gt;SITEURL&lt;/code&gt; variable has the value &lt;code&gt;https://your_username.github.io&lt;/code&gt; and substitute your GitHub username in it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now let's generate the site using the following command. This command should generate the site outside the &lt;code&gt;Pelican&lt;/code&gt; directory and inside the &lt;code&gt;blog&lt;/code&gt; parent directory. Run this command in the &lt;code&gt;Pelican&lt;/code&gt; directory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;pelican content -o .. -s publishconf.py&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Make a GitHub repo with the name &lt;code&gt;your_username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886229161/db5f4e27-c3d5-4bfd-a15d-989c918d8f97.png"&gt;&lt;/p&gt;
+&lt;p&gt;and connect it to the local repository by &lt;code&gt;git remote add&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now push everything inside the &lt;code&gt;blog&lt;/code&gt; directory to the remote repo on GitHub.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enable GitHub pages for your repo from this site &lt;code&gt;https://github.com/your_username/your_username.github.io/settings/pages&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now you should have your very own blog hosted at &lt;code&gt;https://your_username.github.io&lt;/code&gt; !&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;But this is just the beginning. Pelican offers a plethora of additional features and customization options. Whether you want to add new functionalities, experiment with different themes, or delve into the world of web dev, you have a robust platform to build upon.&lt;/p&gt;
+&lt;p&gt;Happy Blogging!&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Practical Productivity Hacks</title><link href="https://sahil-sagwekar2652.github.io/practical-productivity-hacks.html" rel="alternate"></link><published>2023-08-28T12:54:00+05:30</published><updated>2023-08-28T12:54:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-08-28:/practical-productivity-hacks.html</id><summary type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not …&lt;/p&gt;</summary><content type="html">&lt;p&gt;In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not go on that tangent. Here, I will share some hacks which are popular and also some which I have devised on my own which will help you increase your productivity and get things done faster.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;So let's dive in!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1 id="heading-1-breaking-the-instant-gratification-cycle"&gt;1. &lt;strong&gt;Breaking the Instant Gratification Cycle&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;a href="https://unsplash.com/photos/tLZhFRLj6nY"&gt;&lt;img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2070&amp;amp;q=80"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3 id="heading-httpsemojipediaorgmobile-phonecounter-social-media-addiction"&gt;&lt;a href="https://emojipedia.org/mobile-phone"&gt;📱&lt;/a&gt;Counter Social Media Addiction&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Ever find yourself lost in the quicksand of social media's dopamine rush? It's a universal struggle. From those mesmerizing YouTube shorts to the captivating world of Instagram reels, it's all about those lightning-fast dopamine hits. But here's the savvy twist: use social media with intent. If it's not adding real value, recalibrate. Instagram's tricky waters can leave you high and dry unless you're a creator.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;YouTube is unavoidable due to it being the largest video search engine. But YouTube courses are free only if you are willing to pay attention. &lt;a href="https://unhook.app/"&gt;&lt;strong&gt;Unhook.app&lt;/strong&gt;&lt;/a&gt; is a great browser extension that hides the YouTube recommendations feed and the watch next column.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;a href="http://x.com"&gt;X.com&lt;/a&gt; is in my opinion the best social media for developers, where 'Learning in Public' takes center stage. You will find a lot of people supporting you on your journey and also reaching out to you for opportunities. Just remember, time is precious.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3 id="heading-httpswwwgooglecomurlsatandamprctjandampqandampesrcsandampsourcewebandampcdandampved2ahukewip2sz3xv-aaxwsdpuhhcy1ajiqfnoecb8qaqandampurlhttps3a2f2femojipediaorg2fglobe-with-meridiansandampusgaovvaw38sx0alarvhrwur8fqa09sandampopi89978449-plus-pro-tip"&gt;&lt;a href="https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;ved=2ahUKEwip2sz3xv-AAxWsdPUHHcY1AJIQFnoECB8QAQ&amp;amp;url=https%3A%2F%2Femojipedia.org%2Fglobe-with-meridians&amp;amp;usg=AOvVaw38sx0AlaRVHRWUR8Fqa09s&amp;amp;opi=89978449"&gt;🌐&lt;/a&gt; &lt;strong&gt;Plus, Pro Tip:&lt;/strong&gt;&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Navigate the content maze with RSS feeds. Stay at the forefront with news, blogs, and even YouTube channels. Yes, Hashnode blogs too!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The game-changer? Setting up a desktop RSS feed reader. &lt;strong&gt;Thunderbird&lt;/strong&gt; email client takes the lead, especially for our Linux aficionados. I use it too. Here is a video on how to set up RSS feeds on Thunderbird -&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://youtu.be/rF3Yrguwy0M?si=8FPhCaGIOVhrRk28"&gt;Setup RSS on Thunderbird&lt;/a&gt;&lt;/p&gt;
@@ -22,16 +159,49 @@
 &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1 id="heading-2-the-power-of-putting-pen-to-paper"&gt;2. &lt;strong&gt;The Power of Putting Pen to Paper&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;a href="https://unsplash.com/photos/6qThS1x6P6A"&gt;&lt;img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1572273869941-45732d6f581c?ixlib=rb-4.0.3&amp;amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2069&amp;amp;q=80"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The oldest trick, timeless and unfailingly effective put pen to paper. Writing down your goals means writing them down on a piece of paper, preferably a diary or journal, the magic is in the tactile connection. Although this in itself is a good practice; what's better is maintaining a journal.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Daily journaling ideally consists of writing down goals for the day and then writing a summary of what you achieved and what the next set of goals are at the end of the day. This journal, a mirror to your journey, nurtures accountability and tangible growth.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1 id="heading-3-embrace-full-screen-mode"&gt;3. &lt;strong&gt;Embrace Full-Screen Mode&lt;/strong&gt;&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;We have all been guilty of tab-hopping. I often find myself switching through tabs and windows with my fingers constantly on Ctrl+Tab and Alt+Tab. If you are someone like me who gets distracted easily by other open tabs and applications, you need to start using full-screen mode.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;Multi-tasking is an illusion.&lt;/strong&gt; The human brain works similarly to a single-core CPU in this aspect. You cannot handle two processes at the same time, you can only switch between tasks. For us humans, switching between tasks can be very counter-productive.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1693233003752/04bc3bfd-473e-422d-804a-16ea75e7971c.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;So whether you're deep into coding or surfing the web, embrace full-screen bliss. It's my go-to secret to obliterate visual clutter. I'm using full-screen even as I write this blog ;)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h1 id="heading-4-action-beats-theory-just-write-code"&gt;4. 👨💻&lt;strong&gt;Action Beats Theory:&lt;/strong&gt; Just Write Code&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;::: {.embed-wrapper}
 ::: {.embed-loading}
 ::: {.loadingRow}
@@ -41,9 +211,21 @@
 :::&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN"&gt;https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN&lt;/a&gt;
 :::&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;strong&gt;The hardest part about learning to code is writing the actual code.&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Find ways to force yourself to read less, watch less and write code more. Start working on a project and learn on the go. &lt;strong&gt;Counterintuitive? Absolutely. The truth? The learning journey knows no finish line.&lt;/strong&gt; I was a person who used to think that I needed to master all the technologies before starting a project. But I realized that there is no end to learning.&lt;br&gt;
 You will find yourself at the same spot from where you began even after spending weeks 'learning'.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Announce that you are working on a project publicly.&lt;/p&gt;
@@ -56,8 +238,16 @@ You will find yourself at the same spot from where you began even after spending
 &amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h4 id="heading-httpsemojipediaorghigh-voltagea-high-octane-hackathon-delivers-more-knowledge-in-two-days-than-months-of-theoretical-pursuit"&gt;&lt;a href="https://emojipedia.org/high-voltage"&gt;&lt;/a&gt;A high-octane hackathon delivers more knowledge in two days than months of theoretical pursuit.&lt;/h4&gt;
-&lt;h4 id="heading-let-go-of-any-hesitations-open-your-ide-and-just-start-coding"&gt;Let go of any hesitations, open your IDE and just start coding!&lt;/h4&gt;</content><category term="misc"></category></entry><entry><title>Understanding the Essentials of Prompt Engineering: A Beginner's Guide</title><link href="https://sahil-sagwekar2652.github.io/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html" rel="alternate"></link><published>2023-04-07T14:40:00+05:30</published><updated>2023-04-07T14:40:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-04-07:/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html</id><summary type="html">&lt;h2 id="heading-introduction-to-prompt-engineering"&gt;Introduction to Prompt Engineering&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4 id="heading-let-go-of-any-hesitations-open-your-ide-and-just-start-coding"&gt;Let go of any hesitations, open your IDE and just start coding!&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>Understanding the Essentials of Prompt Engineering: A Beginner's Guide</title><link href="https://sahil-sagwekar2652.github.io/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html" rel="alternate"></link><published>2023-04-07T14:40:00+05:30</published><updated>2023-04-07T14:40:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-04-07:/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html</id><summary type="html">&lt;h2 id="heading-introduction-to-prompt-engineering"&gt;Introduction to Prompt Engineering&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
@@ -199,47 +389,137 @@ You will find yourself at the same spot from where you began even after spending
 
 &lt;p&gt;Prompt engineering is a critical part of learning to utilize Generative AI. It is used to train models to generate accurate and relevant responses to user inputs. By understanding the essentials of prompt engineering, beginners can get started with developing intelligent systems that can understand and respond to human language.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Artificial Intelligence"></category></entry><entry><title>Create an HTTP server in Python</title><link href="https://sahil-sagwekar2652.github.io/create-an-http-server-in-python.html" rel="alternate"></link><published>2023-03-29T12:19:00+05:30</published><updated>2023-03-29T12:19:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-03-29:/create-an-http-server-in-python.html</id><summary type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>Create an HTTP server in Python</title><link href="https://sahil-sagwekar2652.github.io/create-an-http-server-in-python.html" rel="alternate"></link><published>2023-03-29T12:19:00+05:30</published><updated>2023-03-29T12:19:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-03-29:/create-an-http-server-in-python.html</id><summary type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Whenever we hear the word server, an image of a big bulky computer with lots of cables and no display pops up in our mind. But technically any computer can be a server. A server is just a computer that is 'serving' accessible data on a network.&lt;/p&gt;
-&lt;p&gt;In this …&lt;/p&gt;</summary><content type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h2 id="heading-introduction"&gt;Introduction&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Whenever we hear the word server, an image of a big bulky computer with lots of cables and no display pops up in our mind. But technically any computer can be a server. A server is just a computer that is 'serving' accessible data on a network.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;In this blog post, we will learn how to create a simple HTTP server in Python.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h2 id="heading-how-does-a-server-work"&gt;How does a server work?&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;img alt="Spider Man How Does That Work Exactly GIF - Spider Man How Does That Work Exactly How Does It Work GIFs" class="image--center mx-auto" src="https://media.tenor.com/W7C6o9zgj_QAAAAC/spider-man-how-does-that-work-exactly.gif"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;A server works by listening on a specific port for incoming connections from clients. Generally, multiple services which all connect to the Internet are running simultaneously on a server. In simple terms, the port number is used to identify the service to which the request is being made. For example, port 80 is usually used for HTTP (HyperText Transfer Protocol), which is the protocol for web communication.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680070124220/7fc9b86b-45ff-4499-9e0b-f527452e5138.png"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;When a client connects to a server on a port, the server accepts the connection and creates a socket, which is an endpoint for communication between the two parties. The client and the server then exchange messages using the protocol of the service. For example, for HTTP, the client sends an HTTP request message, which contains information such as the method (GET, POST, etc.), the path (the URL of the resource), and the headers (additional information). The server then processes the request and sends back an &lt;a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status"&gt;HTTP response message&lt;/a&gt;, which contains information such as the status code (200 OK, 404 Not Found, etc.), the headers, and the body (the content of the resource).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h2 id="heading-how-to-create-a-server-using-the-httpserver-module-in-python"&gt;How to create a server using the http.server module in Python?&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3 id="heading-method-1"&gt;Method 1&lt;/h3&gt;
-&lt;p&gt;This is the fastest way to get your server up and running and also to local data to other devices on your local network.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;This is the fastest way to get your server up and running and also to local data to other devices on your local network.&lt;br&gt;
 To achieve this we run the following command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -m http.server# Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;This command will host the contents of the current directory on localhost i.e. 127.0.0.1 and default port 8000.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;&lt;img alt="That Was Fast GIF - Fast GIFs" class="image--center mx-auto" src="https://media.tenor.com/stcVUHuVy5IAAAAS/fast.gif"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;We can also access the server from another device that is connected to the same network as our server device. To do this, we need to find out the IP address of our server device. For example, on Windows, we can use the &lt;code&gt;ipconfig&lt;/code&gt; command in a command prompt, and on Linux or macOS, we can use the &lt;code&gt;ifconfig&lt;/code&gt; command in a terminal. We need to note down the IP address that is shown for our network adapter.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;local&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;ip&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="kd"&gt;addr&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;number&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;python&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;m&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;server&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="nx"&gt;bind&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Double"&gt;192.168.1.206&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9999&lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;Serving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;HTTP&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="m m-Double"&gt;192.168.1.206&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;9999&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//192.168.1.206:9999/) ...&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;The above command will host the content of the current directory on the &lt;a href="http://192.168.1.206:9999/"&gt;http://192.168.1.206:9999/&lt;/a&gt; URL and will be accessible to all the devices on the local network.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3 id="heading-method-2"&gt;Method 2&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;To create a slightly more customized server using Python, we can use the built-in http.server module. This module provides classes for handling HTTP requests and responses. We can use the &lt;code&gt;HTTPServer&lt;/code&gt; class to create a server object, and the &lt;code&gt;BaseHTTPRequestHandler&lt;/code&gt; class to define how to handle requests.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;To use the http.server module, we need to import it into our Python script. Then, we need to create a subclass of &lt;code&gt;BaseHTTPRequestHandler&lt;/code&gt; and override the &lt;code&gt;do_GET&lt;/code&gt; method. This method is called when the server receives a &lt;a href="http://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET.html#:~:text=The%20HTTP%20GET%20method%20requests%20a%20representation%20of,GET%20should%20only%20retrieve%20data.%20Syntax%20GET%20%2Findex.html"&gt;GET request&lt;/a&gt; from a client. We can write our logic for handling the request inside this method. For example, we can send back some HTML code to display on the client's browser.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Next, we need to create an instance of HTTPServer and pass it two arguments: a tuple of an empty string and a port number, and our handler class. The empty string means that the server will listen on all available IP addresses, and the port number is the port where the server will run. We can choose any port number that is not already in use by another program. Finally, we need to call the serve_forever method on the server object to start the server.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;Here is an example of how to create a simple HTTP server in Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="c1"&gt;# Import the http.server moduleimport http.server# Create a subclass of BaseHTTPRequestHandlerclass MyHandler(http.server.BaseHTTPRequestHandler):# Override the do_GET methoddef do_GET(self):    # Send a 200 OK response    self.send_response(200)    # Send headers    self.send_header(&amp;quot;Content-type&amp;quot;, &amp;quot;text/html&amp;quot;)    self.end_headers()    # Write some HTML code    self.wfile.write(b&amp;quot;&amp;lt;h1&amp;gt;Hello from Python!&amp;lt;/h1&amp;gt;&amp;quot;)# Create an instance of HTTPServerserver = http.server.HTTPServer((&amp;quot;&amp;quot;, 8000), MyHandler)# Start the serverserver.serve_forever()&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;To run this script, we need to save it as a .py file and execute it in a terminal or command prompt. For example, if we save it as &lt;a href="http://server.py"&gt;server.py&lt;/a&gt;, we can run it with:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python server.py
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;This will start the server on port 8000. To access the server from a web browser, we need to enter the URL &lt;a href="http://localhost:8000"&gt;http://localhost:8000&lt;/a&gt; or &lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;. This will display the HTML code that we wrote in the do_GET method. If we enter the IP address of the server then, we can enter the URL http://\&amp;lt;ip_address&amp;gt;:8000 in a web browser on another device, where \&amp;lt;ip_address&amp;gt; is the IP address of our server device. This is how we can create a simple HTTP server in Python using http.server module. We can customize our handler class to handle different types of requests and send different types of responses.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;h3 id="heading-testing-the-output"&gt;Testing the output&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;p&gt;You can test the output by simply opening the link on you browser or by using curl, which is a command line program to make a request to the server from the command line.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;g&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;curl&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//0.0.0.0:8000/curl http://&amp;lt;ip_address&amp;gt;:&amp;lt;port_number&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category></entry><entry><title>Starting your coding journey might not be as hard as you think…</title><link href="https://sahil-sagwekar2652.github.io/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html" rel="alternate"></link><published>2023-01-31T13:12:00+05:30</published><updated>2023-01-31T13:12:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-01-31:/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start your coding adventure.&lt;/strong&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="misc"></category></entry><entry><title>Starting your coding journey might not be as hard as you think…</title><link href="https://sahil-sagwekar2652.github.io/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html" rel="alternate"></link><published>2023-01-31T13:12:00+05:30</published><updated>2023-01-31T13:12:00+05:30</updated><author><name>Sahil Sagwekar</name></author><id>tag:sahil-sagwekar2652.github.io,2023-01-31:/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;strong&gt;You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start your coding adventure.&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&amp;lt;/p&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
