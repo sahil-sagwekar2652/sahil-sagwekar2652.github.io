@@ -13,9 +13,9 @@ The problem is caused mostly when the kernel updates itself during a system upda
 Upon completing the update, an error came up on my screen when I tried to run `docker` .
 
 I used the following command to check the docker daemon logs - (Only works for systemd-based distros)
-
-    sudo journalctl -xeu docker.service
-
+```bash
+sudo journalctl -xeu docker.service
+```
 This was the **output** -
 
 ![alt](https://cdn.hashnode.com/res/hashnode/image/upload/v1703598770959/abade4a3-c9dc-419d-b89b-b2289e59949c.png){.image--center .mx-auto}

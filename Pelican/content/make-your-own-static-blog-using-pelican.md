@@ -5,24 +5,27 @@ Slug: make-your-own-static-blog-using-pelican
 
 In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and demonstrate how you can host it on GitHub Pages, all within a matter of minutes. Whether you're a novice or a seasoned developer, this guide will help you establish a minimal setup. And if you're itching to take your blog further, don't worry - Pelican makes customization astonishingly easy.
 
-Now, let's dive into the world of Pelican and start building your static blog from scratch.7
+Now, let's dive into the world of Pelican and start building your static blog from scratch.
 
 ![alt](https://cdn.hashnode.com/res/hashnode/image/upload/v1695826784018/231ae782-8abb-4738-a61a-c8abc648a0e1.png){.image--center .mx-auto}
 
 ### Step 1 {#heading-step-1}
 
 Create a directory named `blog` and then create another `Pelican` directory inside it.
-
-    blog/ Pelican
-
+```text
+blog/
+├── Pelican
+```
 `cd` into the Pelican directory and start by creating a Python virtual environment using the tool of your choice and installing the pelican package from pip.
-
-    ../blog/Pelican $ python -m venv venv../blog/Pelican $ source venv/bin/activate(venv) ../blog/Pelican $ python -m pip install pelican
-
+```bash
+$ python -m venv venv
+$ source venv/bin/activate
+(venv) $ python -m pip install pelican
+```
 The default content source format supported by Pelican is .rst (reStructured text). If you plan on using Markdown then you need to install the following package too.
-
-    python -m pip install "pelican[markdown]"
-
+```bash
+python -m pip install "pelican[markdown]"
+```
 ### Step 2 {#heading-step-2}
 
 Pelican has a `pelican-quickstart` script which will help us to setup the basic settings interactively. It will also generate the desired directory structure for us. So let's start by using it. Here is an example -
@@ -30,15 +33,32 @@ Pelican has a `pelican-quickstart` script which will help us to setup the basic 
 ![alt](https://cdn.hashnode.com/res/hashnode/image/upload/v1695826741531/c44349a2-3f8b-4561-85dd-65cc62c47399.png){.image--center .mx-auto}
 
 Great! Now you have your pelican blog set up locally. Your file structure should now look like this -
-
-    blog/ Pelican     content        (pages)     output     tasks.py     Makefile     pelicanconf.py       # Main settings file     publishconf.py       # Settings to use when ready to publish
-
+```text
+blog/
+├── Pelican
+    ├── content
+    │   └── (pages)
+    ├── output
+    ├── tasks.py
+    ├── Makefile
+    ├── pelicanconf.py       # Main settings file
+    └── publishconf.py       # Settings to use when ready to publish
+```
 **Important**
 
 You need to add a 'Metadata' section at the start of every content file. The metadata format for markdown content is as below -
+```text
+Title: My super title
+Date: 2010-12-03 10:20
+Modified: 2010-12-05 19:30
+Category: Python
+Tags: pelican, publishing
+Slug: my-super-post
+Authors: Alexis Metaireau, Conan Doyle
+Summary: Short version for index and feeds
 
-    Title: My super titleDate: 2010-12-03 10:20Modified: 2010-12-05 19:30Category: PythonTags: pelican, publishingSlug: my-super-postAuthors: Alexis Metaireau, Conan DoyleSummary: Short version for index and feedsThis is the content of my super blog post.
-
+This is the content of my super blog post.
+```
 You can now start writing up some amazing articles inside the `blog/Pelican/content` directory.
 
 ### Step 3 - Importing an existing blog (optional) {#heading-step-3-importing-an-existing-blog-optional}
@@ -51,21 +71,21 @@ Here we'll look at how to import your pre-existing medium.com blog as I feel it'
 
 1.  We will use the `pelican-import` tool to import our data from medium. `pelican-import` requires some additional dependencies which can be installed through the following steps.
 
-    -   feedparser
+    - feedparser
+	```bash
+	pip install feedparser
+	```
 
-```{=html}
-<!-- -->
-```
-        pip install feedparser
+	-   Pandoc
+	See the [Pandoc site](https://pandoc.org/installing.html) for operating-system-specific installation.
 
--   Pandoc  
-   See the [Pandoc site](https://pandoc.org/installing.html) for operating-system-specific installation.
-
-1.  Medium supports RSS feeds. Refer to [this](https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics) article for supported RSS feeds.
+2.  Medium supports RSS feeds. Refer to [this](https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics) article for supported RSS feeds.
 
     For importing blogs from a profile, use the following command.
 
-         pelican-import --feed https://medium.com/feed/@username -m markdown
+	```
+	pelican-import --feed https://medium.com/feed/@username -m markdown
+	```
 
     I have used markdown as the format in the above example, the default is reStructured Text.
 
@@ -121,4 +141,4 @@ Let's publish the site using GitHub pages so that anyone in the world can read y
 
 But this is just the beginning. Pelican offers a plethora of additional features and customization options. Whether you want to add new functionalities, experiment with different themes, or delve into the world of web dev, you have a robust platform to build upon.
 
-Happy Blogging!
+**Happy Blogging!**

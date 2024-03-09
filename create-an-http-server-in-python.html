@@ -87,15 +87,17 @@
 <p>When a client connects to a server on a port, the server accepts the connection and creates a socket, which is an endpoint for communication between the two parties. The client and the server then exchange messages using the protocol of the service. For example, for HTTP, the client sends an HTTP request message, which contains information such as the method (GET, POST, etc.), the path (the URL of the resource), and the headers (additional information). The server then processes the request and sends back an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response message</a>, which contains information such as the status code (200 OK, 404 Not Found, etc.), the headers, and the body (the content of the resource).</p>
 <h2 id="heading-how-to-create-a-server-using-the-httpserver-module-in-python">How to create a server using the http.server module in Python?</h2>
 <h3 id="heading-method-1">Method 1</h3>
-<p>This is the fastest way to get your server up and running and also to local data to other devices on your local network.<br>
+<p>This is the fastest way to get your server up and running and also to local data to other devices on your local network.
 To achieve this we run the following command:</p>
-<div class="highlight"><pre><span></span><code>python -m http.server# Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>http.server
+<span class="c1"># Serving HTTP on :: port 8000 (http://[::]:8000/) ...</span>
 </code></pre></div>
 
 <p>This command will host the contents of the current directory on localhost i.e. 127.0.0.1 and default port 8000.</p>
 <p><img alt="That Was Fast GIF - Fast GIFs" class="image--center mx-auto" src="https://media.tenor.com/stcVUHuVy5IAAAAS/fast.gif"></p>
 <p>We can also access the server from another device that is connected to the same network as our server device. To do this, we need to find out the IP address of our server device. For example, on Windows, we can use the <code>ipconfig</code> command in a command prompt, and on Linux or macOS, we can use the <code>ifconfig</code> command in a terminal. We need to note down the IP address that is shown for our network adapter.</p>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">server</span><span class="w"> </span><span class="o">--</span><span class="nx">bind</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">local</span><span class="o">-</span><span class="nx">ip</span><span class="o">-</span><span class="kd">addr</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">port</span><span class="o">-</span><span class="nx">number</span><span class="p">&gt;</span><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">server</span><span class="w"> </span><span class="o">--</span><span class="nx">bind</span><span class="w"> </span><span class="m m-Double">192.168.1.206</span><span class="w"> </span><span class="mi">9999</span><span class="err">#</span><span class="w"> </span><span class="nx">Serving</span><span class="w"> </span><span class="nx">HTTP</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="m m-Double">192.168.1.206</span><span class="w"> </span><span class="nx">port</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//192.168.1.206:9999/) ...</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span>--bind<span class="w"> </span>&lt;local-ip-addr&gt;<span class="w"> </span>&lt;port-number&gt;python<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span>--bind<span class="w"> </span><span class="m">192</span>.168.1.206<span class="w"> </span><span class="m">9999</span>
+<span class="c1"># Serving HTTP on 192.168.1.206 port 9999 (http://192.168.1.206:9999/) ...</span>
 </code></pre></div>
 
 <p>The above command will host the content of the current directory on the <a href="http://192.168.1.206:9999/">http://192.168.1.206:9999/</a> URL and will be accessible to all the devices on the local network.</p>
@@ -104,17 +106,39 @@ To achieve this we run the following command:</p>
 <p>To use the http.server module, we need to import it into our Python script. Then, we need to create a subclass of <code>BaseHTTPRequestHandler</code> and override the <code>do_GET</code> method. This method is called when the server receives a <a href="http://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET.html#:~:text=The%20HTTP%20GET%20method%20requests%20a%20representation%20of,GET%20should%20only%20retrieve%20data.%20Syntax%20GET%20%2Findex.html">GET request</a> from a client. We can write our logic for handling the request inside this method. For example, we can send back some HTML code to display on the client's browser.</p>
 <p>Next, we need to create an instance of HTTPServer and pass it two arguments: a tuple of an empty string and a port number, and our handler class. The empty string means that the server will listen on all available IP addresses, and the port number is the port where the server will run. We can choose any port number that is not already in use by another program. Finally, we need to call the serve_forever method on the server object to start the server.</p>
 <p>Here is an example of how to create a simple HTTP server in Python:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Import the http.server moduleimport http.server# Create a subclass of BaseHTTPRequestHandlerclass MyHandler(http.server.BaseHTTPRequestHandler):# Override the do_GET methoddef do_GET(self):    # Send a 200 OK response    self.send_response(200)    # Send headers    self.send_header(&quot;Content-type&quot;, &quot;text/html&quot;)    self.end_headers()    # Write some HTML code    self.wfile.write(b&quot;&lt;h1&gt;Hello from Python!&lt;/h1&gt;&quot;)# Create an instance of HTTPServerserver = http.server.HTTPServer((&quot;&quot;, 8000), MyHandler)# Start the serverserver.serve_forever()</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import the http.server module</span>
+<span class="kn">import</span> <span class="nn">http.server</span>
+
+<span class="c1"># Create a subclass of BaseHTTPRequestHandler</span>
+<span class="k">class</span> <span class="nc">MyHandler</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">BaseHTTPRequestHandler</span><span class="p">):</span>
+
+<span class="c1"># Override the do_GET method</span>
+<span class="k">def</span> <span class="nf">do_GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Send a 200 OK response</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">send_response</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="c1"># Send headers</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">send_header</span><span class="p">(</span><span class="s2">&quot;Content-type&quot;</span><span class="p">,</span> <span class="s2">&quot;text/html&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">end_headers</span><span class="p">()</span>
+    <span class="c1"># Write some HTML code</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">wfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;&lt;h1&gt;Hello from Python!&lt;/h1&gt;&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create an instance of HTTPServer</span>
+<span class="n">server</span> <span class="o">=</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">HTTPServer</span><span class="p">((</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="mi">8000</span><span class="p">),</span> <span class="n">MyHandler</span><span class="p">)</span>
+
+<span class="c1"># Start the server</span>
+<span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
 </code></pre></div>
 
 <p>To run this script, we need to save it as a .py file and execute it in a terminal or command prompt. For example, if we save it as <a href="http://server.py">server.py</a>, we can run it with:</p>
-<div class="highlight"><pre><span></span><code>python server.py
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>server.py
 </code></pre></div>
 
 <p>This will start the server on port 8000. To access the server from a web browser, we need to enter the URL <a href="http://localhost:8000">http://localhost:8000</a> or <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>. This will display the HTML code that we wrote in the do_GET method. If we enter the IP address of the server then, we can enter the URL http://\&lt;ip_address&gt;:8000 in a web browser on another device, where \&lt;ip_address&gt; is the IP address of our server device. This is how we can create a simple HTTP server in Python using http.server module. We can customize our handler class to handle different types of requests and send different types of responses.</p>
 <h3 id="heading-testing-the-output">Testing the output</h3>
 <p>You can test the output by simply opening the link on you browser or by using curl, which is a command line program to make a request to the server from the command line.</p>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.</span><span class="w"> </span><span class="nx">curl</span><span class="w"> </span><span class="nx">http</span><span class="p">:</span><span class="c1">//0.0.0.0:8000/curl http://&lt;ip_address&gt;:&lt;port_number&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># e.g.</span>
+curl<span class="w"> </span>http://0.0.0.0:8000/
+<span class="c1"># curl http://&lt;ip_address&gt;:&lt;port_number&gt;</span>
 </code></pre></div>
         </section>
 

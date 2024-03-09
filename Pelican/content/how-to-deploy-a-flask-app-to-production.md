@@ -56,7 +56,7 @@ The current directory looks like this -
 -   `CMD` directive is the command the container executes by default when you launch the built image, the command is `gunicorn --bind 0.0.0.0:5000 wsgi:app` .
    We'll talk more about **gunicorn** and **wsgi** later in the article.
 
-1.  ### Docker compose file {#heading-docker-compose-file}
+2.  ### Docker compose file {#heading-docker-compose-file}
 
 ```YAML
 services:
@@ -109,7 +109,7 @@ volumes:
 
 I won't be going through every section of the docker-compose file. If you would like to understand what's happening in detail, go through the official [docker compose reference](https://docs.docker.com/compose/compose-file/compose-file-v3/).
 
-1.  ### Persisting data {#heading-persisting-data}
+3.  ### Persisting data {#heading-persisting-data}
 
 If we start a container ad-hoc, it creates an untagged volume. In our context, we need to persist the data from the database container. So even if we bring the stack down using `docker compose down` , make some changes and then bring the stack up once again using `docker compose up` no data would be lost.
 

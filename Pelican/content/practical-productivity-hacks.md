@@ -7,8 +7,7 @@ In today's age, the ability to focus and pay attention to one thing is diminishi
 
 So let's dive in!
 
-1. **Breaking the Instant Gratification Cycle** {#heading-1-breaking-the-instant-gratification-cycle}
-===============================================
+#1. **Breaking the Instant Gratification Cycle** {#heading-1-breaking-the-instant-gratification-cycle}
 
 [![alt](https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80){.image--center .mx-auto}](https://unsplash.com/photos/tLZhFRLj6nY)
 
@@ -20,7 +19,7 @@ YouTube is unavoidable due to it being the largest video search engine. But YouT
 
 [X.com](http://x.com) is in my opinion the best social media for developers, where 'Learning in Public' takes center stage. You will find a lot of people supporting you on your journey and also reaching out to you for opportunities. Just remember, time is precious.
 
-### [🌐](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwip2sz3xv-AAxWsdPUHHcY1AJIQFnoECB8QAQ&url=https%3A%2F%2Femojipedia.org%2Fglobe-with-meridians&usg=AOvVaw38sx0AlaRVHRWUR8Fqa09s&opi=89978449) **Plus, Pro Tip:** {#heading-httpswwwgooglecomurlsatandamprctjandampqandampesrcsandampsourcewebandampcdandampved2ahukewip2sz3xv-aaxwsdpuhhcy1ajiqfnoecb8qaqandampurlhttps3a2f2femojipediaorg2fglobe-with-meridiansandampusgaovvaw38sx0alarvhrwur8fqa09sandampopi89978449-plus-pro-tip}
+### [🌐 ](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwip2sz3xv-AAxWsdPUHHcY1AJIQFnoECB8QAQ&url=https%3A%2F%2Femojipedia.org%2Fglobe-with-meridians&usg=AOvVaw38sx0AlaRVHRWUR8Fqa09s&opi=89978449) **Plus, Pro Tip:** {#heading-httpswwwgooglecomurlsatandamprctjandampqandampesrcsandampsourcewebandampcdandampved2ahukewip2sz3xv-aaxwsdpuhhcy1ajiqfnoecb8qaqandampurlhttps3a2f2femojipediaorg2fglobe-with-meridiansandampusgaovvaw38sx0alarvhrwur8fqa09sandampopi89978449-plus-pro-tip}
 
 Navigate the content maze with RSS feeds. Stay at the forefront with news, blogs, and even YouTube channels. Yes, Hashnode blogs too!
 
@@ -30,8 +29,7 @@ The game-changer? Setting up a desktop RSS feed reader. **Thunderbird** email cl
 
 -   [Find RSS links for YouTube channels](https://authory.com/blog/create-a-youtube-rss-feed-with-vastly-increased-limits)
 
-2. **The Power of Putting Pen to Paper** {#heading-2-the-power-of-putting-pen-to-paper}
-========================================
+# 2. **The Power of Putting Pen to Paper** {#heading-2-the-power-of-putting-pen-to-paper}
 
 [![alt](https://images.unsplash.com/photo-1572273869941-45732d6f581c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80){.image--center .mx-auto}](https://unsplash.com/photos/6qThS1x6P6A)
 
@@ -39,8 +37,7 @@ The oldest trick, timeless and unfailingly effective put pen to paper. Writing d
 
 Daily journaling ideally consists of writing down goals for the day and then writing a summary of what you achieved and what the next set of goals are at the end of the day. This journal, a mirror to your journey, nurtures accountability and tangible growth.
 
-3. **Embrace Full-Screen Mode** {#heading-3-embrace-full-screen-mode}
-===============================
+# 3. **Use Full-Screen Mode** {#heading-3-embrace-full-screen-mode}
 
 We have all been guilty of tab-hopping. I often find myself switching through tabs and windows with my fingers constantly on Ctrl+Tab and Alt+Tab. If you are someone like me who gets distracted easily by other open tabs and applications, you need to start using full-screen mode.
 
@@ -50,24 +47,13 @@ We have all been guilty of tab-hopping. I often find myself switching through ta
 
 So whether you're deep into coding or surfing the web, embrace full-screen bliss. It's my go-to secret to obliterate visual clutter. I'm using full-screen even as I write this blog ;)
 
-4. 👨💻**Action Beats Theory:** Just Write Code {#heading-4-action-beats-theory-just-write-code}
-=============================================
+# 4. 👨 💻 **Action Beats Theory:** Just Write Code {#heading-4-action-beats-theory-just-write-code}
 
-::: {.embed-wrapper}
-::: {.embed-loading}
-::: {.loadingRow}
-:::
-
-::: {.loadingRow}
-:::
-:::
-
-<https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN>
-:::
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QMbx0dTWJIQ?si=mEFm8RYJ1kiYcMzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 **The hardest part about learning to code is writing the actual code.**
 
-Find ways to force yourself to read less, watch less and write code more. Start working on a project and learn on the go. **Counterintuitive? Absolutely. The truth? The learning journey knows no finish line.** I was a person who used to think that I needed to master all the technologies before starting a project. But I realized that there is no end to learning.  
+Find ways to force yourself to read less, watch less and write code more. Start working on a project and learn on the go. **Counterintuitive? Absolutely. The truth? The learning journey knows no finish line.** I was a person who used to think that I needed to master all the technologies before starting a project. But I realized that there is no end to learning.
 You will find yourself at the same spot from where you began even after spending weeks 'learning'.
 
 -   Announce that you are working on a project publicly.

@@ -82,7 +82,7 @@
 <p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
 <p>Upon completing the update, an error came up on my screen when I tried to run <code>docker</code> .</p>
 <p>I used the following command to check the docker daemon logs - (Only works for systemd-based distros)</p>
-<div class="highlight"><pre><span></span><code>sudo journalctl -xeu docker.service
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>journalctl<span class="w"> </span>-xeu<span class="w"> </span>docker.service
 </code></pre></div>
 
 <p>This was the <strong>output</strong> -</p>
