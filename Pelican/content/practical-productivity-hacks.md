@@ -77,7 +77,3 @@ You will find yourself at the same spot from where you began even after spending
 #### [](https://emojipedia.org/high-voltage)A high-octane hackathon delivers more knowledge in two days than months of theoretical pursuit. {#heading-httpsemojipediaorghigh-voltagea-high-octane-hackathon-delivers-more-knowledge-in-two-days-than-months-of-theoretical-pursuit}
 
 #### Let go of any hesitations, open your IDE and just start coding! {#heading-let-go-of-any-hesitations-open-your-ide-and-just-start-coding}
-
-```{=html}
-</p>
-```

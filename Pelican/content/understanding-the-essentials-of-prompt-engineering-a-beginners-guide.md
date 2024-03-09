@@ -68,7 +68,3 @@ Conclusion {#heading-conclusion}
 ----------
 
 Prompt engineering is a critical part of learning to utilize Generative AI. It is used to train models to generate accurate and relevant responses to user inputs. By understanding the essentials of prompt engineering, beginners can get started with developing intelligent systems that can understand and respond to human language.
-
-```{=html}
-</p>
-```

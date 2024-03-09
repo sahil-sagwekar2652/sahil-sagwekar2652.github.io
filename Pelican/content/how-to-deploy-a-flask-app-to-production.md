@@ -97,7 +97,3 @@ Our blog is now ready to deploy! Run it on your local machine or on a Cloud inst
 <https://chat.openai.com/share/27e0b18d-cc23-4925-acc5-7966916d04e4>
 
 <https://flask.palletsprojects.com/en/3.0.x/deploying/>
-
-```{=html}
-</p>
-```

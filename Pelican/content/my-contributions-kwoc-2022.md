@@ -49,6 +49,3 @@ One of the most important things I learned during my time as a KWoC participant 
 
 I also gained valuable experience in project management and time management, as I had to juggle my KWoC commitments with my other responsibilities.
 
-```{=html}
-</p>
-```

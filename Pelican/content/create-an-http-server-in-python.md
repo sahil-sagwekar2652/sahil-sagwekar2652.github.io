@@ -64,7 +64,3 @@ This will start the server on port 8000. To access the server from a web browser
 You can test the output by simply opening the link on you browser or by using curl, which is a command line program to make a request to the server from the command line.
 
     # e.g. curl http://0.0.0.0:8000/curl http://<ip_address>:<port_number>
-
-```{=html}
-</p>
-```

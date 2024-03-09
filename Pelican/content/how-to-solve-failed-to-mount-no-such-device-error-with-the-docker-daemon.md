@@ -44,7 +44,3 @@ Learn more about docker layers
 -   <https://www.petermcconnell.com/posts/docker-overlayfs/>
 
 -   <https://youtu.be/FCk5ylLjnxw>
-
-```{=html}
-</p>
-```

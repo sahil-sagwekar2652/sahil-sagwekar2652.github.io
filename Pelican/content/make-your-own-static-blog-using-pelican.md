@@ -121,8 +121,4 @@ Let's publish the site using GitHub pages so that anyone in the world can read y
 
 But this is just the beginning. Pelican offers a plethora of additional features and customization options. Whether you want to add new functionalities, experiment with different themes, or delve into the world of web dev, you have a robust platform to build upon.
 
-Happy Bloggin!
-
-```{=html}
-</p>
-```
+Happy Blogging!

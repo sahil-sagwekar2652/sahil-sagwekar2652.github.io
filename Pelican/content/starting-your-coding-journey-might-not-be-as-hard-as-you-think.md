@@ -56,7 +56,3 @@ Yes, you read that correctly, searching for ways to solve an error is a big part
 
 **To conclude, there is hardly anything you need to start coding. Just down a cup of coffee and go for it!** {#heading-to-conclude-there-is-hardly-anything-you-need-to-start-coding-just-down-a-cup-of-coffee-and-go-for-it}
 ------------------------------------------------------------------------------------------------------------
-
-```{=html}
-</p>
-```
