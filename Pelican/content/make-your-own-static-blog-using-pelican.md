@@ -71,9 +71,9 @@ Here we'll look at how to import your pre-existing medium.com blog as I feel it'
 
 1.  We will use the `pelican-import` tool to import our data from medium. `pelican-import` requires some additional dependencies which can be installed through the following steps.
 
-    - feedparser
+    -   feedparser
 
-	```bash
+	```
 	pip install feedparser
 	```
 
