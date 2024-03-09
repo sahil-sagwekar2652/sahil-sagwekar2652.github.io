@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <link rel="stylesheet" href="/theme/css/style.css" />
+        <link rel="stylesheet" href="/theme/css/fonts.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>How to solve "failed to mount: no such device" error with the docker daemon &ndash; Sahil's Blog</title>
+        <meta charset="utf-8" />
+
+        <meta name="keywords" content="Sahil's Blog How to solve "failed to mount: no such device" error with the docker daemon " />
+
+        <meta property="og:image" content="http://localhost:8000/files/images/hrw-512.jpg" />
+
+
+
+
+    <meta name="description" content="Solution The solution to this problem could be as simple as rebooting your system. The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command sudo pacman -Syu to start a system update. Upon …" />
+
+
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#2e8233"/>
+        <link rel="apple-touch-icon" sizes="192x192" href="/files/images/hrw-192.jpg">
+        <link rel="icon" href="/files/images/hrw-192.jpg">
+        <link rel="me" href="https://society.oftrolls.com/@hrw">
+        <script>
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+
+        </script>
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://localhost:8000/">Sahil's Blog</a></h1>
+                <p></p>
+        </header>
+        <nav id="menu"><ul>
+        </ul></nav>
+
+<main id="content"  data-pagefind-body >
+	<header>
+		<h2 class="entry-title" data-pagefind-meta="title" >
+			<a href="http://localhost:8000/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html" rel="bookmark" title="Permalink to How to solve "failed to mount: no such device" error with the docker daemon">How to solve "failed to mount: no such device" error with the docker daemon</a>
+		</h2>
+	</header>
+	<div class="entry-content">
+		<h1 id="heading-solution">Solution</h1>
+<p><strong>The solution to this problem could be as simple as rebooting your system.</strong></p>
+<p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
+<p>Upon completing the update, an error came up on my screen when I tried to run <code>docker</code> .</p>
+<p>I used the following command to check the docker daemon logs - (Only works for systemd-based distros)</p>
+<div class="highlight"><pre><span></span><code>sudo journalctl -xeu docker.service
+</code></pre></div>
+
+<p>This was the <strong>output</strong> -</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703598770959/abade4a3-c9dc-419d-b89b-b2289e59949c.png"></p>
+<p>The first error message says - <code>msg="failed to mount overlay: no such device" storage-driver=overlay2</code></p>
+<p>Let us try to understand what <code>overlay</code> is and what are Layers in the context of Docker containers.</p>
+<h1 id="heading-docker-layers">Docker Layers</h1>
+<p>Containers were meant to be a better and more efficient alternative to VMs, the preferred solution for running applications in isolation. Individual VMs do not share any resources between them. Each VM has its own full-fledged operating system which creates its own file system. Even two VMs of the same operating system share nothing with each other. While this kind of setup also has its use cases, it's a waste of resources in our context. Containers solve this problem by sharing resources.</p>
+<p>What is an image? It's a collection of filesystem layers and metadata. These layers are together run by Docker as a container. Containers are a running instance of an image. We can run multiple containers of the same image.</p>
+<p>Docker implements a <strong>copy-on-write</strong> mechanism. Multiple containers share the same base system of the base image. The base directory of the image is read-only and all the changes are recorded in a different directory which is then layered on top of the base directory. The Overlay driver is used by Docker to implement it's layered file system. Layers can be shared across multiple running containers.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png"></p>
+<h4 id="heading-references">References :</h4>
+<p>Learn more about docker layers</p>
+<ul>
+<li>
+<p><a href="https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/">https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://www.petermcconnell.com/posts/docker-overlayfs/">https://www.petermcconnell.com/posts/docker-overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/FCk5ylLjnxw">https://youtu.be/FCk5ylLjnxw</a></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div>
+	</div>
+	<footer class="post-info">
+		Written by Sahil Sagwekar on 
+		<time class="published" datetime="2023-12-28T20:24:00+05:30" data-pagefind-sort="date">				28th
+December 2023
+		</time>
+	</footer>
+	<ul id="next-prev-links">
+	</ul>
+</main>
+        
+        <aside id="sidebar">
+                <h2>About me</h2>
+                <p>
+                I work at Red Hat. And I am full time assignee at Linaro.
+                Mostly working on AArch64 support in several projects.
+                </p>
+
+                <p>
+                I am also known as 'hrw' (<a href="/2007/04/26/how-to-pronounce-haerwu/">/hʌ eə vʊ/</a>).
+                </p>
+
+		<h2>Search</h2>
+		<div id="search"></div>
+
+                <h2>Privacy policy</h2>
+                <p>This website does not use cookies. Server logs contain IP
+                   address and user agent info. You can leave if you disagree.</p>
+                <p><a href="/2018/05/24/gdpr/">GDPR information</a> if you want to read such policies.</p>
+
+                <h2>Useful tables</h2>
+
+                <ul>
+                        <li>
+                                <a href="/download/tables/bsa-sbsa.html">BSA and
+                                        SBSA checklists</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/syscalls.html">Linux kernel
+                                        system calls for all architectures</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/arm-socs.html">AArch64 SoC features</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/arm-cpu-cores.html">AArch64 cpu core information</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/fosdem/">FOSDEM videos</a>
+                        </li>
+                </ul>
+
+                <h2>Recent posts</h2>
+                <ul>
+                        <li>
+                                <a href="http://localhost:8000/how-to-deploy-a-flask-app-to-production.html">How to deploy a Flask app to production</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html">How to solve "failed to mount: no such device" error with the docker daemon</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/make-your-own-static-blog-using-pelican.html">Make your own static blog using Pelican</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/practical-productivity-hacks.html">Practical Productivity Hacks</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html">Understanding the Essentials of Prompt Engineering: A Beginner's Guide</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/create-an-http-server-in-python.html">Create an HTTP server in Python</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html">Starting your coding journey might not be as hard as you think…</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/my-contributions-kwoc-2022.html">My contributions @  KWoC 2022</a>
+                        </li>
+                </ul>
+        </aside>
+        
+        <footer id="site-footer">
+                <p>
+                        Copyright by Marcin Juszkiewicz. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.
+                </p>
+        </footer>
+	<link  href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			new PagefindUI({
+				element: "#search",
+				showImages: false,
+			});
+		});
+	</script>
+</body>
+</html>

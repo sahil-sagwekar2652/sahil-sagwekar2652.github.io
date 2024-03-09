@@ -1,155 +1,697 @@
-<!doctype html>
-<html lang="en" itemscope itemtype="https://schema.org/Person">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <!-- Site Meta Data -->
-  <title>Sahil's Blog - misc</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Sahil Nilesh Sagwekar">
+        <link rel="stylesheet" href="/theme/css/style.css" />
+        <link rel="stylesheet" href="/theme/css/fonts.css" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Sahil's Blog - misc category</title>
+        <meta charset="utf-8" />
 
-  <link rel="shortcut icon" href="">
 
-  <!-- schema.org -->
-  <meta itemprop="name" content="Sahil's Blog">
-  <meta itemprop="image" content="">
-  <meta itemprop="description" content="">
+        <meta property="og:image" content="http://localhost:8000/files/images/hrw-512.jpg" />
 
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-  <!-- Style Meta Data -->
-  <link rel="stylesheet" href="http://localhost:8000/theme/css/style.css" type="text/css" />
-  <link rel="stylesheet" href="http://localhost:8000/theme/css/pygments.css" type="text/css" />
+        <meta name="description" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Sahil's Blog" />
+        <meta property="og:description" content="" />
+        <meta property="og:site_name" content="Sahil's Blog" />
+        <meta property="og:url" content="http://localhost:8000" />
 
-  <!-- Feed Meta Data -->
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#2e8233"/>
+        <link rel="apple-touch-icon" sizes="192x192" href="/files/images/hrw-192.jpg">
+        <link rel="icon" href="/files/images/hrw-192.jpg">
+        <link rel="me" href="https://society.oftrolls.com/@hrw">
+        <script>
 
-  <!-- Twitter Feed -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="sagwekar_sahil">
-  <meta name="twitter:image" content="">
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 
-<meta name="twitter:creator" content="sagwekar_sahil">
-<meta name="twitter:url" content="http://localhost:8000">
-<meta name="twitter:title" content="Sahil's Blog">
-<meta name="twitter:description" content="Developer and X Poster">
-
-<!-- Facebook Meta Data -->
-<meta property="og:title" content="Sahil's Blog" />
-<meta property="og:description" content="Developer and X Poster" />
-<meta property="og:image" content="" />
-
-<meta name="twitter:creator" content="sagwekar_sahil">
-<meta name="twitter:url" content="http://localhost:8000/category/misc.html">
-<meta name="twitter:title" content="Sahil's Blog ~ misc">
-<meta name="twitter:description" content="Articles de misc">
-
-<!-- Facebook Meta Data -->
-<meta property="og:title" content="Sahil's Blog ~ misc" />
-<meta property="og:description" content="Articles de misc" />
-<meta property="og:image" content="" />
+        </script>
 </head>
 
-<body>
-  <!-- Sidebar -->
-  <aside>
-    <!--<center><a href="http://localhost:8000"><img id="avatar" src=""></a></center>-->
-    <h1>Sahil's Blog</h1>
-      <p>Developer and X Poster</p>
-    <br>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://localhost:8000/">Sahil's Blog</a></h1>
+                <p></p>
+        </header>
+        <nav id="menu"><ul>
+        </ul></nav>
 
-      <a class="twitter-follow-button"
-      href="https://twitter.com/sagwekar_sahil"
-      data-show-count="false"
-      data-lang="en">
-      Follow @twitterdev
-      </a>
-      <script type="text/javascript">
-      window.twttr = (function (d, s, id) {
-        var t, js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src= "https://platform.twitter.com/widgets.js";
-        fjs.parentNode.insertBefore(js, fjs);
-        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-      }(document, "script", "twitter-wjs"));
-      </script>
-
-    <nav class="nav">
-      <ul class="list-bare">
-      
-          <li><a class="nav__link" href="http://localhost:8000">Blog</a></li>
-         
-         
-      </ul>
-    </nav>
-
-    <p class="social">
-        <a href="https://www.linkedin.com/in/sahil-sagwekar-0b955b223/" target="_blank" ><img src="http://localhost:8000/theme/images/icons/linkedin.png"></a>
-        <a href="https://github.com/sahil-sagwekar2652" target="_blank" ><img src="http://localhost:8000/theme/images/icons/github.png"></a>
-        <a href="https://twitter.com/sagwekar_sahil" target="_blank" ><img src="http://localhost:8000/theme/images/icons/twitter.png"></a>
-    </p>
-
-    <!--
-    <h2>Categories</h2>
-    <ul class="navbar">
-      <li class="active"><a href="http://localhost:8000/category/misc.html">misc</a></li>
-    </ul> 
-    -->
-  </aside>
-
-  <!-- Content -->
-  <article>
-<h1 class="title">Hi, I'm Sahil Nilesh Sagwekar</h1>
-
+<main id="content">
+	<ol id="post-list">
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/how-to-deploy-a-flask-app-to-production.html" rel="bookmark" title="Permalink to How to deploy a Flask app to production">How to deploy a Flask app to production</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <p>Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website</p>
+<h1 id="heading-why-use-docker">Why use Docker?</h1>
+<h4 id="heading-tldr-agility-portability-and-isolation">TLDR - Agility, Portability and Isolation</h4>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png?auto=compress,format&amp;format=webp"></p>
+<p>You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would suck if one computer could do only one thing. Although we can run multiple programs simultaneously, we need to ensure that they don't interfere with each other i.e. we need isolation. It also might happen that different software requires different versions of the same dependency. So people invented Virtual Machines! But virtual machines set up a whole new virtual computer, ensuring complete isolation but introducing significant overhead too. Containers on the other hand share the kernel within the host OS.</p>
+<h1 id="heading-lets-build-the-stack">Let's build the stack</h1>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1705737568119/dd6d3e75-e5ae-49b2-8961-d8e8a094159f.png"></p>
+<p>We will be using 3 containers in our stack. Nginx as reverse-proxy, the flask app in the second container and the database running in the third container.</p>
 <ol>
-	<h2 class="latest">Latest Posts</h2>
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="http://localhost:8000/practical-productivity-hacks.html" rel="bookmark" title="Permalink to Practical Productivity Hacks">Practical Productivity Hacks</a></h2>
-		<a href="http://localhost:8000/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
-		<span> in </span>
-		<span class="post_category"><a href="http://localhost:8000/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
-		<span class="post_date">Mon 28 August 2023</span>
-	</li>
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="http://localhost:8000/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html" rel="bookmark" title="Permalink to Understanding the Essentials of Prompt Engineering: A Beginner's Guide">Understanding the Essentials of Prompt Engineering: A Beginner's Guide</a></h2>
-		<a href="http://localhost:8000/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
-		<span> in </span>
-		<span class="post_category"><a href="http://localhost:8000/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
-		<span class="post_date">Fri 07 April 2023</span>
-	</li>
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="http://localhost:8000/create-an-http-server-in-python.html" rel="bookmark" title="Permalink to Create an HTTP server in Python">Create an HTTP server in Python</a></h2>
-		<a href="http://localhost:8000/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
-		<span> in </span>
-		<span class="post_category"><a href="http://localhost:8000/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
-		<span class="post_date">Wed 29 March 2023</span>
-	</li>
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="http://localhost:8000/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html" rel="bookmark" title="Permalink to Starting your coding journey might not be as hard as you think…">Starting your coding journey might not be as hard as you think…</a></h2>
-		<a href="http://localhost:8000/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
-		<span> in </span>
-		<span class="post_category"><a href="http://localhost:8000/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
-		<span class="post_date">Tue 31 January 2023</span>
-	</li>
-	<li class="post_list"><p class="post_entry">
-		<h2 class="post_title"><a href="http://localhost:8000/my-contributions-kwoc-2022.html" rel="bookmark" title="Permalink to My contributions @ KWoC 2022">My contributions @  KWoC 2022</a></h2>
-		<a href="http://localhost:8000/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
-		<span> in </span>
-		<span class="post_category"><a href="http://localhost:8000/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
-		<span class="post_date">Sun 08 January 2023</span>
-	</li>
+<li>
+<h3 id="heading-the-flask-container">The Flask container</h3>
+</li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
 
+<div class="highlight"><pre><span></span><code>FROM python:3.11.6-slim-bullseyeWORKDIR ~/flask_blogCOPY . .RUN pip3 install -r requirements.txtRUN apt-get update &amp;&amp; apt-get install -y curlCMD [&quot;gunicorn&quot;, &quot;--bind&quot;, &quot;0.0.0.0:5000&quot;, &quot;wsgi:app&quot;]
+</code></pre></div>
 
-  </article>
+<ul>
+<li>
+<p>The <code>FROM</code><em>directive</em> (that's what they are called) specifies the base image that we will be using. We will use the <code>python 3.11</code> image which comes with python 3.11 pre-installed.</p>
+</li>
+<li>
+<p>The <code>WORKDIR</code> directive creates and specifies the working directory for all the next commands in the Dockerfile.</p>
+</li>
+<li>
+<p><code>COPY</code> directive copies the contents of the current directory on the host OS and copies it inside our working directory i.e. <code>~/flask_blog</code> inside the container.</p>
+</li>
+</ul>
+<p>The current directory looks like this -</p>
+<div class="highlight"><pre><span></span><code>. Dockerfile forms.py main.py requirements.txt static templates wsgi.py
+</code></pre></div>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      Blog powered by <a href="https://getpelican.com/">Pelican</a> 
-      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a>.
-    </p>
-  </footer>
+<ul>
+<li>
+<p>The <code>RUN</code> directives run commands which commit their changes onto the container image i.e. installing the dependencies updating the apt repository and installing curl.</p>
+</li>
+<li>
+<p><code>CMD</code> directive is the command the container executes by default when you launch the built image, the command is <code>gunicorn --bind 0.0.0.0:5000 wsgi:app</code> .<br>
+   We'll talk more about <strong>gunicorn</strong> and <strong>wsgi</strong> later in the article.</p>
+</li>
+<li>
+<h3 id="heading-docker-compose-file">Docker compose file</h3>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
 
+<div class="highlight"><pre><span></span><code><span class="n">services</span><span class="o">:</span><span class="w">  </span><span class="n">nginx</span><span class="o">:</span><span class="w">    </span><span class="n">depends_on</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">image</span><span class="o">:</span><span class="w"> </span><span class="n">nginx</span><span class="o">:</span><span class="n">stable</span><span class="w">    </span><span class="n">restart</span><span class="o">:</span><span class="w"> </span><span class="n">always</span><span class="w">    </span><span class="n">links</span><span class="o">:</span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">ports</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="mi">80</span><span class="o">:</span><span class="mi">80</span><span class="w">    </span><span class="n">volumes</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="o">./</span><span class="n">nginx</span><span class="sr">/:/etc/nginx/conf.d/:ro  db:    image: postgres:12-bullseye    env_file:      - .env    volumes:      - postgres_data:/var/lib/postgresql/data/    healthcheck:      test: [&quot;CMD-SHELL&quot;, &quot;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&quot;]      interval: 1s      timeout: 3s      retries: 10  flask_blog:    image: sahilsagwekar2652/personal-blog-website:master    depends_on:      db:        condition: service_started    env_file:      - .env    environment:      DATABASE_URL: db     links:      - db    healthcheck:      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;--fail&quot;, &quot;http://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span><span class="s2">&quot;]      interval: 30s      timeout: 10s      retries: 5    restart: on-failurevolumes:  postgres_data:    name: &quot;</span><span class="n">db_volume</span><span class="err">&quot;</span>
+</code></pre></div>
 
+<p>I won't be going through every section of the docker-compose file. If you would like to understand what's happening in detail, go through the official <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">docker compose reference</a>.</p>
+<ol>
+<li>
+<h3 id="heading-persisting-data">Persisting data</h3>
+</li>
+</ol>
+<p>If we start a container ad-hoc, it creates an untagged volume. In our context, we need to persist the data from the database container. So even if we bring the stack down using <code>docker compose down</code> , make some changes and then bring the stack up once again using <code>docker compose up</code> no data would be lost.</p>
+<p>The key takeaway from the docker-compose file is the <code>volumes</code> section at the end. Here we define a volume <code>postgres_data</code> . This volume is mapped to <code>/var/lib/postgresql/data</code> inside the <code>db</code> container.</p>
+<h1 id="heading-about-wsgi">About WSGI</h1>
+<p><strong>WSGI</strong> stands for <strong>Web Server Gateway Interface.</strong> WSGI is nothing but a protocol to communicate between the HTTP server and the python backend application. Think of it as a middleman between the HTTP server and the python backend. The WSGI protocol is described in the PEP 3333 standard.</p>
+<p>One of the reasons why WSGI exists is to decouple the application from the webserver and to make it more platform agnostic. If you have worked with Flask or Django you might recall that both frameworks come packaged with a built-in HTTP server. However when we run these servers the output strictly warns us against using these built-in servers in production. The reason is that these servers miss quite a few features that other web servers provide, one of which is support for TLS certificates (HTTPS).</p>
+<p>For production, there are many WSGI servers to choose from. In this project we will be using Gunicorn. You could tell that from the last line in the Flask blog Dockerfile.</p>
+<p>More about WSGI in this Reddit post - <a href="https://www.reddit.com/r/django/comments/skge94/uwsgi_wsgi_gunicorn_apache_nginx_could_someone/">https://www.reddit.com/r/django/comments/skge94/uwsgi_wsgi_gunicorn_apache_nginx_could_someone/</a></p>
+<ol>
+<li>
+<h3 id="heading-setting-up-nginx-webserver">Setting up NGINX webserver</h3>
+</li>
+</ol>
+<p>Now that we the flask container ready, we need to set up a webserver container to handle all the HTTP requests. For simplicity, a reverse-proxy also does the same thing but can do a lot more. NGINX is also used a reverse-proxy server.</p>
+<div class="highlight"><pre><span></span><code>    volumes:      - ./nginx/:/etc/nginx/conf.d/:ro
+</code></pre></div>
+
+<p>In the volumes section inside the <code>nginx</code> service in the docker-compose file, we have a volume mapping from the <code>nginx</code> directory in the host OS to the <code>/etc/nginx/conf.d/</code> directory in the container. The <code>ro</code> specifies the read-only nature of the connection.</p>
+<p>The contents of the <code>nginx</code> directory should look like this -</p>
+<div class="highlight"><pre><span></span><code>nginx/ nginx.conf
+</code></pre></div>
+
+<p>Configuring nginx is relatively simple for our context. Following is the <code>nginx.conf</code> that we will be using -</p>
+<div class="highlight"><pre><span></span><code><span class="nt">upstream</span><span class="w"> </span><span class="nt">flask_blog</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">server</span><span class="w"> </span><span class="n">flask_blog</span><span class="p">:</span><span class="mi">5000</span><span class="p">;}</span><span class="nt">server</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">listen</span><span class="w"> </span><span class="err">80</span><span class="p">;</span><span class="w">    </span><span class="err">location</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">{</span><span class="w">        </span><span class="err">proxy_pass</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">flask_blog</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">X-Forwarded-For</span><span class="w"> </span><span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">Host</span><span class="w"> </span><span class="err">$host</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_redirect</span><span class="w"> </span><span class="err">off</span><span class="p">;</span><span class="w">    </span><span class="p">}</span><span class="err">}</span>
+</code></pre></div>
+
+<p>Source - <a href="https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn">https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn</a></p>
+<h2 id="heading-we-are-done">We are DONE!</h2>
+<p>Our blog is now ready to deploy! Run it on your local machine or on a Cloud instance.</p>
+<h4 id="heading-references">References -</h4>
+<p><a href="https://chat.openai.com/share/27e0b18d-cc23-4925-acc5-7966916d04e4">https://chat.openai.com/share/27e0b18d-cc23-4925-acc5-7966916d04e4</a></p>
+<p><a href="https://flask.palletsprojects.com/en/3.0.x/deploying/">https://flask.palletsprojects.com/en/3.0.x/deploying/</a></p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2024-01-24T16:08:00+05:30">						24th
+January 2024
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html" rel="bookmark" title="Permalink to How to solve "failed to mount: no such device" error with the docker daemon">How to solve "failed to mount: no such device" error with the docker daemon</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <h1 id="heading-solution">Solution</h1>
+<p><strong>The solution to this problem could be as simple as rebooting your system.</strong></p>
+<p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
+<p>Upon completing the update, an error came up on my screen when I tried to run <code>docker</code> .</p>
+<p>I used the following command to check the docker daemon logs - (Only works for systemd-based distros)</p>
+<div class="highlight"><pre><span></span><code>sudo journalctl -xeu docker.service
+</code></pre></div>
+
+<p>This was the <strong>output</strong> -</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703598770959/abade4a3-c9dc-419d-b89b-b2289e59949c.png"></p>
+<p>The first error message says - <code>msg="failed to mount overlay: no such device" storage-driver=overlay2</code></p>
+<p>Let us try to understand what <code>overlay</code> is and what are Layers in the context of Docker containers.</p>
+<h1 id="heading-docker-layers">Docker Layers</h1>
+<p>Containers were meant to be a better and more efficient alternative to VMs, the preferred solution for running applications in isolation. Individual VMs do not share any resources between them. Each VM has its own full-fledged operating system which creates its own file system. Even two VMs of the same operating system share nothing with each other. While this kind of setup also has its use cases, it's a waste of resources in our context. Containers solve this problem by sharing resources.</p>
+<p>What is an image? It's a collection of filesystem layers and metadata. These layers are together run by Docker as a container. Containers are a running instance of an image. We can run multiple containers of the same image.</p>
+<p>Docker implements a <strong>copy-on-write</strong> mechanism. Multiple containers share the same base system of the base image. The base directory of the image is read-only and all the changes are recorded in a different directory which is then layered on top of the base directory. The Overlay driver is used by Docker to implement it's layered file system. Layers can be shared across multiple running containers.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png"></p>
+<h4 id="heading-references">References :</h4>
+<p>Learn more about docker layers</p>
+<ul>
+<li>
+<p><a href="https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/">https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://www.petermcconnell.com/posts/docker-overlayfs/">https://www.petermcconnell.com/posts/docker-overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/FCk5ylLjnxw">https://youtu.be/FCk5ylLjnxw</a></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-12-28T20:24:00+05:30">						28th
+December 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/make-your-own-static-blog-using-pelican.html" rel="bookmark" title="Permalink to Make your own static blog using Pelican">Make your own static blog using Pelican</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <p>In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and demonstrate how you can host it on GitHub Pages, all within a matter of minutes. Whether you're a novice or a seasoned developer, this guide will help you establish a minimal setup. And if you're itching to take your blog further, don't worry - Pelican makes customization astonishingly easy.</p>
+<p>Now, let's dive into the world of Pelican and start building your static blog from scratch.7</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826784018/231ae782-8abb-4738-a61a-c8abc648a0e1.png"></p>
+<h3 id="heading-step-1">Step 1</h3>
+<p>Create a directory named <code>blog</code> and then create another <code>Pelican</code> directory inside it.</p>
+<div class="highlight"><pre><span></span><code>blog/ Pelican
+</code></pre></div>
+
+<p><code>cd</code> into the Pelican directory and start by creating a Python virtual environment using the tool of your choice and installing the pelican package from pip.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">../blog/Pelican $ python -m venv venv../blog/Pelican $ source venv/bin/activate(venv) ../blog/Pelican $ python -m pip install pelican</span>
+</code></pre></div>
+
+<p>The default content source format supported by Pelican is .rst (reStructured text). If you plan on using Markdown then you need to install the following package too.</p>
+<div class="highlight"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="ss">&quot;pelican[markdown]&quot;</span>
+</code></pre></div>
+
+<h3 id="heading-step-2">Step 2</h3>
+<p>Pelican has a <code>pelican-quickstart</code> script which will help us to setup the basic settings interactively. It will also generate the desired directory structure for us. So let's start by using it. Here is an example -</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826741531/c44349a2-3f8b-4561-85dd-65cc62c47399.png"></p>
+<p>Great! Now you have your pelican blog set up locally. Your file structure should now look like this -</p>
+<div class="highlight"><pre><span></span><code>blog/ Pelican     content        (pages)     output     tasks.py     Makefile     pelicanconf.py       # Main settings file     publishconf.py       # Settings to use when ready to publish
+</code></pre></div>
+
+<p><strong>Important</strong></p>
+<p>You need to add a 'Metadata' section at the start of every content file. The metadata format for markdown content is as below -</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">titleDate</span><span class="o">:</span><span class="w"> </span><span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span><span class="w"> </span><span class="mi">10</span><span class="o">:</span><span class="mi">20</span><span class="n">Modified</span><span class="o">:</span><span class="w"> </span><span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">19</span><span class="o">:</span><span class="mi">30</span><span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">PythonTags</span><span class="o">:</span><span class="w"> </span><span class="n">pelican</span><span class="o">,</span><span class="w"> </span><span class="n">publishingSlug</span><span class="o">:</span><span class="w"> </span><span class="n">my</span><span class="o">-</span><span class="kd">super</span><span class="o">-</span><span class="n">postAuthors</span><span class="o">:</span><span class="w"> </span><span class="n">Alexis</span><span class="w"> </span><span class="n">Metaireau</span><span class="o">,</span><span class="w"> </span><span class="n">Conan</span><span class="w"> </span><span class="n">DoyleSummary</span><span class="o">:</span><span class="w"> </span><span class="n">Short</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">feedsThis</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">blog</span><span class="w"> </span><span class="n">post</span><span class="o">.</span>
+</code></pre></div>
+
+<p>You can now start writing up some amazing articles inside the <code>blog/Pelican/content</code> directory.</p>
+<h3 id="heading-step-3-importing-an-existing-blog-optional">Step 3 - Importing an existing blog (optional)</h3>
+<p><em>You can skip this step if you don't wish to import your data from blogging platforms like Medium, WordPress, Tumblr etc.</em></p>
+<p>Detailed documentation for this step can be found at <a href="https://docs.getpelican.com/en/latest/importer.html">https://docs.getpelican.com/en/latest/importer.html</a></p>
+<p>Here we'll look at how to import your pre-existing medium.com blog as I feel it's one of the most used platforms</p>
+<ol>
+<li>
+<p>We will use the <code>pelican-import</code> tool to import our data from medium. <code>pelican-import</code> requires some additional dependencies which can be installed through the following steps.</p>
+<ul>
+<li>feedparser</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    pip install feedparser
+</code></pre></div>
+
+<ul>
+<li>
+<p>Pandoc<br>
+   See the <a href="https://pandoc.org/installing.html">Pandoc site</a> for operating-system-specific installation.</p>
+</li>
+<li>
+<p>Medium supports RSS feeds. Refer to <a href="https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics">this</a> article for supported RSS feeds.</p>
+<p>For importing blogs from a profile, use the following command.</p>
+<div class="highlight"><pre><span></span><code> <span class="n">pelican</span><span class="o">-</span><span class="kn">import</span> <span class="o">--</span><span class="n">feed</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">medium</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">feed</span><span class="o">/</span><span class="nd">@username</span> <span class="o">-</span><span class="n">m</span> <span class="n">markdown</span>
+</code></pre></div>
+
+<p>I have used markdown as the format in the above example, the default is reStructured Text.</p>
+<p>The content will now be imported into the <code>blog/Pelican/content</code> directory.</p>
+</li>
+</ul>
+<h3 id="heading-step-4">Step 4</h3>
+<p>The default site generated by Pelican is plain HTML. Who likes to read plain HTML? No one. So let's spruce up our blog with a UI theme. (If you generate your content using Step 3, you might have a theme installed by default.)</p>
+<p>Pelican has a large collection of community-maintained themes to choose from. To use these themes, we need to clone the themes repository locally.</p>
+<p>Before we do that, make sure to create a git repository in the <code>blog</code> directory. Create a <code>.gitignore</code> file and add the following lines to it.</p>
+<div class="highlight"><pre><span></span><code>Pelican/pelican-themesPelican/venv
+</code></pre></div>
+
+<p>Now let's clone the pelican-themes repo. Run the following command inside the <code>blog/Pelican</code> directory.</p>
+<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelican-themes ./pelican-themes
+</code></pre></div>
+
+<p>We will use <code>pelican-themes</code> command to install a new theme. Here, I'm installing the <a href="https://github.com/Parbhat/pelican-blue">Pelican blue</a> theme.</p>
+<div class="highlight"><pre><span></span><code>pelican-themes -i ./pelican-themes/pelican-blue
+</code></pre></div>
+
+<p>Now, we need to add this theme to our <code>pelicanconf.py</code> settings file. Note that every theme might have different settings which should be mentioned in the respective theme's GitHub repo. Copy the settings mentioned in the <a href="https://github.com/Parbhat/pelican-blue">Pelican blue</a> repo README. The theme should look like this - <a href="https://sahil-sagwekar.github.io">https://sahil-sagwekar.github.io</a></p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886054892/9b910376-ea80-48ca-8dd0-fe1e72821e53.png"></p>
+<p>To test the blog locally, use the <code>make devserver</code> command. It will host your site at <code>localhost:8000</code> by default and automatically regenerate on changes.</p>
+<p><strong>NOTE</strong> - Blank lines in the original blog post might result in some artifacts in the markdown content, make sure to check the files before publishing.</p>
+<h3 id="heading-step-5">Step 5</h3>
+<p>Let's publish the site using GitHub pages so that anyone in the world can read your blog.</p>
+<ol>
+<li>
+<p>Open the <code>publishconf.py</code> file and make sure that the <code>SITEURL</code> variable has the value <code>https://your_username.github.io</code> and substitute your GitHub username in it.</p>
+</li>
+<li>
+<p>Now let's generate the site using the following command. This command should generate the site outside the <code>Pelican</code> directory and inside the <code>blog</code> parent directory. Run this command in the <code>Pelican</code> directory.</p>
+</li>
+<li>
+<p>pelican content -o .. -s publishconf.py</p>
+</li>
+<li>
+<p>Make a GitHub repo with the name <code>your_username.github.io</code></p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886229161/db5f4e27-c3d5-4bfd-a15d-989c918d8f97.png"></p>
+<p>and connect it to the local repository by <code>git remote add</code>.</p>
+</li>
+<li>
+<p>Now push everything inside the <code>blog</code> directory to the remote repo on GitHub.</p>
+</li>
+<li>
+<p>Enable GitHub pages for your repo from this site <code>https://github.com/your_username/your_username.github.io/settings/pages</code></p>
+</li>
+<li>
+<p>Now you should have your very own blog hosted at <code>https://your_username.github.io</code> !</p>
+</li>
+</ol>
+<p>But this is just the beginning. Pelican offers a plethora of additional features and customization options. Whether you want to add new functionalities, experiment with different themes, or delve into the world of web dev, you have a robust platform to build upon.</p>
+<p>Happy Bloggin!</p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-09-28T08:34:00+05:30">						28th
+September 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/practical-productivity-hacks.html" rel="bookmark" title="Permalink to Practical Productivity Hacks">Practical Productivity Hacks</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <p>In today's age, the ability to focus and pay attention to one thing is diminishing amongst the younger generation. A large part of the cause can be attributed to social media. Facebook is more of a mass social manipulation experiment than it is a tech company. But we shall not go on that tangent. Here, I will share some hacks which are popular and also some which I have devised on my own which will help you increase your productivity and get things done faster.</p>
+<p>So let's dive in!</p>
+<h1 id="heading-1-breaking-the-instant-gratification-cycle">1. <strong>Breaking the Instant Gratification Cycle</strong></h1>
+<p><a href="https://unsplash.com/photos/tLZhFRLj6nY"><img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"></a></p>
+<h3 id="heading-httpsemojipediaorgmobile-phonecounter-social-media-addiction"><a href="https://emojipedia.org/mobile-phone">📱</a>Counter Social Media Addiction</h3>
+<p>Ever find yourself lost in the quicksand of social media's dopamine rush? It's a universal struggle. From those mesmerizing YouTube shorts to the captivating world of Instagram reels, it's all about those lightning-fast dopamine hits. But here's the savvy twist: use social media with intent. If it's not adding real value, recalibrate. Instagram's tricky waters can leave you high and dry unless you're a creator.</p>
+<p>YouTube is unavoidable due to it being the largest video search engine. But YouTube courses are free only if you are willing to pay attention. <a href="https://unhook.app/"><strong>Unhook.app</strong></a> is a great browser extension that hides the YouTube recommendations feed and the watch next column.</p>
+<p><a href="http://x.com">X.com</a> is in my opinion the best social media for developers, where 'Learning in Public' takes center stage. You will find a lot of people supporting you on your journey and also reaching out to you for opportunities. Just remember, time is precious.</p>
+<h3 id="heading-httpswwwgooglecomurlsatandamprctjandampqandampesrcsandampsourcewebandampcdandampved2ahukewip2sz3xv-aaxwsdpuhhcy1ajiqfnoecb8qaqandampurlhttps3a2f2femojipediaorg2fglobe-with-meridiansandampusgaovvaw38sx0alarvhrwur8fqa09sandampopi89978449-plus-pro-tip"><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;ved=2ahUKEwip2sz3xv-AAxWsdPUHHcY1AJIQFnoECB8QAQ&amp;url=https%3A%2F%2Femojipedia.org%2Fglobe-with-meridians&amp;usg=AOvVaw38sx0AlaRVHRWUR8Fqa09s&amp;opi=89978449">🌐</a> <strong>Plus, Pro Tip:</strong></h3>
+<p>Navigate the content maze with RSS feeds. Stay at the forefront with news, blogs, and even YouTube channels. Yes, Hashnode blogs too!</p>
+<p>The game-changer? Setting up a desktop RSS feed reader. <strong>Thunderbird</strong> email client takes the lead, especially for our Linux aficionados. I use it too. Here is a video on how to set up RSS feeds on Thunderbird -</p>
+<ul>
+<li>
+<p><a href="https://youtu.be/rF3Yrguwy0M?si=8FPhCaGIOVhrRk28">Setup RSS on Thunderbird</a></p>
+</li>
+<li>
+<p><a href="https://authory.com/blog/create-a-youtube-rss-feed-with-vastly-increased-limits">Find RSS links for YouTube channels</a></p>
+</li>
+</ul>
+<h1 id="heading-2-the-power-of-putting-pen-to-paper">2. <strong>The Power of Putting Pen to Paper</strong></h1>
+<p><a href="https://unsplash.com/photos/6qThS1x6P6A"><img alt class="image--center mx-auto" src="https://images.unsplash.com/photo-1572273869941-45732d6f581c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2069&amp;q=80"></a></p>
+<p>The oldest trick, timeless and unfailingly effective put pen to paper. Writing down your goals means writing them down on a piece of paper, preferably a diary or journal, the magic is in the tactile connection. Although this in itself is a good practice; what's better is maintaining a journal.</p>
+<p>Daily journaling ideally consists of writing down goals for the day and then writing a summary of what you achieved and what the next set of goals are at the end of the day. This journal, a mirror to your journey, nurtures accountability and tangible growth.</p>
+<h1 id="heading-3-embrace-full-screen-mode">3. <strong>Embrace Full-Screen Mode</strong></h1>
+<p>We have all been guilty of tab-hopping. I often find myself switching through tabs and windows with my fingers constantly on Ctrl+Tab and Alt+Tab. If you are someone like me who gets distracted easily by other open tabs and applications, you need to start using full-screen mode.</p>
+<p><strong>Multi-tasking is an illusion.</strong> The human brain works similarly to a single-core CPU in this aspect. You cannot handle two processes at the same time, you can only switch between tasks. For us humans, switching between tasks can be very counter-productive.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1693233003752/04bc3bfd-473e-422d-804a-16ea75e7971c.png"></p>
+<p>So whether you're deep into coding or surfing the web, embrace full-screen bliss. It's my go-to secret to obliterate visual clutter. I'm using full-screen even as I write this blog ;)</p>
+<h1 id="heading-4-action-beats-theory-just-write-code">4. 👨💻<strong>Action Beats Theory:</strong> Just Write Code</h1>
+<p>::: {.embed-wrapper}
+::: {.embed-loading}
+::: {.loadingRow}
+:::</p>
+<p>::: {.loadingRow}
+:::
+:::</p>
+<p><a href="https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN">https://youtu.be/QMbx0dTWJIQ?si=x3YmLPz5T2sJxWhN</a>
+:::</p>
+<p><strong>The hardest part about learning to code is writing the actual code.</strong></p>
+<p>Find ways to force yourself to read less, watch less and write code more. Start working on a project and learn on the go. <strong>Counterintuitive? Absolutely. The truth? The learning journey knows no finish line.</strong> I was a person who used to think that I needed to master all the technologies before starting a project. But I realized that there is no end to learning.<br>
+You will find yourself at the same spot from where you began even after spending weeks 'learning'.</p>
+<ul>
+<li>
+<p>Announce that you are working on a project publicly.</p>
+</li>
+<li>
+<p>Participate in hackathons and competitions.</p>
+</li>
+</ul>
+<h4 id="heading-httpsemojipediaorghigh-voltagea-high-octane-hackathon-delivers-more-knowledge-in-two-days-than-months-of-theoretical-pursuit"><a href="https://emojipedia.org/high-voltage"></a>A high-octane hackathon delivers more knowledge in two days than months of theoretical pursuit.</h4>
+<h4 id="heading-let-go-of-any-hesitations-open-your-ide-and-just-start-coding">Let go of any hesitations, open your IDE and just start coding!</h4>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-08-28T12:54:00+05:30">						28th
+August 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html" rel="bookmark" title="Permalink to Understanding the Essentials of Prompt Engineering: A Beginner's Guide">Understanding the Essentials of Prompt Engineering: A Beginner's Guide</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <h2 id="heading-introduction-to-prompt-engineering">Introduction to Prompt Engineering</h2>
+<p>Prompt engineering is a process that involves creating prompts or inputs for natural language processing models. These prompts are used to generate responses that are relevant to the given input. The process of prompt engineering is essential to the development of intelligent systems that can understand human language.</p>
+<p>Prompt engineering involves designing a set of prompts that can be used to train natural language processing models. These prompts can be in the form of questions, statements, or any other input that might be relevant to a particular application. The goal of prompt engineering is to create a set of prompts that will generate accurate and relevant responses from the model.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680877662852/348858ad-103f-4162-9905-f125b7754fa2.jpeg"></p>
+<h2 id="heading-what-is-gpt">What is GPT ?</h2>
+<p>GPT, or Generative Pre-trained Transformer, is a type of natural language processing model that has recently gained popularity. GPT is a language model that is pre-trained on a large dataset of text. The model is trained to generate text similar to the text it was trained on.</p>
+<h2 id="heading-applications-of-prompt-engineering">Applications of Prompt Engineering</h2>
+<p>Prompt engineering has a wide range of applications in various fields. One of the most prominent applications of prompt engineering is <strong>chatbots</strong>. Chatbots are computer programs that use natural language processing to interact with users. Prompt engineering is used to train chatbots to respond to user queries.</p>
+<p>Another application of prompt engineering is in language translation. Language translation systems use prompts to generate translations of text from one language to another. Prompt engineering is used to train these systems to generate accurate translations.</p>
+<h2 id="heading-the-benefits-of-prompt-engineering">The Benefits of Prompt Engineering</h2>
+<p>Prompt engineering has several benefits, including:</p>
+<ul>
+<li>
+<p><strong>Accuracy</strong>: Prompt engineering can help improve the accuracy of natural language processing models. By training the model on a set of relevant prompts, it can generate more accurate responses.</p>
+</li>
+<li>
+<p><strong>Efficiency</strong>: Prompt engineering can help make natural language processing models more efficient. By training the model on a set of relevant prompts, it can generate responses more quickly.</p>
+</li>
+<li>
+<p><strong>Flexibility</strong>: Prompt engineering allows for flexibility in using natural language processing models. By creating a set of relevant prompts, the model can be trained to respond to a wide range of inputs. So instead of having a do-it-all program, we can narrow down our requirements to get more precise responses.</p>
+</li>
+</ul>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680878303596/af000487-e2ac-4a30-aa4f-36430f31b9ad.png"></p>
+<h2 id="heading-how-to-get-started-with-prompt-engineering-a-beginners-guide">How to Get Started with Prompt Engineering: A Beginner's Guide</h2>
+<p>Getting started with prompt engineering can be overwhelming for beginners. Here are some tips on how to get started:</p>
+<ol>
+<li>
+<p><strong>Choose a tool</strong>: There are several tools available for practicing your prompt engineering skills, including GPT-3, Chat Sonic, and many more. Choose a tool that suits your needs.</p>
+</li>
+<li>
+<p><strong>Define your prompts</strong>: Define a set of relevant prompts for your application. These prompts will be used to train the model.</p>
+</li>
+<li>
+<p><strong>Train the model</strong>: Use your set of prompts to train the model. This process can take some time, but it is essential to generating accurate responses.</p>
+</li>
+</ol>
+<h2 id="heading-tips-for-creating-effective-prompts">Tips for Creating Effective Prompts</h2>
+<p>To create effective prompts, consider the following:</p>
+<ol>
+<li>
+<p><strong>Be specific</strong>: The prompts should be specific to your application.</p>
+</li>
+<li>
+<p><strong>Be concise</strong>: The prompts should be concise and easy to understand.</p>
+</li>
+<li>
+<p><strong>Use natural language</strong>: The prompts should be written in natural language to make them more relevant to users.</p>
+</li>
+</ol>
+<h2 id="heading-the-future-of-prompt-engineering">The Future of Prompt Engineering</h2>
+<p>The future of prompt engineering is promising. As the demand for intelligent systems continues to grow, the need for individuals who can efficiently prompt language models will increase. As it is widely said that "AI won't take away your job, but people who use AI will."</p>
+<h2 id="heading-conclusion">Conclusion</h2>
+<p>Prompt engineering is a critical part of learning to utilize Generative AI. It is used to train models to generate accurate and relevant responses to user inputs. By understanding the essentials of prompt engineering, beginners can get started with developing intelligent systems that can understand and respond to human language.</p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-04-07T14:40:00+05:30">						7th
+April 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/create-an-http-server-in-python.html" rel="bookmark" title="Permalink to Create an HTTP server in Python">Create an HTTP server in Python</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <h2 id="heading-introduction">Introduction</h2>
+<p>Whenever we hear the word server, an image of a big bulky computer with lots of cables and no display pops up in our mind. But technically any computer can be a server. A server is just a computer that is 'serving' accessible data on a network.</p>
+<p>In this blog post, we will learn how to create a simple HTTP server in Python.</p>
+<h2 id="heading-how-does-a-server-work">How does a server work?</h2>
+<p><img alt="Spider Man How Does That Work Exactly GIF - Spider Man How Does That Work Exactly How Does It Work GIFs" class="image--center mx-auto" src="https://media.tenor.com/W7C6o9zgj_QAAAAC/spider-man-how-does-that-work-exactly.gif"></p>
+<p>A server works by listening on a specific port for incoming connections from clients. Generally, multiple services which all connect to the Internet are running simultaneously on a server. In simple terms, the port number is used to identify the service to which the request is being made. For example, port 80 is usually used for HTTP (HyperText Transfer Protocol), which is the protocol for web communication.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1680070124220/7fc9b86b-45ff-4499-9e0b-f527452e5138.png"></p>
+<p>When a client connects to a server on a port, the server accepts the connection and creates a socket, which is an endpoint for communication between the two parties. The client and the server then exchange messages using the protocol of the service. For example, for HTTP, the client sends an HTTP request message, which contains information such as the method (GET, POST, etc.), the path (the URL of the resource), and the headers (additional information). The server then processes the request and sends back an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP response message</a>, which contains information such as the status code (200 OK, 404 Not Found, etc.), the headers, and the body (the content of the resource).</p>
+<h2 id="heading-how-to-create-a-server-using-the-httpserver-module-in-python">How to create a server using the http.server module in Python?</h2>
+<h3 id="heading-method-1">Method 1</h3>
+<p>This is the fastest way to get your server up and running and also to local data to other devices on your local network.<br>
+To achieve this we run the following command:</p>
+<div class="highlight"><pre><span></span><code>python -m http.server# Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+</code></pre></div>
+
+<p>This command will host the contents of the current directory on localhost i.e. 127.0.0.1 and default port 8000.</p>
+<p><img alt="That Was Fast GIF - Fast GIFs" class="image--center mx-auto" src="https://media.tenor.com/stcVUHuVy5IAAAAS/fast.gif"></p>
+<p>We can also access the server from another device that is connected to the same network as our server device. To do this, we need to find out the IP address of our server device. For example, on Windows, we can use the <code>ipconfig</code> command in a command prompt, and on Linux or macOS, we can use the <code>ifconfig</code> command in a terminal. We need to note down the IP address that is shown for our network adapter.</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">server</span><span class="w"> </span><span class="o">--</span><span class="nx">bind</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">local</span><span class="o">-</span><span class="nx">ip</span><span class="o">-</span><span class="kd">addr</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">port</span><span class="o">-</span><span class="nx">number</span><span class="p">&gt;</span><span class="nx">python</span><span class="w"> </span><span class="o">-</span><span class="nx">m</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">server</span><span class="w"> </span><span class="o">--</span><span class="nx">bind</span><span class="w"> </span><span class="m m-Double">192.168.1.206</span><span class="w"> </span><span class="mi">9999</span><span class="err">#</span><span class="w"> </span><span class="nx">Serving</span><span class="w"> </span><span class="nx">HTTP</span><span class="w"> </span><span class="nx">on</span><span class="w"> </span><span class="m m-Double">192.168.1.206</span><span class="w"> </span><span class="nx">port</span><span class="w"> </span><span class="mi">9999</span><span class="w"> </span><span class="p">(</span><span class="nx">http</span><span class="p">:</span><span class="c1">//192.168.1.206:9999/) ...</span>
+</code></pre></div>
+
+<p>The above command will host the content of the current directory on the <a href="http://192.168.1.206:9999/">http://192.168.1.206:9999/</a> URL and will be accessible to all the devices on the local network.</p>
+<h3 id="heading-method-2">Method 2</h3>
+<p>To create a slightly more customized server using Python, we can use the built-in http.server module. This module provides classes for handling HTTP requests and responses. We can use the <code>HTTPServer</code> class to create a server object, and the <code>BaseHTTPRequestHandler</code> class to define how to handle requests.</p>
+<p>To use the http.server module, we need to import it into our Python script. Then, we need to create a subclass of <code>BaseHTTPRequestHandler</code> and override the <code>do_GET</code> method. This method is called when the server receives a <a href="http://www.devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET.html#:~:text=The%20HTTP%20GET%20method%20requests%20a%20representation%20of,GET%20should%20only%20retrieve%20data.%20Syntax%20GET%20%2Findex.html">GET request</a> from a client. We can write our logic for handling the request inside this method. For example, we can send back some HTML code to display on the client's browser.</p>
+<p>Next, we need to create an instance of HTTPServer and pass it two arguments: a tuple of an empty string and a port number, and our handler class. The empty string means that the server will listen on all available IP addresses, and the port number is the port where the server will run. We can choose any port number that is not already in use by another program. Finally, we need to call the serve_forever method on the server object to start the server.</p>
+<p>Here is an example of how to create a simple HTTP server in Python:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Import the http.server moduleimport http.server# Create a subclass of BaseHTTPRequestHandlerclass MyHandler(http.server.BaseHTTPRequestHandler):# Override the do_GET methoddef do_GET(self):    # Send a 200 OK response    self.send_response(200)    # Send headers    self.send_header(&quot;Content-type&quot;, &quot;text/html&quot;)    self.end_headers()    # Write some HTML code    self.wfile.write(b&quot;&lt;h1&gt;Hello from Python!&lt;/h1&gt;&quot;)# Create an instance of HTTPServerserver = http.server.HTTPServer((&quot;&quot;, 8000), MyHandler)# Start the serverserver.serve_forever()</span>
+</code></pre></div>
+
+<p>To run this script, we need to save it as a .py file and execute it in a terminal or command prompt. For example, if we save it as <a href="http://server.py">server.py</a>, we can run it with:</p>
+<div class="highlight"><pre><span></span><code>python server.py
+</code></pre></div>
+
+<p>This will start the server on port 8000. To access the server from a web browser, we need to enter the URL <a href="http://localhost:8000">http://localhost:8000</a> or <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>. This will display the HTML code that we wrote in the do_GET method. If we enter the IP address of the server then, we can enter the URL http://\&lt;ip_address&gt;:8000 in a web browser on another device, where \&lt;ip_address&gt; is the IP address of our server device. This is how we can create a simple HTTP server in Python using http.server module. We can customize our handler class to handle different types of requests and send different types of responses.</p>
+<h3 id="heading-testing-the-output">Testing the output</h3>
+<p>You can test the output by simply opening the link on you browser or by using curl, which is a command line program to make a request to the server from the command line.</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">g</span><span class="p">.</span><span class="w"> </span><span class="nx">curl</span><span class="w"> </span><span class="nx">http</span><span class="p">:</span><span class="c1">//0.0.0.0:8000/curl http://&lt;ip_address&gt;:&lt;port_number&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-03-29T12:19:00+05:30">						29th
+March 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html" rel="bookmark" title="Permalink to Starting your coding journey might not be as hard as you think…">Starting your coding journey might not be as hard as you think…</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <p><strong>You could be anyone, a high-school student going down the online rabbit hole or an adult who is frustrated with his current job and looking to switch careers. If you are looking to start your journey as a programmer, this article will help you get up-to-speed on how to start your coding adventure.</strong></p>
+<h1 id="heading-it-is-easy-to-start-programming"><strong>It is easy to start programming</strong></h1>
+<p>If you dont mind sitting in front of a computer and staring at your code for long hours then programming just might be your thing ;)</p>
+<p>Programming is just like maths in some ways. The only things you need to start doing mathematics are a pen, a piece of paper and your brain. Likewise, a computer of any form factor (even your smartphone) and your brain are all you need to start coding. There is no need for any swanky new setup. Any computer which runs reasonably smoothly will be enough for you to start coding. Tools like Replit make it easy for newcomers to start without setting up a coding environment. Replit is even available as an app for Android.</p>
+<p>It would help if you start with a goal. But even if you dont have a goal you should do your homework and find out which path suits you the best.</p>
+<p>The best way to learn to code is through projects. If you start learning the language you may find it boring on the other hand if you start working on a project and learn the language on-the-go chances are you will find yourself learning a new language and its applications simultaneously.</p>
+<p>What sources you refer to solely depends on your taste but there is one thing you should keep in mind and that is .</p>
+<h1 id="heading-tutorial-hell"><strong>Tutorial hell</strong> 💀</h1>
+<p>If you feel like learning through books is more like your thing then there are plenty of great books to pick from. Even then YouTube is likely to be your first choice to look for content while learning new topics and skills. But remember, while using free services the product is the user. You could find yourself in Tutorial hell, which means you are stuck watching tutorial upon tutorial from the recommendations without learning anything substantial. The YouTube algorithm is made in a way that coaxes you into watching more and more videos.</p>
+<p>Remember, <strong>real learning</strong> happens when through hands-on projects. Not only do you need a good roadmap, but also an environment where you can learn and apply your skills at the same time. This brings us to the next point .</p>
+<h1 id="heading-benefits-of-paid-platforms"><strong>Benefits of paid platforms</strong></h1>
+<p>It is totally fine if you choose to use YouTube as your primary source of learning, there are a ton of amazing courses on YouTube which are free. But still, they might feel incomplete. Paid courses on Platforms like Codedamn, Udemy or Coursera have courses that have carefully curated content that is regularly updated. Codedamn even provides you with virtual code playgrounds to practice your skills.</p>
+<p>Still, it is recommended that you try out free content on free platforms before committing to a paid course. There are many domains in programming. Web development, Data Science, AI, Machine learning, Game Development, and Mobile development are some popular domains. You should try and get your hands dirty in at least two different domains to understand which one is for you.</p>
+<h1 id="heading-do-you-need-to-learn-maths-to-start-coding"><strong>Do you need to learn Maths to start coding?</strong></h1>
+<p>The answer is no.</p>
+<p>Having a good grasp of maths would never hurt anybody but its not necessary if you are just starting. What you need to learn is the skill of <strong>Logic Building</strong> and <strong>Problem Solving</strong>.</p>
+<p>Computers were invented to solve complex problems and do tedious, repetitive tasks for humans. Learning how to use conditions and loops to emulate real-life scenarios and solve real-world problems is a part of Logic Building. These skills can only be attained through practice and more practice!</p>
+<p>If your goal is to be a Data Scientist or an AI/ML engineer then mathematics becomes a necessary part of your skill set.</p>
+<h1 id="heading-consistency-is-the-best-virtue-of-a-programmer"><strong>Consistency is the best virtue of a programmer</strong></h1>
+<p>Just like Honesty is the best policy, Consistency is the best virtue of a programmer.</p>
+<p>Learning to code is difficult. At times you may get stuck on a problem for hours and feel like giving up your coding adventure altogether. It happens to all of us. But you must remind yourself that getting stuck and facing problems is all a part of the journey.</p>
+<p>It often happens to me that I feel like there is no way to solve an error, but when I look at it again the next day I find out that it was just a silly mistake! It is during times like these you learn the most crucial skill as a programmer which is How to GOOGLE effectively.</p>
+<p>Yes, you read that correctly, searching for ways to solve an error is a big part of a programmers job. If you come across an error there is an almost 100% chance that someone has already faced and solved that error. The best website for this purpose is StackOverflow. Almost every error you come across will have its solution on StackOverflow.</p>
+<h2 id="heading-to-conclude-there-is-hardly-anything-you-need-to-start-coding-just-down-a-cup-of-coffee-and-go-for-it"><strong>To conclude, there is hardly anything you need to start coding. Just down a cup of coffee and go for it!</strong></h2>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-01-31T13:12:00+05:30">						31st
+January 2023
+					</time>
+				</footer>
+			</article></li>
+		<li><article class="hentry">
+				<header>
+					<h2 class="entry-title">
+						<a href="http://localhost:8000/my-contributions-kwoc-2022.html" rel="bookmark" title="Permalink to My contributions @ KWoC 2022">My contributions @  KWoC 2022</a>
+					</h2> 
+				</header>
+				<div class="entry-content"> <h3 id="heading-ps-i-got-selected-as-a-top-contributorhttpsgithubcomkossiitkgppublic-filesblobmasterkwoc2022-certificatesstudentsahil-sagwekar2652pdf">P.S. I got selected as a <a href="https://github.com/kossiitkgp/public-files/blob/master/KWoC/2022-Certificates/Student/sahil-sagwekar2652.pdf">top contributor</a> 🎉</h3>
+<h3 id="heading-introduction">Introduction</h3>
+<p>As a new open-source contributor, participating in the Kharagpur winter of code 2022 event was an incredibly valuable experience for me. I had the opportunity to work on an open-source project and make meaningful contributions to their codebase.</p>
+<h3 id="heading-projects-i-worked-on">Projects I worked on</h3>
+<p><a href="https://github.com/sadbro/pydirman">Pydirman</a></p>
+<h3 id="heading-list-of-pull-requests-made-by-me">List of pull requests made by me</h3>
+<ul>
+<li>
+<p><a href="https://github.com/sadbro/pydirman/pull/13">https://github.com/sadbro/pydirman/pull/13</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sadbro/pydirman/pull/14">https://github.com/sadbro/pydirman/pull/14</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sadbro/pydirman/pull/15">https://github.com/sadbro/pydirman/pull/15</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sadbro/pydirman/pull/18">https://github.com/sadbro/pydirman/pull/18</a></p>
+</li>
+</ul>
+<h3 id="heading-summary">Summary</h3>
+<p>I work on Linux and use the command line all the time. This is probably the reason I gravitated towards Pydirman because it is a command-line application for Linux systems.</p>
+<p>The first issue I faced with the project was with the installation. The project was initially developed only for Debian Linux. So naturally, my first step was to port the project for Arch Linux (my working distro). I had to replace the bash commands with the package manager for Arch Linux. Features like user input for required packages and optimising the path of the installed files were added and a single setup.py was created.</p>
+<p>Once I had the project installed I started using the project on a daily basis. Which exposed some bugs and inadequacies. The default text editor used was nano, which is a command line text editor. The command line text editor which is most popular is 'vim'. So I modified the code so that users can use their choice of text editor by specifying it in the '.pydirman.config' configuration file. Another issue concerned with the 'test' command was fixed within this same pull request.</p>
+<p>The next pull request I've updated the README.md to reflect the changes in the project. Also added the support for python debugger, this will enable the user to use the python debugger inside the Pydirman 'test' interface. Added support to execute .pyw python files alongside normal .py files. Finally created an uninstall.py file which removes all the installed files.</p>
+<h3 id="heading-future-work">Future Work</h3>
+<ol>
+<li>
+<p>Making a separate terminal emulator with python tkinter to display the 'test' interface.</p>
+</li>
+<li>
+<p>Adding support for the 'u - open USB drive' command for other distros.</p>
+<p>(referenced in the Issues tab)</p>
+</li>
+<li>
+<p>Working on other projects like: <a href="https://github.com/exitflynn/DeGrasse">DeGrasse - Python Discord Bot Using NASA Space API's and more</a>, <a href="https://github.com/proffapt/code-runner">Code Runner</a></p>
+</li>
+</ol>
+<h3 id="heading-learnings">Learnings</h3>
+<p>One of the most important things I learned during my time as a KWoC participant was the importance of effective communication. I also learned the importance of asking for help when needed, as there were always team members and mentors available to support me.</p>
+<p>I also gained valuable experience in project management and time management, as I had to juggle my KWoC commitments with my other responsibilities.</p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div> </div>
+				<footer class="post-info">
+					Written by Sahil Sagwekar on 
+					<time class="published" datetime="2023-01-08T20:41:00+05:30">						8th
+January 2023
+					</time>
+				</footer>
+			</article></li>
+	</ol>
+</main>
+        
+        <aside id="sidebar">
+                <h2>About me</h2>
+                <p>
+                I work at Red Hat. And I am full time assignee at Linaro.
+                Mostly working on AArch64 support in several projects.
+                </p>
+
+                <p>
+                I am also known as 'hrw' (<a href="/2007/04/26/how-to-pronounce-haerwu/">/hʌ eə vʊ/</a>).
+                </p>
+
+		<h2>Search</h2>
+		<div id="search"></div>
+
+                <h2>Privacy policy</h2>
+                <p>This website does not use cookies. Server logs contain IP
+                   address and user agent info. You can leave if you disagree.</p>
+                <p><a href="/2018/05/24/gdpr/">GDPR information</a> if you want to read such policies.</p>
+
+                <h2>Useful tables</h2>
+
+                <ul>
+                        <li>
+                                <a href="/download/tables/bsa-sbsa.html">BSA and
+                                        SBSA checklists</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/syscalls.html">Linux kernel
+                                        system calls for all architectures</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/arm-socs.html">AArch64 SoC features</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/arm-cpu-cores.html">AArch64 cpu core information</a>
+                        </li>
+                        <li>
+                                <a href="/download/tables/fosdem/">FOSDEM videos</a>
+                        </li>
+                </ul>
+
+                <h2>Recent posts</h2>
+                <ul>
+                        <li>
+                                <a href="http://localhost:8000/how-to-deploy-a-flask-app-to-production.html">How to deploy a Flask app to production</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html">How to solve "failed to mount: no such device" error with the docker daemon</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/make-your-own-static-blog-using-pelican.html">Make your own static blog using Pelican</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/practical-productivity-hacks.html">Practical Productivity Hacks</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/understanding-the-essentials-of-prompt-engineering-a-beginners-guide.html">Understanding the Essentials of Prompt Engineering: A Beginner's Guide</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/create-an-http-server-in-python.html">Create an HTTP server in Python</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/starting-your-coding-journey-might-not-be-as-hard-as-you-think.html">Starting your coding journey might not be as hard as you think…</a>
+                        </li>
+                        <li>
+                                <a href="http://localhost:8000/my-contributions-kwoc-2022.html">My contributions @  KWoC 2022</a>
+                        </li>
+                </ul>
+        </aside>
+        
+        <footer id="site-footer">
+                <p>
+                        Copyright by Marcin Juszkiewicz. Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.
+                </p>
+        </footer>
+	<link  href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+	<script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			new PagefindUI({
+				element: "#search",
+				showImages: false,
+			});
+		});
+	</script>
 </body>
 </html>

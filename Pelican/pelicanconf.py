@@ -23,45 +23,19 @@ LINKS = (
     ("You can modify those links in your config file", "#"),
 )
 
-# Social widget
-SOCIAL = (
-    ("linkedin", "https://www.linkedin.com/in/sahil-sagwekar-0b955b223/"),
-    ("github", "https://github.com/sahil-sagwekar2652"),
-    ("twitter", "https://twitter.com/sagwekar_sahil"),
-)
-
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
 # Theme setting
-# PELICAN-BLUE
-THEME = "/home/sahil/Sahil/blog/Pelican/pelican-themes/pelican-blue"
+THEME = "/home/sahil/Sahil/blog/Pelican/pelican-themes/pelican-haerwu-theme"
 
-SIDEBAR_DIGEST = "Developer and X Poster"
+THEME_SIDEBAR_ABOUT = "<p>Developer and X Poster</p>"
 
-# FAVICON = 'url-to-favicon'
+THEME_SIDEBAR_LINKS = {
+        "GitHub" : "https://github.com/sahil-sagwekar2652",
+        "linkedin" : "https://www.linkedin.com/in/sahil-sagwekar-0b955b223/",
+        "twitter" : "https://twitter.com/sagwekar_sahil",
+        }
 
-DISPLAY_PAGES_ON_MENU = True
-
-TWITTER_USERNAME = "sagwekar_sahil"
-
-MENUITEMS = (
-    ("Blog", "https://sahil-sagwekar2652.github.io"),
-    ("About", "https://sahil-sagwekar2652.github.io/authors.html"),
-    (
-        "Resume",
-        "https://drive.google.com/file/d/1rXOBr8sOUBVSKtQ0aIw3gD1TF7fBghQ-/view?usp=drive_link",
-    ),
-)
-
-
-# CSS_FILE = "/home/sahil/Sahil/blog/Pelican/pelican-themes/pelican-blue/static/css/style.css"
-
-## SUNDOWN
-# THEME = "/home/sahil/Sahil/blog/Pelican/pelican-themes/monospace"
-
-# MD_EXTENSIONS = ["codehilite(css_class=codehilite code)"]
-
-# DESCRIPTION = "This is where I write some important stuff."
