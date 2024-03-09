@@ -1,6 +1,7 @@
 Title: How to solve "failed to mount: no such device" error with the docker daemon
 Date: 2023-12-28 20:24
 Author: Sahil Sagwekar
+Category: devops
 Slug: how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon
 
 Solution {#heading-solution}

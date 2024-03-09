@@ -1,6 +1,7 @@
 Title: How to deploy a Flask app to production
 Date: 2024-01-24 16:08
 Author: Sahil Sagwekar
+Category: devops
 Slug: how-to-deploy-a-flask-app-to-production
 
 [Link to the GitHub repository](https://github.com/sahil-sagwekar2652/Personal-blog-website)
