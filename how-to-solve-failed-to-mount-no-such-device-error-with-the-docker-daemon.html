@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>How to solve "failed to mount: no such device" error with the docker daemon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Sahil Nilesh Sagwekar">
+
+  <link rel="shortcut icon" href="">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="Sahil's Blog">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+    <link href="https://sahilhacks.co/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sahil's Blog ATOM Feed" />
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="sagwekar_sahil">
+  <meta name="twitter:image" content="">
+
+<meta name="twitter:creator" content="sagwekar_sahil">
+<meta name="twitter:url" content="https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html">
+<meta name="twitter:title" content="Sahil's Blog ~ How to solve "failed to mount: no such device" error with the docker daemon">
+<meta name="twitter:description" content="<h1 id="heading-solution">Solution</h1>
+<p><strong>The solution to this problem could be as simple as rebooting your system.</strong></p>
+<p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
+<p>Upon …</p>">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="Sahil's Blog ~ How to solve "failed to mount: no such device" error with the docker daemon" />
+<meta property="og:description" content="<h1 id="heading-solution">Solution</h1>
+<p><strong>The solution to this problem could be as simple as rebooting your system.</strong></p>
+<p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
+<p>Upon …</p>" />
+<meta property="og:image" content="" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://sahilhacks.co"><img id="avatar" src=""></a></center>-->
+    <h1>Sahil's Blog</h1>
+      <p>Developer and X Poster</p>
+    <br>
+
+      <a class="twitter-follow-button"
+      href="https://twitter.com/sagwekar_sahil"
+      data-show-count="false"
+      data-lang="en">
+      Follow @twitterdev
+      </a>
+      <script type="text/javascript">
+      window.twttr = (function (d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src= "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+      </script>
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io">Blog</a></li>
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io/authors.html">About</a></li>
+          <li><a class="nav__link" href="https://drive.google.com/file/d/1rXOBr8sOUBVSKtQ0aIw3gD1TF7fBghQ-/view?usp=drive_link">Resume</a></li>
+         
+         
+      </ul>
+    </nav>
+
+    <p class="social">
+        <a href="https://www.linkedin.com/in/sahil-sagwekar-0b955b223/" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/linkedin.png"></a>
+        <a href="https://github.com/sahil-sagwekar2652" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/github.png"></a>
+        <a href="https://twitter.com/sagwekar_sahil" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/twitter.png"></a>
+      <a href="https://sahilhacks.co/feeds/all.atom.xml" rel="alternate">
+        <img src="https://sahilhacks.co/theme/images/icons/rss.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li class="active"><a href="https://sahilhacks.co/category/misc.html">misc</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html" rel="bookmark" title="Permalink to How to solve "failed to mount: no such device" error with the docker daemon">How to solve "failed to mount: no such device" error with the docker daemon</a></h2>
+        <div class="entry-content blog-post">
+            <h1 id="heading-solution">Solution</h1>
+<p><strong>The solution to this problem could be as simple as rebooting your system.</strong></p>
+<p>The problem is caused mostly when the kernel updates itself during a system update. In my case, I was on Arch Linux when I ran the command <code>sudo pacman -Syu</code> to start a system update.</p>
+<p>Upon completing the update, an error came up on my screen when I tried to run <code>docker</code> .</p>
+<p>I used the following command to check the docker daemon logs - (Only works for systemd-based distros)</p>
+<div class="highlight"><pre><span></span><code>sudo journalctl -xeu docker.service
+</code></pre></div>
+
+<p>This was the <strong>output</strong> -</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703598770959/abade4a3-c9dc-419d-b89b-b2289e59949c.png"></p>
+<p>The first error message says - <code>msg="failed to mount overlay: no such device" storage-driver=overlay2</code></p>
+<p>Let us try to understand what <code>overlay</code> is and what are Layers in the context of Docker containers.</p>
+<h1 id="heading-docker-layers">Docker Layers</h1>
+<p>Containers were meant to be a better and more efficient alternative to VMs, the preferred solution for running applications in isolation. Individual VMs do not share any resources between them. Each VM has its own full-fledged operating system which creates its own file system. Even two VMs of the same operating system share nothing with each other. While this kind of setup also has its use cases, it's a waste of resources in our context. Containers solve this problem by sharing resources.</p>
+<p>What is an image? It's a collection of filesystem layers and metadata. These layers are together run by Docker as a container. Containers are a running instance of an image. We can run multiple containers of the same image.</p>
+<p>Docker implements a <strong>copy-on-write</strong> mechanism. Multiple containers share the same base system of the base image. The base directory of the image is read-only and all the changes are recorded in a different directory which is then layered on top of the base directory. The Overlay driver is used by Docker to implement it's layered file system. Layers can be shared across multiple running containers.</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png"></p>
+<h4 id="heading-references">References :</h4>
+<p>Learn more about docker layers</p>
+<ul>
+<li>
+<p><a href="https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/">https://jvns.ca/blog/2019/11/18/how-containers-work--overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://www.petermcconnell.com/posts/docker-overlayfs/">https://www.petermcconnell.com/posts/docker-overlayfs/</a></p>
+</li>
+<li>
+<p><a href="https://youtu.be/FCk5ylLjnxw">https://youtu.be/FCk5ylLjnxw</a></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div>
+        </div>
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://sahilhacks.co/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://sahilhacks.co/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
+            <span class="post_date">Thu 28 December 2023</span>
+            <div><span>Tags : </span>
+            </div>
+
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html&text=How to solve "failed to mount: no such device" error with the docker daemon&via=sagwekar_sahil"><img src="https://sahilhacks.co/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html&t=How to solve "failed to mount: no such device" error with the docker daemon"><img src="https://sahilhacks.co/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html&title=How to solve "failed to mount: no such device" error with the docker daemon" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=How to solve "failed to mount: no such device" error with the docker daemon&amp;body=Viens découvrir un article à propos de [How to solve "failed to mount: no such device" error with the docker daemon] sur le site de Sahil Nilesh Sagwekar. https://sahilhacks.co/how-to-solve-failed-to-mount-no-such-device-error-with-the-docker-daemon.html" title="Share by Email" target="_blank"><img src="https://sahilhacks.co/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="https://getpelican.com/">Pelican</a> 
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>

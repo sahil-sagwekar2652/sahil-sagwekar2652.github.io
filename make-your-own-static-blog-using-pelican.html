@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>Make your own static blog using Pelican</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Sahil Nilesh Sagwekar">
+
+  <link rel="shortcut icon" href="">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="Sahil's Blog">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+    <link href="https://sahilhacks.co/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sahil's Blog ATOM Feed" />
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="sagwekar_sahil">
+  <meta name="twitter:image" content="">
+
+<meta name="twitter:creator" content="sagwekar_sahil">
+<meta name="twitter:url" content="https://sahilhacks.co/make-your-own-static-blog-using-pelican.html">
+<meta name="twitter:title" content="Sahil's Blog ~ Make your own static blog using Pelican">
+<meta name="twitter:description" content="<p>In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and …</p>">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="Sahil's Blog ~ Make your own static blog using Pelican" />
+<meta property="og:description" content="<p>In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and …</p>" />
+<meta property="og:image" content="" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://sahilhacks.co"><img id="avatar" src=""></a></center>-->
+    <h1>Sahil's Blog</h1>
+      <p>Developer and X Poster</p>
+    <br>
+
+      <a class="twitter-follow-button"
+      href="https://twitter.com/sagwekar_sahil"
+      data-show-count="false"
+      data-lang="en">
+      Follow @twitterdev
+      </a>
+      <script type="text/javascript">
+      window.twttr = (function (d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src= "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+      </script>
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io">Blog</a></li>
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io/authors.html">About</a></li>
+          <li><a class="nav__link" href="https://drive.google.com/file/d/1rXOBr8sOUBVSKtQ0aIw3gD1TF7fBghQ-/view?usp=drive_link">Resume</a></li>
+         
+         
+      </ul>
+    </nav>
+
+    <p class="social">
+        <a href="https://www.linkedin.com/in/sahil-sagwekar-0b955b223/" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/linkedin.png"></a>
+        <a href="https://github.com/sahil-sagwekar2652" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/github.png"></a>
+        <a href="https://twitter.com/sagwekar_sahil" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/twitter.png"></a>
+      <a href="https://sahilhacks.co/feeds/all.atom.xml" rel="alternate">
+        <img src="https://sahilhacks.co/theme/images/icons/rss.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li class="active"><a href="https://sahilhacks.co/category/misc.html">misc</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://sahilhacks.co/make-your-own-static-blog-using-pelican.html" rel="bookmark" title="Permalink to Make your own static blog using Pelican">Make your own static blog using Pelican</a></h2>
+        <div class="entry-content blog-post">
+            <p>In the world of website creation, simplicity and efficiency are key. Enter Pelican, a powerful static site generator written in Python that's perfect for crafting blogs, portfolios, and straightforward websites. In this blog post, I'll guide you through the process of creating your own static blog site using Pelican and demonstrate how you can host it on GitHub Pages, all within a matter of minutes. Whether you're a novice or a seasoned developer, this guide will help you establish a minimal setup. And if you're itching to take your blog further, don't worry - Pelican makes customization astonishingly easy.</p>
+<p>Now, let's dive into the world of Pelican and start building your static blog from scratch.7</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826784018/231ae782-8abb-4738-a61a-c8abc648a0e1.png"></p>
+<h3 id="heading-step-1">Step 1</h3>
+<p>Create a directory named <code>blog</code> and then create another <code>Pelican</code> directory inside it.</p>
+<div class="highlight"><pre><span></span><code>blog/ Pelican
+</code></pre></div>
+
+<p><code>cd</code> into the Pelican directory and start by creating a Python virtual environment using the tool of your choice and installing the pelican package from pip.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">../blog/Pelican $ python -m venv venv../blog/Pelican $ source venv/bin/activate(venv) ../blog/Pelican $ python -m pip install pelican</span>
+</code></pre></div>
+
+<p>The default content source format supported by Pelican is .rst (reStructured text). If you plan on using Markdown then you need to install the following package too.</p>
+<div class="highlight"><pre><span></span><code><span class="n">python</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="ss">&quot;pelican[markdown]&quot;</span>
+</code></pre></div>
+
+<h3 id="heading-step-2">Step 2</h3>
+<p>Pelican has a <code>pelican-quickstart</code> script which will help us to setup the basic settings interactively. It will also generate the desired directory structure for us. So let's start by using it. Here is an example -</p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695826741531/c44349a2-3f8b-4561-85dd-65cc62c47399.png"></p>
+<p>Great! Now you have your pelican blog set up locally. Your file structure should now look like this -</p>
+<div class="highlight"><pre><span></span><code>blog/ Pelican     content        (pages)     output     tasks.py     Makefile     pelicanconf.py       # Main settings file     publishconf.py       # Settings to use when ready to publish
+</code></pre></div>
+
+<p><strong>Important</strong></p>
+<p>You need to add a 'Metadata' section at the start of every content file. The metadata format for markdown content is as below -</p>
+<div class="highlight"><pre><span></span><code><span class="n">Title</span><span class="o">:</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">titleDate</span><span class="o">:</span><span class="w"> </span><span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span><span class="w"> </span><span class="mi">10</span><span class="o">:</span><span class="mi">20</span><span class="n">Modified</span><span class="o">:</span><span class="w"> </span><span class="mi">2010</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">05</span><span class="w"> </span><span class="mi">19</span><span class="o">:</span><span class="mi">30</span><span class="n">Category</span><span class="o">:</span><span class="w"> </span><span class="n">PythonTags</span><span class="o">:</span><span class="w"> </span><span class="n">pelican</span><span class="o">,</span><span class="w"> </span><span class="n">publishingSlug</span><span class="o">:</span><span class="w"> </span><span class="n">my</span><span class="o">-</span><span class="kd">super</span><span class="o">-</span><span class="n">postAuthors</span><span class="o">:</span><span class="w"> </span><span class="n">Alexis</span><span class="w"> </span><span class="n">Metaireau</span><span class="o">,</span><span class="w"> </span><span class="n">Conan</span><span class="w"> </span><span class="n">DoyleSummary</span><span class="o">:</span><span class="w"> </span><span class="n">Short</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">feedsThis</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">my</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">blog</span><span class="w"> </span><span class="n">post</span><span class="o">.</span>
+</code></pre></div>
+
+<p>You can now start writing up some amazing articles inside the <code>blog/Pelican/content</code> directory.</p>
+<h3 id="heading-step-3-importing-an-existing-blog-optional">Step 3 - Importing an existing blog (optional)</h3>
+<p><em>You can skip this step if you don't wish to import your data from blogging platforms like Medium, WordPress, Tumblr etc.</em></p>
+<p>Detailed documentation for this step can be found at <a href="https://docs.getpelican.com/en/latest/importer.html">https://docs.getpelican.com/en/latest/importer.html</a></p>
+<p>Here we'll look at how to import your pre-existing medium.com blog as I feel it's one of the most used platforms</p>
+<ol>
+<li>
+<p>We will use the <code>pelican-import</code> tool to import our data from medium. <code>pelican-import</code> requires some additional dependencies which can be installed through the following steps.</p>
+<ul>
+<li>feedparser</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>    pip install feedparser
+</code></pre></div>
+
+<ul>
+<li>
+<p>Pandoc<br>
+   See the <a href="https://pandoc.org/installing.html">Pandoc site</a> for operating-system-specific installation.</p>
+</li>
+<li>
+<p>Medium supports RSS feeds. Refer to <a href="https://help.medium.com/hc/en-us/articles/214874118-Using-RSS-feeds-of-profiles-publications-and-topics">this</a> article for supported RSS feeds.</p>
+<p>For importing blogs from a profile, use the following command.</p>
+<div class="highlight"><pre><span></span><code> <span class="n">pelican</span><span class="o">-</span><span class="kn">import</span> <span class="o">--</span><span class="n">feed</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">medium</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">feed</span><span class="o">/</span><span class="nd">@username</span> <span class="o">-</span><span class="n">m</span> <span class="n">markdown</span>
+</code></pre></div>
+
+<p>I have used markdown as the format in the above example, the default is reStructured Text.</p>
+<p>The content will now be imported into the <code>blog/Pelican/content</code> directory.</p>
+</li>
+</ul>
+<h3 id="heading-step-4">Step 4</h3>
+<p>The default site generated by Pelican is plain HTML. Who likes to read plain HTML? No one. So let's spruce up our blog with a UI theme. (If you generate your content using Step 3, you might have a theme installed by default.)</p>
+<p>Pelican has a large collection of community-maintained themes to choose from. To use these themes, we need to clone the themes repository locally.</p>
+<p>Before we do that, make sure to create a git repository in the <code>blog</code> directory. Create a <code>.gitignore</code> file and add the following lines to it.</p>
+<div class="highlight"><pre><span></span><code>Pelican/pelican-themesPelican/venv
+</code></pre></div>
+
+<p>Now let's clone the pelican-themes repo. Run the following command inside the <code>blog/Pelican</code> directory.</p>
+<div class="highlight"><pre><span></span><code>git clone --recursive https://github.com/getpelican/pelican-themes ./pelican-themes
+</code></pre></div>
+
+<p>We will use <code>pelican-themes</code> command to install a new theme. Here, I'm installing the <a href="https://github.com/Parbhat/pelican-blue">Pelican blue</a> theme.</p>
+<div class="highlight"><pre><span></span><code>pelican-themes -i ./pelican-themes/pelican-blue
+</code></pre></div>
+
+<p>Now, we need to add this theme to our <code>pelicanconf.py</code> settings file. Note that every theme might have different settings which should be mentioned in the respective theme's GitHub repo. Copy the settings mentioned in the <a href="https://github.com/Parbhat/pelican-blue">Pelican blue</a> repo README. The theme should look like this - <a href="https://sahil-sagwekar.github.io">https://sahil-sagwekar.github.io</a></p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886054892/9b910376-ea80-48ca-8dd0-fe1e72821e53.png"></p>
+<p>To test the blog locally, use the <code>make devserver</code> command. It will host your site at <code>localhost:8000</code> by default and automatically regenerate on changes.</p>
+<p><strong>NOTE</strong> - Blank lines in the original blog post might result in some artifacts in the markdown content, make sure to check the files before publishing.</p>
+<h3 id="heading-step-5">Step 5</h3>
+<p>Let's publish the site using GitHub pages so that anyone in the world can read your blog.</p>
+<ol>
+<li>
+<p>Open the <code>publishconf.py</code> file and make sure that the <code>SITEURL</code> variable has the value <code>https://your_username.github.io</code> and substitute your GitHub username in it.</p>
+</li>
+<li>
+<p>Now let's generate the site using the following command. This command should generate the site outside the <code>Pelican</code> directory and inside the <code>blog</code> parent directory. Run this command in the <code>Pelican</code> directory.</p>
+</li>
+<li>
+<p>pelican content -o .. -s publishconf.py</p>
+</li>
+<li>
+<p>Make a GitHub repo with the name <code>your_username.github.io</code></p>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1695886229161/db5f4e27-c3d5-4bfd-a15d-989c918d8f97.png"></p>
+<p>and connect it to the local repository by <code>git remote add</code>.</p>
+</li>
+<li>
+<p>Now push everything inside the <code>blog</code> directory to the remote repo on GitHub.</p>
+</li>
+<li>
+<p>Enable GitHub pages for your repo from this site <code>https://github.com/your_username/your_username.github.io/settings/pages</code></p>
+</li>
+<li>
+<p>Now you should have your very own blog hosted at <code>https://your_username.github.io</code> !</p>
+</li>
+</ol>
+<p>But this is just the beginning. Pelican offers a plethora of additional features and customization options. Whether you want to add new functionalities, experiment with different themes, or delve into the world of web dev, you have a robust platform to build upon.</p>
+<p>Happy Bloggin!</p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div>
+        </div>
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://sahilhacks.co/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://sahilhacks.co/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
+            <span class="post_date">Thu 28 September 2023</span>
+            <div><span>Tags : </span>
+            </div>
+
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://sahilhacks.co/make-your-own-static-blog-using-pelican.html&text=Make your own static blog using Pelican&via=sagwekar_sahil"><img src="https://sahilhacks.co/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://sahilhacks.co/make-your-own-static-blog-using-pelican.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://sahilhacks.co/make-your-own-static-blog-using-pelican.html&t=Make your own static blog using Pelican"><img src="https://sahilhacks.co/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://sahilhacks.co/make-your-own-static-blog-using-pelican.html&title=Make your own static blog using Pelican" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=Make your own static blog using Pelican&amp;body=Viens découvrir un article à propos de [Make your own static blog using Pelican] sur le site de Sahil Nilesh Sagwekar. https://sahilhacks.co/make-your-own-static-blog-using-pelican.html" title="Share by Email" target="_blank"><img src="https://sahilhacks.co/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="https://getpelican.com/">Pelican</a> 
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>

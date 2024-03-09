@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en" itemscope itemtype="https://schema.org/Person">
+<head>
+  <meta charset="utf-8">
+  <!-- Site Meta Data -->
+  <title>How to deploy a Flask app to production</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Sahil Nilesh Sagwekar">
+
+  <link rel="shortcut icon" href="">
+
+  <!-- schema.org -->
+  <meta itemprop="name" content="Sahil's Blog">
+  <meta itemprop="image" content="">
+  <meta itemprop="description" content="">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <!-- Style Meta Data -->
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://sahilhacks.co/theme/css/pygments.css" type="text/css" />
+
+  <!-- Feed Meta Data -->
+    <link href="https://sahilhacks.co/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Sahil's Blog ATOM Feed" />
+
+  <!-- Twitter Feed -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="sagwekar_sahil">
+  <meta name="twitter:image" content="">
+
+<meta name="twitter:creator" content="sagwekar_sahil">
+<meta name="twitter:url" content="https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html">
+<meta name="twitter:title" content="Sahil's Blog ~ How to deploy a Flask app to production">
+<meta name="twitter:description" content="<p>Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website</p>
+<h1 id="heading-why-use-docker">Why use Docker?</h1>
+<h4 id="heading-tldr-agility-portability-and-isolation">TLDR - Agility, Portability and Isolation</h4>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png?auto=compress,format&amp;format=webp"></p>
+<p>You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would …</p>">
+
+<!-- Facebook Meta Data -->
+<meta property="og:title" content="Sahil's Blog ~ How to deploy a Flask app to production" />
+<meta property="og:description" content="<p>Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website</p>
+<h1 id="heading-why-use-docker">Why use Docker?</h1>
+<h4 id="heading-tldr-agility-portability-and-isolation">TLDR - Agility, Portability and Isolation</h4>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png?auto=compress,format&amp;format=webp"></p>
+<p>You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would …</p>" />
+<meta property="og:image" content="" />
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside>
+    <!--<center><a href="https://sahilhacks.co"><img id="avatar" src=""></a></center>-->
+    <h1>Sahil's Blog</h1>
+      <p>Developer and X Poster</p>
+    <br>
+
+      <a class="twitter-follow-button"
+      href="https://twitter.com/sagwekar_sahil"
+      data-show-count="false"
+      data-lang="en">
+      Follow @twitterdev
+      </a>
+      <script type="text/javascript">
+      window.twttr = (function (d, s, id) {
+        var t, js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src= "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+      }(document, "script", "twitter-wjs"));
+      </script>
+
+    <nav class="nav">
+      <ul class="list-bare">
+      
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io">Blog</a></li>
+          <li><a class="nav__link" href="https://sahil-sagwekar2652.github.io/authors.html">About</a></li>
+          <li><a class="nav__link" href="https://drive.google.com/file/d/1rXOBr8sOUBVSKtQ0aIw3gD1TF7fBghQ-/view?usp=drive_link">Resume</a></li>
+         
+         
+      </ul>
+    </nav>
+
+    <p class="social">
+        <a href="https://www.linkedin.com/in/sahil-sagwekar-0b955b223/" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/linkedin.png"></a>
+        <a href="https://github.com/sahil-sagwekar2652" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/github.png"></a>
+        <a href="https://twitter.com/sagwekar_sahil" target="_blank" ><img src="https://sahilhacks.co/theme/images/icons/twitter.png"></a>
+      <a href="https://sahilhacks.co/feeds/all.atom.xml" rel="alternate">
+        <img src="https://sahilhacks.co/theme/images/icons/rss.png"></a>
+    </p>
+
+    <!--
+    <h2>Categories</h2>
+    <ul class="navbar">
+      <li class="active"><a href="https://sahilhacks.co/category/misc.html">misc</a></li>
+    </ul> 
+    -->
+  </aside>
+
+  <!-- Content -->
+  <article>
+<section id="content">
+    <article>
+        <h2 class="post_title post_detail"><a href="https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html" rel="bookmark" title="Permalink to How to deploy a Flask app to production">How to deploy a Flask app to production</a></h2>
+        <div class="entry-content blog-post">
+            <p>Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website</p>
+<h1 id="heading-why-use-docker">Why use Docker?</h1>
+<h4 id="heading-tldr-agility-portability-and-isolation">TLDR - Agility, Portability and Isolation</h4>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png?auto=compress,format&amp;format=webp"></p>
+<p>You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would suck if one computer could do only one thing. Although we can run multiple programs simultaneously, we need to ensure that they don't interfere with each other i.e. we need isolation. It also might happen that different software requires different versions of the same dependency. So people invented Virtual Machines! But virtual machines set up a whole new virtual computer, ensuring complete isolation but introducing significant overhead too. Containers on the other hand share the kernel within the host OS.</p>
+<h1 id="heading-lets-build-the-stack">Let's build the stack</h1>
+<p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1705737568119/dd6d3e75-e5ae-49b2-8961-d8e8a094159f.png"></p>
+<p>We will be using 3 containers in our stack. Nginx as reverse-proxy, the flask app in the second container and the database running in the third container.</p>
+<ol>
+<li>
+<h3 id="heading-the-flask-container">The Flask container</h3>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>FROM python:3.11.6-slim-bullseyeWORKDIR ~/flask_blogCOPY . .RUN pip3 install -r requirements.txtRUN apt-get update &amp;&amp; apt-get install -y curlCMD [&quot;gunicorn&quot;, &quot;--bind&quot;, &quot;0.0.0.0:5000&quot;, &quot;wsgi:app&quot;]
+</code></pre></div>
+
+<ul>
+<li>
+<p>The <code>FROM</code><em>directive</em> (that's what they are called) specifies the base image that we will be using. We will use the <code>python 3.11</code> image which comes with python 3.11 pre-installed.</p>
+</li>
+<li>
+<p>The <code>WORKDIR</code> directive creates and specifies the working directory for all the next commands in the Dockerfile.</p>
+</li>
+<li>
+<p><code>COPY</code> directive copies the contents of the current directory on the host OS and copies it inside our working directory i.e. <code>~/flask_blog</code> inside the container.</p>
+</li>
+</ul>
+<p>The current directory looks like this -</p>
+<div class="highlight"><pre><span></span><code>. Dockerfile forms.py main.py requirements.txt static templates wsgi.py
+</code></pre></div>
+
+<ul>
+<li>
+<p>The <code>RUN</code> directives run commands which commit their changes onto the container image i.e. installing the dependencies updating the apt repository and installing curl.</p>
+</li>
+<li>
+<p><code>CMD</code> directive is the command the container executes by default when you launch the built image, the command is <code>gunicorn --bind 0.0.0.0:5000 wsgi:app</code> .<br>
+   We'll talk more about <strong>gunicorn</strong> and <strong>wsgi</strong> later in the article.</p>
+</li>
+<li>
+<h3 id="heading-docker-compose-file">Docker compose file</h3>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">services</span><span class="o">:</span><span class="w">  </span><span class="n">nginx</span><span class="o">:</span><span class="w">    </span><span class="n">depends_on</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">image</span><span class="o">:</span><span class="w"> </span><span class="n">nginx</span><span class="o">:</span><span class="n">stable</span><span class="w">    </span><span class="n">restart</span><span class="o">:</span><span class="w"> </span><span class="n">always</span><span class="w">    </span><span class="n">links</span><span class="o">:</span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">ports</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="mi">80</span><span class="o">:</span><span class="mi">80</span><span class="w">    </span><span class="n">volumes</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="o">./</span><span class="n">nginx</span><span class="sr">/:/etc/nginx/conf.d/:ro  db:    image: postgres:12-bullseye    env_file:      - .env    volumes:      - postgres_data:/var/lib/postgresql/data/    healthcheck:      test: [&quot;CMD-SHELL&quot;, &quot;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&quot;]      interval: 1s      timeout: 3s      retries: 10  flask_blog:    image: sahilsagwekar2652/personal-blog-website:master    depends_on:      db:        condition: service_started    env_file:      - .env    environment:      DATABASE_URL: db     links:      - db    healthcheck:      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;--fail&quot;, &quot;http://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span><span class="s2">&quot;]      interval: 30s      timeout: 10s      retries: 5    restart: on-failurevolumes:  postgres_data:    name: &quot;</span><span class="n">db_volume</span><span class="err">&quot;</span>
+</code></pre></div>
+
+<p>I won't be going through every section of the docker-compose file. If you would like to understand what's happening in detail, go through the official <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">docker compose reference</a>.</p>
+<ol>
+<li>
+<h3 id="heading-persisting-data">Persisting data</h3>
+</li>
+</ol>
+<p>If we start a container ad-hoc, it creates an untagged volume. In our context, we need to persist the data from the database container. So even if we bring the stack down using <code>docker compose down</code> , make some changes and then bring the stack up once again using <code>docker compose up</code> no data would be lost.</p>
+<p>The key takeaway from the docker-compose file is the <code>volumes</code> section at the end. Here we define a volume <code>postgres_data</code> . This volume is mapped to <code>/var/lib/postgresql/data</code> inside the <code>db</code> container.</p>
+<h1 id="heading-about-wsgi">About WSGI</h1>
+<p><strong>WSGI</strong> stands for <strong>Web Server Gateway Interface.</strong> WSGI is nothing but a protocol to communicate between the HTTP server and the python backend application. Think of it as a middleman between the HTTP server and the python backend. The WSGI protocol is described in the PEP 3333 standard.</p>
+<p>One of the reasons why WSGI exists is to decouple the application from the webserver and to make it more platform agnostic. If you have worked with Flask or Django you might recall that both frameworks come packaged with a built-in HTTP server. However when we run these servers the output strictly warns us against using these built-in servers in production. The reason is that these servers miss quite a few features that other web servers provide, one of which is support for TLS certificates (HTTPS).</p>
+<p>For production, there are many WSGI servers to choose from. In this project we will be using Gunicorn. You could tell that from the last line in the Flask blog Dockerfile.</p>
+<p>More about WSGI in this Reddit post - <a href="https://www.reddit.com/r/django/comments/skge94/uwsgi_wsgi_gunicorn_apache_nginx_could_someone/">https://www.reddit.com/r/django/comments/skge94/uwsgi_wsgi_gunicorn_apache_nginx_could_someone/</a></p>
+<ol>
+<li>
+<h3 id="heading-setting-up-nginx-webserver">Setting up NGINX webserver</h3>
+</li>
+</ol>
+<p>Now that we the flask container ready, we need to set up a webserver container to handle all the HTTP requests. For simplicity, a reverse-proxy also does the same thing but can do a lot more. NGINX is also used a reverse-proxy server.</p>
+<div class="highlight"><pre><span></span><code>    volumes:      - ./nginx/:/etc/nginx/conf.d/:ro
+</code></pre></div>
+
+<p>In the volumes section inside the <code>nginx</code> service in the docker-compose file, we have a volume mapping from the <code>nginx</code> directory in the host OS to the <code>/etc/nginx/conf.d/</code> directory in the container. The <code>ro</code> specifies the read-only nature of the connection.</p>
+<p>The contents of the <code>nginx</code> directory should look like this -</p>
+<div class="highlight"><pre><span></span><code>nginx/ nginx.conf
+</code></pre></div>
+
+<p>Configuring nginx is relatively simple for our context. Following is the <code>nginx.conf</code> that we will be using -</p>
+<div class="highlight"><pre><span></span><code><span class="nt">upstream</span><span class="w"> </span><span class="nt">flask_blog</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">server</span><span class="w"> </span><span class="n">flask_blog</span><span class="p">:</span><span class="mi">5000</span><span class="p">;}</span><span class="nt">server</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">listen</span><span class="w"> </span><span class="err">80</span><span class="p">;</span><span class="w">    </span><span class="err">location</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">{</span><span class="w">        </span><span class="err">proxy_pass</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">flask_blog</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">X-Forwarded-For</span><span class="w"> </span><span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">Host</span><span class="w"> </span><span class="err">$host</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_redirect</span><span class="w"> </span><span class="err">off</span><span class="p">;</span><span class="w">    </span><span class="p">}</span><span class="err">}</span>
+</code></pre></div>
+
+<p>Source - <a href="https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn">https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn</a></p>
+<h2 id="heading-we-are-done">We are DONE!</h2>
+<p>Our blog is now ready to deploy! Run it on your local machine or on a Cloud instance.</p>
+<h4 id="heading-references">References -</h4>
+<p><a href="https://chat.openai.com/share/27e0b18d-cc23-4925-acc5-7966916d04e4">https://chat.openai.com/share/27e0b18d-cc23-4925-acc5-7966916d04e4</a></p>
+<p><a href="https://flask.palletsprojects.com/en/3.0.x/deploying/">https://flask.palletsprojects.com/en/3.0.x/deploying/</a></p>
+<div class="highlight"><pre><span></span><code>&lt;/p&gt;
+</code></pre></div>
+        </div>
+        <div class="post_list">
+            <span>By </span>
+            <a href="https://sahilhacks.co/author/sahil-sagwekar.html">@Sahil Sagwekar</a>
+            <span> in </span>
+            <span class="post_category"><a href="https://sahilhacks.co/category/misc.html" rel="bookmark" title="Permalink to misc">[ misc ]</a></span>
+            <span class="post_date">Wed 24 January 2024</span>
+            <div><span>Tags : </span>
+            </div>
+
+            <div class="entry-social">
+                <span class="twitter"><a target="_blank" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=700');return false;" title="Twitter" href="https://twitter.com/share?url=https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html&text=How to deploy a Flask app to production&via=sagwekar_sahil"><img src="https://sahilhacks.co/theme/images/icons/twitter-s.png"></a></span>
+
+                <span class="gplus"><a target="_blank" title="Google +" href="https://plus.google.com/share?url=https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html&hl=fr" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/google-s.png"></a></span>
+
+                <span class="facebook"><a target="_blank" title="Facebook" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=500,width=700');return false;" href="https://www.facebook.com/sharer.php?u=https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html&t=How to deploy a Flask app to production"><img src="https://sahilhacks.co/theme/images/icons/facebook-s.png"></a></span>
+
+                <a  target="_blank" title="Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html&title=How to deploy a Flask app to production" rel="nofollow" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=650');return false;"><img src="https://sahilhacks.co/theme/images/icons/linkedin-s.png"></a>
+
+                <span class="mail"><a href="mailto:?subject=How to deploy a Flask app to production&amp;body=Viens découvrir un article à propos de [How to deploy a Flask app to production] sur le site de Sahil Nilesh Sagwekar. https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html" title="Share by Email" target="_blank"><img src="https://sahilhacks.co/theme/images/icons/mail-s.png"></a></span>
+            </div>
+        </div>
+    </article>
+</section>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      Blog powered by <a href="https://getpelican.com/">Pelican</a> 
+      Theme <a href="https://github.com/parbhat/pelican-blue">Pelican-Blue</a>.
+    </p>
+  </footer>
+
+
+</body>
+</html>
