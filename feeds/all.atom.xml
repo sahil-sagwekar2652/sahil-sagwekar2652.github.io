@@ -249,15 +249,13 @@ This is the content of my super blog post.
 &lt;li&gt;
 &lt;p&gt;We will use the &lt;code&gt;pelican-import&lt;/code&gt; tool to import our data from medium. &lt;code&gt;pelican-import&lt;/code&gt; requires some additional dependencies which can be installed through the following steps.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;feedparser
-&lt;code&gt;bash
+&lt;li&gt;feedparser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;bash
 pip install feedparser&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pandoc
-See the &lt;a href="https://pandoc.org/installing.html"&gt;Pandoc site&lt;/a&gt; for operating-system-specific installation.&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;Pandoc
+See the &lt;a href="https://pandoc.org/installing.html"&gt;Pandoc site&lt;/a&gt; for operating-system-specific installation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
