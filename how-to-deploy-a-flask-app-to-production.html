@@ -17,13 +17,13 @@
 
     <meta property="og:type" content="article"/>
     <meta property="og:title" content="How to deploy a Flask app to production"/>
-    <meta property="og:description" content="Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website Why use Docker? TLDR - Agility, Portability and Isolation You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would …"/>
+    <meta property="og:description" content="Link to the GitHub repository Why use Docker? TLDR - Agility, Portability and Isolation You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would suck if one computer could …"/>
     <meta property="og:site_name" content="Sahil's Blog" />
     <meta property="og:url" content="https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html"/>
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="How to deploy a Flask app to production">
-    <meta name="twitter:description" content="Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website Why use Docker? TLDR - Agility, Portability and Isolation You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would …">
+    <meta name="twitter:description" content="Link to the GitHub repository Why use Docker? TLDR - Agility, Portability and Isolation You should use a technology only if it fits your use case and not because everybody is talking about it on Twitter. The main purpose of using Docker is efficiency. It would suck if one computer could …">
     <meta name="twitter:url" content="https://sahilhacks.co/how-to-deploy-a-flask-app-to-production.html">
 
     <!-- Feed -->
@@ -48,7 +48,7 @@
   <body>
     <div class="w3-row w3-card w3-white">
       <header id="header">
-        <a href="https://sahilhacks.co" id="header-logo" title="Home">SN</a>
+        <a href="https://sahilhacks.co" id="header-logo" title="Home">SS</a>
         <nav id="header-menu">
           <ul>
             <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
@@ -77,7 +77,7 @@
 
       <div class="col-main w3-container">
         <section id="content">
-          <p>Link to the GitHub repository - https://github.com/sahil-sagwekar2652/Personal-blog-website</p>
+          <p><a href="https://github.com/sahil-sagwekar2652/Personal-blog-website">Link to the GitHub repository</a></p>
 <h1 id="heading-why-use-docker">Why use Docker?</h1>
 <h4 id="heading-tldr-agility-portability-and-isolation">TLDR - Agility, Portability and Isolation</h4>
 <p><img alt class="image--center mx-auto" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1703792704561/f1a4cdf8-1f5d-4fba-a2e0-26403830724f.png?auto=compress,format&amp;format=webp"></p>
@@ -90,10 +90,15 @@
 <h3 id="heading-the-flask-container">The Flask container</h3>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.11.6-slim-bullseye</span>
 
-<div class="highlight"><pre><span></span><code>FROM python:3.11.6-slim-bullseyeWORKDIR ~/flask_blogCOPY . .RUN pip3 install -r requirements.txtRUN apt-get update &amp;&amp; apt-get install -y curlCMD [&quot;gunicorn&quot;, &quot;--bind&quot;, &quot;0.0.0.0:5000&quot;, &quot;wsgi:app&quot;]
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">~/flask_blog</span>
+
+<span class="k">COPY</span><span class="w"> </span>.<span class="w"> </span>.
+<span class="k">RUN</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>curl
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;gunicorn&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;--bind&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;0.0.0.0:5000&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;wsgi:app&quot;</span><span class="p">]</span>
 </code></pre></div>
 
 <ul>
@@ -108,7 +113,14 @@
 </li>
 </ul>
 <p>The current directory looks like this -</p>
-<div class="highlight"><pre><span></span><code>. Dockerfile forms.py main.py requirements.txt static templates wsgi.py
+<div class="highlight"><pre><span></span><code>.
+├── Dockerfile
+├── forms.py
+├── main.py
+├── requirements.txt
+├── static
+├── templates
+└── wsgi.py
 </code></pre></div>
 
 <ul>
@@ -116,17 +128,59 @@
 <p>The <code>RUN</code> directives run commands which commit their changes onto the container image i.e. installing the dependencies updating the apt repository and installing curl.</p>
 </li>
 <li>
-<p><code>CMD</code> directive is the command the container executes by default when you launch the built image, the command is <code>gunicorn --bind 0.0.0.0:5000 wsgi:app</code> .<br>
+<p><code>CMD</code> directive is the command the container executes by default when you launch the built image, the command is <code>gunicorn --bind 0.0.0.0:5000 wsgi:app</code> .
    We'll talk more about <strong>gunicorn</strong> and <strong>wsgi</strong> later in the article.</p>
 </li>
 <li>
 <h3 id="heading-docker-compose-file">Docker compose file</h3>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="o">&lt;!--</span><span class="w"> </span><span class="o">--&gt;</span>
-</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">nginx</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flask_blog</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:stable</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">always</span>
+<span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">flask_blog</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:80</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./nginx/:/etc/nginx/conf.d/:ro</span>
 
-<div class="highlight"><pre><span></span><code><span class="n">services</span><span class="o">:</span><span class="w">  </span><span class="n">nginx</span><span class="o">:</span><span class="w">    </span><span class="n">depends_on</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">image</span><span class="o">:</span><span class="w"> </span><span class="n">nginx</span><span class="o">:</span><span class="n">stable</span><span class="w">    </span><span class="n">restart</span><span class="o">:</span><span class="w"> </span><span class="n">always</span><span class="w">    </span><span class="n">links</span><span class="o">:</span><span class="w">        </span><span class="o">-</span><span class="w"> </span><span class="n">flask_blog</span><span class="w">    </span><span class="n">ports</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="mi">80</span><span class="o">:</span><span class="mi">80</span><span class="w">    </span><span class="n">volumes</span><span class="o">:</span><span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="o">./</span><span class="n">nginx</span><span class="sr">/:/etc/nginx/conf.d/:ro  db:    image: postgres:12-bullseye    env_file:      - .env    volumes:      - postgres_data:/var/lib/postgresql/data/    healthcheck:      test: [&quot;CMD-SHELL&quot;, &quot;pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}&quot;]      interval: 1s      timeout: 3s      retries: 10  flask_blog:    image: sahilsagwekar2652/personal-blog-website:master    depends_on:      db:        condition: service_started    env_file:      - .env    environment:      DATABASE_URL: db     links:      - db    healthcheck:      test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;--fail&quot;, &quot;http://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">5000</span><span class="s2">&quot;]      interval: 30s      timeout: 10s      retries: 5    restart: on-failurevolumes:  postgres_data:    name: &quot;</span><span class="n">db_volume</span><span class="err">&quot;</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres:12-bullseye</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres_data:/var/lib/postgresql/data/</span>
+<span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD-SHELL&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;pg_isready</span><span class="nv"> </span><span class="s">-d</span><span class="nv"> </span><span class="s">$${POSTGRES_DB}</span><span class="nv"> </span><span class="s">-U</span><span class="nv"> </span><span class="s">$${POSTGRES_USER}&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1s</span>
+<span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3s</span>
+<span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+
+<span class="w">  </span><span class="nt">flask_blog</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sahilsagwekar2652/personal-blog-website:master</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">condition</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">service_started</span>
+<span class="w">    </span><span class="nt">env_file</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.env</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<span class="w">    </span><span class="nt">links</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">db</span>
+<span class="w">    </span><span class="nt">healthcheck</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">test</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;CMD&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;curl&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;--fail&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;http://localhost:5000&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30s</span>
+<span class="w">      </span><span class="nt">timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10s</span>
+<span class="w">      </span><span class="nt">retries</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">on-failure</span>
+
+<span class="nt">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">postgres_data</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;db_volume&quot;</span>
 </code></pre></div>
 
 <p>I won't be going through every section of the docker-compose file. If you would like to understand what's happening in detail, go through the official <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">docker compose reference</a>.</p>
@@ -148,16 +202,31 @@
 </li>
 </ol>
 <p>Now that we the flask container ready, we need to set up a webserver container to handle all the HTTP requests. For simplicity, a reverse-proxy also does the same thing but can do a lot more. NGINX is also used a reverse-proxy server.</p>
-<div class="highlight"><pre><span></span><code>    volumes:      - ./nginx/:/etc/nginx/conf.d/:ro
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./nginx/:/etc/nginx/conf.d/:ro</span>
 </code></pre></div>
 
 <p>In the volumes section inside the <code>nginx</code> service in the docker-compose file, we have a volume mapping from the <code>nginx</code> directory in the host OS to the <code>/etc/nginx/conf.d/</code> directory in the container. The <code>ro</code> specifies the read-only nature of the connection.</p>
 <p>The contents of the <code>nginx</code> directory should look like this -</p>
-<div class="highlight"><pre><span></span><code>nginx/ nginx.conf
+<div class="highlight"><pre><span></span><code>nginx/
+└── nginx.conf
 </code></pre></div>
 
 <p>Configuring nginx is relatively simple for our context. Following is the <code>nginx.conf</code> that we will be using -</p>
-<div class="highlight"><pre><span></span><code><span class="nt">upstream</span><span class="w"> </span><span class="nt">flask_blog</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">server</span><span class="w"> </span><span class="n">flask_blog</span><span class="p">:</span><span class="mi">5000</span><span class="p">;}</span><span class="nt">server</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="err">listen</span><span class="w"> </span><span class="err">80</span><span class="p">;</span><span class="w">    </span><span class="err">location</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">{</span><span class="w">        </span><span class="err">proxy_pass</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">flask_blog</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">X-Forwarded-For</span><span class="w"> </span><span class="err">$proxy_add_x_forwarded_for</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_set_header</span><span class="w"> </span><span class="err">Host</span><span class="w"> </span><span class="err">$host</span><span class="p">;</span><span class="w">        </span><span class="err">proxy_redirect</span><span class="w"> </span><span class="err">off</span><span class="p">;</span><span class="w">    </span><span class="p">}</span><span class="err">}</span>
+<div class="highlight"><pre><span></span><code>upstream flask_blog {
+    server flask_blog:5000;
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass http://flask_blog;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $host;
+        proxy_redirect off;
+    }
+}
 </code></pre></div>
 
 <p>Source - <a href="https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn">https://testdriven.io/blog/dockerizing-flask-with-postgres-gunicorn-and-nginx/#gunicorn</a></p>
@@ -177,7 +246,7 @@
                 <a href="https://sahil-sagwekar2652.github.io"><img style="width: 60px; height: 60px;" src="https://www.gravatar.com/avatar/14d6aae5677b0a937900e452ab55d29effa852d31e3fbf971e20a89112441559?s=240" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
                 <div style="margin-left: 20px; margin-top: 15px;">
                   <a href="https://sahil-sagwekar2652.github.io"><span id="author-name" class="w3-hover-text-dark-grey">Sahil Sagwekar</span></a>
-                  <p id="author-story"></p>
+                  <p id="author-story">Hello world! I’m Sahil Sagwekar. Developer and FOSS enthusiast.</p>
                 </div>
               </div>
             </div>
@@ -209,7 +278,7 @@
 
     <footer id="footer">
       <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
-        <span>&copy; 2023-2024 Sahil Nilesh Sagwekar  | <a href="https://sahilhacks.co/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
+        <span>&copy; 2023-2024 Sahil Sagwekar  | <a href="https://sahilhacks.co/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
       </div>
     </footer>
 

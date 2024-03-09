@@ -1,6 +1,6 @@
 import datetime
 
-AUTHOR = "Sahil Nilesh Sagwekar"
+AUTHOR = "Sahil Sagwekar"
 SITENAME = "Sahil's Blog"
 SITEURL = "http://localhost:8000"
 
