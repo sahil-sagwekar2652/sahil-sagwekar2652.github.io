@@ -211,7 +211,9 @@ Dependent upon the underlying system's network management tool.
 # Formatting Filesystems
 ## Tools -
 1. `mkfs` - literally, make file system. *Used to format partitions with a particular filesystem format.*
+
 ![filesystem types](images/filesystems.excalidraw.png)
+
 # Mounting Partitions
 can do it manually using tools like -
 - **mount / umount**
