@@ -124,6 +124,7 @@ These commands not only query the host but also allow you to *choose which DNS s
 - ## /etc/nsswitch.conf
 	Configures a bunch of things like group and password files.
 	See the `hosts` line
+
 	```
 	hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname
     ```
@@ -476,6 +477,7 @@ Locate maintains a database of all the files in it's cache, which is refreshed o
 
 # Maintaining SysV Runlevels
 - outdated and not used in modern distros
+
 ![sysV runlevels](images/sysV-run-levels.png)
 
 # Maintaining SystemD Init
