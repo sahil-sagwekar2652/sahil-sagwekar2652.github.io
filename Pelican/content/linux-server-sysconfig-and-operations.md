@@ -9,7 +9,7 @@ Notes from the FCC course [Linux Server Course - System Configuration and Operat
 - **Basic Input Output System** v/s **Unified Extensible Firmware Interface**
 - BIOS is much older and modern machines mostly ship with UEFI.
 - BIOS and UEFI do basically the same thing i.e. communicating between the Hardware and the Operating System software.
-	## BIOS
+    ## BIOS
 	- BIOS supported MBR (Master Boot Record) which was a small sector on the HDD which contained the code to boot the OS.
 	- BIOS also had limited capacity to support large HDDs, although there are hacks around it.
     ## UEFI
@@ -22,6 +22,7 @@ Notes from the FCC course [Linux Server Course - System Configuration and Operat
 | - difficult to modify                                   | - customizable in _/etc/default/grub_       |
 | - boot menu usually displays on boot                    | - can boot ISO, USB, UUID, device           |
 |                                                         | - hidden boot menu (press shift!)           |
+
 # Boot Methods
 - ## Hardware vs Software
 - ## PXE, USB, CD, iPXE, ISO
@@ -121,11 +122,13 @@ These commands not only query the host but also allow you to *choose which DNS s
 
 - ## /etc/nsswitch.conf
 	Configures a bunch of things like group and password files.
-	See the `hosts` line
+	See the `hosts` line -
+
 	```
 	hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname
     ```
-    - Here the `files` word is first which means that the system will look through the `/etc/hosts` file first.
+
+	- Here the `files` word is first which means that the system will look through the `/etc/hosts` file first.
     - `mdns4_minimal` for local lookups.
 	- The `dns` keyword is for the default DNS server.
 
@@ -151,7 +154,7 @@ New version have `/etc/netplan`
 - Rather than having unique IPs for each port, we want to use the combined bandwidth.
 - Following are the **network bonding modes**
 - **Switch Support** refers to the capability of the network switch to support the said network mode.
-![switch ports diagram](images/multiple_eth_ports_on_servers.excalidraw.png)
+- ![switch ports diagram](images/multiple_eth_ports_on_servers.excalidraw.png)
 
 | MODE | Description | Need Switch Support? |
 | ---- | ---- | ---- |

@@ -49,24 +49,18 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;- hidden boot menu (press shift!)&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;# Boot Methods&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;- ## Hardware vs Software&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;- ## PXE, USB, CD, iPXE, ISO&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;- &lt;strong&gt;Pre-boot execution environment i.e. PXE&lt;/strong&gt; - Boots up over the network (iPXE is and advanced version) needs the boot image stored on a TFTP server.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h1&gt;Boot Methods&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h2&gt;Hardware vs Software&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h2&gt;PXE, USB, CD, iPXE, ISO&lt;/h2&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pre-boot execution environment i.e. PXE&lt;/strong&gt; - Boots up over the network (iPXE is and advanced version) needs the boot image stored on a TFTP server.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;These methods are not Linux-specific, but Hardware supported.&lt;/em&gt;
 - &lt;strong&gt;iPXE&lt;/strong&gt; Supports boot image download over HTTP which is faster.
 - &lt;strong&gt;USB&lt;/strong&gt;, &lt;strong&gt;HDD&lt;/strong&gt;, &lt;strong&gt;CD&lt;/strong&gt; - Hardware medium, the computer knows how to read from this media.&lt;/p&gt;
@@ -293,12 +287,10 @@
 &lt;li&gt;
 &lt;h2&gt;/etc/nsswitch.conf&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Configures&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bunch&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;things&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;like&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;group&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;password&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;See&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`hosts`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;`&lt;/span&gt;&lt;span class="n n-Quoted n-Quoted-Escape"&gt;``&lt;/span&gt;
-&lt;span class="n n-Quoted"&gt;hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname&lt;/span&gt;
-&lt;span class="n n-Quoted n-Quoted-Escape"&gt;``&lt;/span&gt;&lt;span class="n n-Quoted"&gt;`&lt;/span&gt;
+&lt;span class="n"&gt;See&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n n-Quoted"&gt;`hosts`&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;&lt;code&gt;hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Here the &lt;code&gt;files&lt;/code&gt; word is first which means that the system will look through the &lt;code&gt;/etc/hosts&lt;/code&gt; file first.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;mdns4_minimal&lt;/code&gt; for local lookups.&lt;/li&gt;
@@ -330,8 +322,8 @@
 &lt;li&gt;Network bonding in Linux is just a way to utilise multiple ethernet ports.&lt;/li&gt;
 &lt;li&gt;Rather than having unique IPs for each port, we want to use the combined bandwidth.&lt;/li&gt;
 &lt;li&gt;Following are the &lt;strong&gt;network bonding modes&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Switch Support&lt;/strong&gt; refers to the capability of the network switch to support the said network mode.
-&lt;img alt="switch ports diagram" src="images/multiple_eth_ports_on_servers.excalidraw.png"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Switch Support&lt;/strong&gt; refers to the capability of the network switch to support the said network mode.&lt;/li&gt;
+&lt;li&gt;&lt;img alt="switch ports diagram" src="images/multiple_eth_ports_on_servers.excalidraw.png"&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;table&gt;
 &lt;thead&gt;

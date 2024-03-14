@@ -125,24 +125,18 @@
 <td></td>
 <td>- hidden boot menu (press shift!)</td>
 </tr>
-<tr>
-<td># Boot Methods</td>
-<td></td>
-</tr>
-<tr>
-<td>- ## Hardware vs Software</td>
-<td></td>
-</tr>
-<tr>
-<td>- ## PXE, USB, CD, iPXE, ISO</td>
-<td></td>
-</tr>
-<tr>
-<td>- <strong>Pre-boot execution environment i.e. PXE</strong> - Boots up over the network (iPXE is and advanced version) needs the boot image stored on a TFTP server.</td>
-<td></td>
-</tr>
 </tbody>
 </table>
+<h1>Boot Methods</h1>
+<ul>
+<li>
+<h2>Hardware vs Software</h2>
+</li>
+<li>
+<h2>PXE, USB, CD, iPXE, ISO</h2>
+</li>
+<li><strong>Pre-boot execution environment i.e. PXE</strong> - Boots up over the network (iPXE is and advanced version) needs the boot image stored on a TFTP server.</li>
+</ul>
 <p><em>These methods are not Linux-specific, but Hardware supported.</em>
 - <strong>iPXE</strong> Supports boot image download over HTTP which is faster.
 - <strong>USB</strong>, <strong>HDD</strong>, <strong>CD</strong> - Hardware medium, the computer knows how to read from this media.</p>
@@ -369,12 +363,10 @@
 <li>
 <h2>/etc/nsswitch.conf</h2>
 <div class="highlight"><pre><span></span><code><span class="n">Configures</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bunch</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">things</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">password</span><span class="w"> </span><span class="n">files</span><span class="p">.</span>
-<span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`hosts`</span><span class="w"> </span><span class="n">line</span>
-<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span>
-<span class="n n-Quoted">hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname</span>
-<span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">`</span>
+<span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`hosts`</span><span class="w"> </span><span class="n">line</span><span class="w"> </span><span class="o">-</span>
 </code></pre></div>
 
+<p><code>hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname</code></p>
 <ul>
 <li>Here the <code>files</code> word is first which means that the system will look through the <code>/etc/hosts</code> file first.</li>
 <li><code>mdns4_minimal</code> for local lookups.</li>
@@ -406,8 +398,8 @@
 <li>Network bonding in Linux is just a way to utilise multiple ethernet ports.</li>
 <li>Rather than having unique IPs for each port, we want to use the combined bandwidth.</li>
 <li>Following are the <strong>network bonding modes</strong></li>
-<li><strong>Switch Support</strong> refers to the capability of the network switch to support the said network mode.
-<img alt="switch ports diagram" src="images/multiple_eth_ports_on_servers.excalidraw.png"></li>
+<li><strong>Switch Support</strong> refers to the capability of the network switch to support the said network mode.</li>
+<li><img alt="switch ports diagram" src="images/multiple_eth_ports_on_servers.excalidraw.png"></li>
 </ul>
 <table>
 <thead>
