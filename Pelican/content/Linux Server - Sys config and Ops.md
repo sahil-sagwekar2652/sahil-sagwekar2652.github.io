@@ -478,8 +478,6 @@ Locate maintains a database of all the files in it's cache, which is refreshed o
 # Maintaining SysV Runlevels
 - outdated and not used in modern distros
 
-![sysV runlevels](images/sysV-run-levels.png)
-
 # Maintaining SystemD Init
 
 | Runlevel | Boot Target |
