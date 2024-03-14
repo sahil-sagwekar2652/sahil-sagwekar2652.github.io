@@ -215,132 +215,55 @@
 <tr>
 <th>insmod</th>
 <th>modprobe</th>
-<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-path only</td>
+<td>- path only</td>
 <td>- name only</td>
-<td></td>
 </tr>
 <tr>
 <td>- no deps</td>
 <td>- deps</td>
-<td></td>
 </tr>
 <tr>
-<td>- fail with not explanation</td>
+<td>- fail with no explanation</td>
 <td>- needs map</td>
-<td></td>
 </tr>
 <tr>
 <td><em>modprobe</em> uses <em>insmod</em> in behind-the-scenes.</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td>## Loading a Kernel module (example) -</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- Check the current kernel version using <code>uname -r</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- All the available kernel modules are inside <code>/lib/modules/&lt;your-kernel-version&gt;/kernel</code> directory.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- You can further narrow down by cding into the directories e.g. <code>/drivers/&lt;category e.g. net&gt;</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- If we try installing a module using <code>insmod</code> (specify the path to the <code>.ko</code> file) we get Unknown erros.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- If we try the same using <code>modprobe &lt;kernel-module-name&gt;</code> it works fine.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td># 2. Networking</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td># Testing Network Connectivity</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>1. <strong>Just check the cables</strong> - Sometimes you will find yourself spending hours on the command line only to discover that your ethernet cable is loosely connected.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>2. <strong>Turn off and turn back on</strong> - any device or interface.</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>## Tools -</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- <strong>ping</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>- <strong>ip add</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>## Basic steps to troubleshoot -</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>1. Ping a domain name e.g. google.com</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>2. Ping an ip address e.g. 8.8.8.8</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>3. Check your own ip address on the local network using <code>ifconfig</code> or <code>ip add</code></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>4. ping your own LAN ip address (the one in the <em>eth0</em> section)</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>5. ping other devices on your network</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>6. Check <code>ip route</code> , see if <strong>default route</strong> exists.</td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
+<h2>Loading a Kernel module (example) -</h2>
+<ul>
+<li>Check the current kernel version using <code>uname -r</code></li>
+<li>All the available kernel modules are inside <code>/lib/modules/&lt;your-kernel-version&gt;/kernel</code> directory.</li>
+<li>You can further narrow down by cding into the directories e.g. <code>/drivers/&lt;category e.g. net&gt;</code></li>
+<li>If we try installing a module using <code>insmod</code> (specify the path to the <code>.ko</code> file) we get Unknown erros.</li>
+<li>If we try the same using <code>modprobe &lt;kernel-module-name&gt;</code> it works fine.</li>
+</ul>
+<h1>Networking</h1>
+<h2>Testing Network Connectivity</h2>
+<ol>
+<li><strong>Just check the cables</strong> - Sometimes you will find yourself spending hours on the command line only to discover that your ethernet cable is loosely connected.</li>
+<li><strong>Turn off and turn back on</strong> - any device or interface.</li>
+</ol>
+<h2>Tools -</h2>
+<ul>
+<li><strong>ping</strong></li>
+<li><strong>ip add</strong></li>
+</ul>
+<h2>Basic steps to troubleshoot -</h2>
+<ol>
+<li>Ping a domain name e.g. google.com</li>
+<li>Ping an ip address e.g. 8.8.8.8</li>
+<li>Check your own ip address on the local network using <code>ifconfig</code> or <code>ip add</code></li>
+<li>ping your own LAN ip address (the one in the <em>eth0</em> section)</li>
+<li>ping other devices on your network</li>
+<li>Check <code>ip route</code> , see if <strong>default route</strong> exists.</li>
+</ol>
 <h4>Layer-wise -</h4>
 <ol>
 <li>Layer 3 (network) <code>ping</code> and <code>traceroute</code> commands.</li>

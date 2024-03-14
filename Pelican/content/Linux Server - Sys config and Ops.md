@@ -69,20 +69,22 @@ We can configure what modules are loaded or not.
 | **lsmod**    | list installed kernel modules                                                       |
 | **depmod**   | update the system map to make a newly installed kernel module available to modprobe |
 
-| insmod                      | modprobe    |     |
-| --------------------------- | ----------- | --- |
-| -path only                  | - name only |     |
-| - no deps                   | - deps      |     |
-| - fail with not explanation | - needs map |     |
+| insmod        | modprobe    |
+| --------------| ----------- |
+| - path only    | - name only |
+| - no deps     | - deps      |
+| - fail with no explanation| - needs map |
 _modprobe_ uses *insmod* in behind-the-scenes.
+
 ## Loading a Kernel module (example) -
 - Check the current kernel version using `uname -r`
 - All the available kernel modules are inside `/lib/modules/<your-kernel-version>/kernel` directory.
 - You can further narrow down by cding into the directories e.g. `/drivers/<category e.g. net>`
 - If we try installing a module using `insmod` (specify the path to the `.ko` file) we get Unknown erros.
 - If we try the same using `modprobe <kernel-module-name>` it works fine.
-# 2. Networking
-# Testing Network Connectivity
+
+# Networking
+## Testing Network Connectivity
 1. **Just check the cables** - Sometimes you will find yourself spending hours on the command line only to discover that your ethernet cable is loosely connected.
 2. **Turn off and turn back on** - any device or interface.
 ## Tools -
