@@ -69,22 +69,20 @@ We can configure what modules are loaded or not.
 | **lsmod**    | list installed kernel modules                                                       |
 | **depmod**   | update the system map to make a newly installed kernel module available to modprobe |
 
-| insmod        | modprobe    |
-| --------------| ----------- |
-| - path only    | - name only |
-| - no deps     | - deps      |
-| - fail with no explanation| - needs map |
+| insmod                      | modprobe    |     |
+| --------------------------- | ----------- | --- |
+| -path only                  | - name only |     |
+| - no deps                   | - deps      |     |
+| - fail with not explanation | - needs map |     |
 _modprobe_ uses *insmod* in behind-the-scenes.
-
 ## Loading a Kernel module (example) -
 - Check the current kernel version using `uname -r`
 - All the available kernel modules are inside `/lib/modules/<your-kernel-version>/kernel` directory.
 - You can further narrow down by cding into the directories e.g. `/drivers/<category e.g. net>`
 - If we try installing a module using `insmod` (specify the path to the `.ko` file) we get Unknown erros.
 - If we try the same using `modprobe <kernel-module-name>` it works fine.
-
-# Networking
-## Testing Network Connectivity
+# 2. Networking
+# Testing Network Connectivity
 1. **Just check the cables** - Sometimes you will find yourself spending hours on the command line only to discover that your ethernet cable is loosely connected.
 2. **Turn off and turn back on** - any device or interface.
 ## Tools -
@@ -124,7 +122,6 @@ These commands not only query the host but also allow you to *choose which DNS s
 - ## /etc/nsswitch.conf
 	Configures a bunch of things like group and password files.
 	See the `hosts` line
-
 	```
 	hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname
     ```
@@ -154,7 +151,7 @@ New version have `/etc/netplan`
 - Rather than having unique IPs for each port, we want to use the combined bandwidth.
 - Following are the **network bonding modes**
 - **Switch Support** refers to the capability of the network switch to support the said network mode.
-![switch and server](images/multiple_eth_ports_on_servers.excalidraw.png)
+![switch ports diagram](images/multiple_eth_ports_on_servers.excalidraw.png)
 
 | MODE | Description | Need Switch Support? |
 | ---- | ---- | ---- |
@@ -211,9 +208,7 @@ Dependent upon the underlying system's network management tool.
 # Formatting Filesystems
 ## Tools -
 1. `mkfs` - literally, make file system. *Used to format partitions with a particular filesystem format.*
-
-![filesystem types](images/filesystems.excalidraw.png)
-
+![filesystems](images/filesystems.excalidraw.png)
 # Mounting Partitions
 can do it manually using tools like -
 - **mount / umount**
