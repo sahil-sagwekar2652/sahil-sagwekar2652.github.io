@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Linux - System Configuration and Operation notes &ndash; Sahil's Blog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Sahil's Blog &ndash; ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Social -->
+    <meta property="article:author" content="Sahil Sagwekar" />
+    <meta property="article:section" content="Linux" />
+    <meta property="article:published_time" content="2024-02-27" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Linux - System Configuration and Operation notes"/>
+    <meta property="og:description" content="Notes from the FCC course Linux Server Course - System Configuration and Operation BIOS vs UEFI Basic Input Output System v/s Unified Extensible Firmware Interface BIOS is much older and modern machines mostly ship with UEFI. BIOS and UEFI do basically the same thing i.e. communicating between the Hardware …"/>
+    <meta property="og:site_name" content="Sahil's Blog" />
+    <meta property="og:url" content="https://sahil-sagwekar2652.github.io/linux-server-system-config-and-operations.html"/>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Linux - System Configuration and Operation notes">
+    <meta name="twitter:description" content="Notes from the FCC course Linux Server Course - System Configuration and Operation BIOS vs UEFI Basic Input Output System v/s Unified Extensible Firmware Interface BIOS is much older and modern machines mostly ship with UEFI. BIOS and UEFI do basically the same thing i.e. communicating between the Hardware …">
+    <meta name="twitter:url" content="https://sahil-sagwekar2652.github.io/linux-server-system-config-and-operations.html">
+
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" href="https://sahil-sagwekar2652.github.io/feeds/all.atom.xml" title="Sahil's Blog Atom Feed" />
+    <link rel="alternate" type="application/atom+xml" href="https://sahil-sagwekar2652.github.io/feeds/linux.atom.xml" title="Sahil's Blog Categories Atom Feed" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="https://sahil-sagwekar2652.github.io/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="https://sahil-sagwekar2652.github.io/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://sahil-sagwekar2652.github.io/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="https://sahil-sagwekar2652.github.io/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://sahil-sagwekar2652.github.io/theme/css/pygments-highlight-github.css">
+
+    <!-- Icon -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://sahil-sagwekar2652.github.io/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="https://sahil-sagwekar2652.github.io" id="header-logo" title="Home">SS</a>
+        <nav id="header-menu">
+          <ul>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" ><a href="https://sahil-sagwekar2652.github.io/category/devops.html">devops</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" style="font-weight: bold;"><a href="https://sahil-sagwekar2652.github.io/category/linux.html">Linux</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green" ><a href="https://sahil-sagwekar2652.github.io/category/python.html">python</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/archives.html">Archive</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+
+
+    <br><br><br>
+
+    <article>
+      <header class="w3-container col-main">
+        <h1>Linux - System Configuration and Operation notes</h1>
+        <div class="post-info">
+          <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+            <span><time datetime="2024-02-27T10:11:00+05:30">Tue 27 February 2024</time> in <a href="https://sahil-sagwekar2652.github.io/category/linux.html" title="All articles in category Linux">Linux</a></span>
+          </div>
+        </div>
+      </header>
+
+      <br>
+
+
+      <div class="col-main w3-container">
+        <section id="content">
+          <p>Notes from the FCC course <a href="https://youtu.be/WMy3OzvBWc0">Linux Server Course - System Configuration and Operation</a></p>
+<h1>BIOS vs UEFI</h1>
+<ul>
+<li><strong>Basic Input Output System</strong> v/s <strong>Unified Extensible Firmware Interface</strong></li>
+<li>BIOS is much older and modern machines mostly ship with UEFI.</li>
+<li>BIOS and UEFI do basically the same thing i.e. communicating between the Hardware and the Operating System software.
+    ## BIOS<ul>
+<li>BIOS supported MBR (Master Boot Record) which was a small sector on the HDD which contained the code to boot the OS.</li>
+<li>BIOS also had limited capacity to support large HDDs, although there are hacks around it.</li>
+</ul>
+<h2>UEFI</h2>
+<ul>
+<li>UEFI on the other hand has an entire boot partition, which stores the entire boot code for the OS.</li>
+</ul>
+</li>
+</ul>
+<h1>GRUB vs GRUB2</h1>
+<table>
+<thead>
+<tr>
+<th>GRUB</th>
+<th>GRUB2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>- Also known as GRUB <em>legacy</em>.</td>
+<td>- GRUB2 is used by most new distros</td>
+</tr>
+<tr>
+<td>- <code>ls /boot/grub/</code> will contain <strong>menu.lst, grub.conf</strong></td>
+<td>- <code>ls /boot/grub</code> will contain <strong>grub.cfg</strong></td>
+</tr>
+<tr>
+<td>- difficult to modify</td>
+<td>- customizable in <em>/etc/default/grub</em></td>
+</tr>
+<tr>
+<td>- boot menu usually displays on boot</td>
+<td>- can boot ISO, USB, UUID, device</td>
+</tr>
+<tr>
+<td></td>
+<td>- hidden boot menu (press shift!)</td>
+</tr>
+<tr>
+<td># Boot Methods</td>
+<td></td>
+</tr>
+<tr>
+<td>- ## Hardware vs Software</td>
+<td></td>
+</tr>
+<tr>
+<td>- ## PXE, USB, CD, iPXE, ISO</td>
+<td></td>
+</tr>
+<tr>
+<td>- <strong>Pre-boot execution environment i.e. PXE</strong> - Boots up over the network (iPXE is and advanced version) needs the boot image stored on a TFTP server.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>These methods are not Linux-specific, but Hardware supported.</em>
+- <strong>iPXE</strong> Supports boot image download over HTTP which is faster.
+- <strong>USB</strong>, <strong>HDD</strong>, <strong>CD</strong> - Hardware medium, the computer knows how to read from this media.</p>
+<h1>Boot Process</h1>
+<ul>
+<li><code>init rd</code> or the <em>init ramdisk</em> is like the temporary staging ground which helps the static kernel i.e. <code>vmlinuz</code> get to the full kernel.</li>
+<li>The <code>vmlinux</code> is the static, stripped-down core of the kernel. All the kernel modules are stored on the disk and together comprise the Full Kernel.</li>
+<li><code>vmlinuz</code> is just the compressed version of this kernel.</li>
+<li>
+<p><code>InitramFS</code> is a small filesystem used by the static kernel.
+<img alt="boot process diagram" src="images/Boot_process.png"></p>
+</li>
+<li>
+<p>The init ramdisk images and compilation configuration files are stored inside the <code>/boot</code> directory.</p>
+</li>
+<li>the kernel modules are stored inside the <code>/lib/modules</code> directory</li>
+<li>The above 2 points apply for Ubuntu.</li>
+</ul>
+<h1>Kernel Panic!</h1>
+<h2>Something just went wrong with your kernel.</h2>
+<ol>
+<li>Maybe try updating your kernel, but it it's already up-to-date it could be your hardware who's at fault.</li>
+<li>(Overclocked CPU, bad RAM)</li>
+<li>If a system update gives your <em>Kernel Panic</em> <strong>Then just load the GRUB menu and select an older version of the kernel which you will have inside the <code>/boot/grub/</code></strong></li>
+<li>Then remove the latest kernel, and try to re-install it. Or wait for updates.</li>
+<li>Or we can boot from a USB or a CD and transfer the data from the storage.</li>
+</ol>
+<h1>Loading Kernel Modules on Boot</h1>
+<p>We can configure what modules are loaded or not.
+- <strong>loading</strong>
+- <strong>blacklisting</strong>
+<em>To stop unwanted modules from loading --&gt;</em>
+1. Edit <code>/etc/modules</code>.
+2. Add/delete the name of the module. Dependencies will be automatically loaded.
+3. <strong>Blacklisting</strong> - Go to <code>/etc/modprobe.d/blacklist.conf</code> and edit it's contents.
+4. For e.g. - Useful when trying to load the correct sound card drivers.</p>
+<h1>Manipulating Kernel Modules</h1>
+<table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>insmod</strong></td>
+<td>insert module directly into running kernel (RAW)</td>
+</tr>
+<tr>
+<td><strong>rmmod</strong></td>
+<td>removes installed kernel module</td>
+</tr>
+<tr>
+<td><strong>modprobe</strong></td>
+<td>insert the module, collecting the correct deps etc.</td>
+</tr>
+<tr>
+<td><strong>lsmod</strong></td>
+<td>list installed kernel modules</td>
+</tr>
+<tr>
+<td><strong>depmod</strong></td>
+<td>update the system map to make a newly installed kernel module available to modprobe</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>insmod</th>
+<th>modprobe</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-path only</td>
+<td>- name only</td>
+<td></td>
+</tr>
+<tr>
+<td>- no deps</td>
+<td>- deps</td>
+<td></td>
+</tr>
+<tr>
+<td>- fail with not explanation</td>
+<td>- needs map</td>
+<td></td>
+</tr>
+<tr>
+<td><em>modprobe</em> uses <em>insmod</em> in behind-the-scenes.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## Loading a Kernel module (example) -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Check the current kernel version using <code>uname -r</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- All the available kernel modules are inside <code>/lib/modules/&lt;your-kernel-version&gt;/kernel</code> directory.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- You can further narrow down by cding into the directories e.g. <code>/drivers/&lt;category e.g. net&gt;</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- If we try installing a module using <code>insmod</code> (specify the path to the <code>.ko</code> file) we get Unknown erros.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- If we try the same using <code>modprobe &lt;kernel-module-name&gt;</code> it works fine.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># 2. Networking</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td># Testing Network Connectivity</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. <strong>Just check the cables</strong> - Sometimes you will find yourself spending hours on the command line only to discover that your ethernet cable is loosely connected.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. <strong>Turn off and turn back on</strong> - any device or interface.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## Tools -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <strong>ping</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <strong>ip add</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>## Basic steps to troubleshoot -</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. Ping a domain name e.g. google.com</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. Ping an ip address e.g. 8.8.8.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Check your own ip address on the local network using <code>ifconfig</code> or <code>ip add</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. ping your own LAN ip address (the one in the <em>eth0</em> section)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. ping other devices on your network</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. Check <code>ip route</code> , see if <strong>default route</strong> exists.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4>Layer-wise -</h4>
+<ol>
+<li>Layer 3 (network) <code>ping</code> and <code>traceroute</code> commands.</li>
+<li>Layer 4 (transport) <code>netstat</code> and <code>telnet</code> commands.</li>
+<li>Layet 7 (application) <code>curl</code> command.</li>
+</ol>
+<h1>Testing DNS</h1>
+<h2>Tools -</h2>
+<ul>
+<li><strong>ping, dig</strong></li>
+<li><strong>nslookup, host</strong></li>
+</ul>
+<h2>Commands</h2>
+<p>These commands not only query the host but also allow you to <em>choose which DNS server to query</em>
+- <code>dig @&lt;dns-server&gt; host</code>
+- <code>nslookup host &lt;dns-server&gt;</code>
+- <code>host host &lt;dns-server&gt;</code></p>
+<h1>Common Network Config Files</h1>
+<h3>Location of Config files might change across distributions but we are gonna talk about ones which are mostly common across distros. --&gt;</h3>
+<ul>
+<li>
+<h2>/etc/hosts</h2>
+<p>maps ip address to domain names, locally for e.g.
+<code>127.0.0.1    localhost</code></p>
+</li>
+<li>
+<h2>/etc/nsswitch.conf</h2>
+<div class="highlight"><pre><span></span><code><span class="n">Configures</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">bunch</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="n">things</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="k">group</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">password</span><span class="w"> </span><span class="n">files</span><span class="p">.</span>
+<span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`hosts`</span><span class="w"> </span><span class="n">line</span>
+<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span>
+<span class="n n-Quoted">hosts:    files, mdns4_minimal [NOTFOUND=return] dns myhostname</span>
+<span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">`</span>
+</code></pre></div>
+
+<ul>
+<li>Here the <code>files</code> word is first which means that the system will look through the <code>/etc/hosts</code> file first.</li>
+<li><code>mdns4_minimal</code> for local lookups.</li>
+<li>The <code>dns</code> keyword is for the default DNS server.</li>
+</ul>
+</li>
+<li>
+<h2>/etc/resolv.conf</h2>
+<div class="highlight"><pre><span></span><code> Tells the computer which <span class="gs">*nameserver*</span> to use. \[Do not change anything here as this file is created on the fly by the <span class="sb">`systemd-resolved`</span> service\]
+</code></pre></div>
+
+</li>
+</ul>
+<h1>Identifying network files in Debian and Ubuntu</h1>
+<p>Older version of Debian and Ubuntu (16.04 LTS) had different network configuration
+    - Inside the <code>/etc/network</code> we find a <em>interfaces</em> file
+<strong>Both version still use the same GUI i.e. Network-Manager</strong></p>
+<p>New version have <code>/etc/netplan</code>
+    - And inside it we have a <code>cloud-init-yaml</code>
+    - <code>sudo netplan apply</code> to apply the new configuration
+- One more way is to use <code>nmtui</code> (network manager tui)</p>
+<div class="highlight"><pre><span></span><code>*RedHat and CentOS apparently have a more elegant network configuration solution inside the <span class="sb">`/etc/sysconfig`</span> directory
+<span class="k">-</span> for e.g <span class="sb">`/etc/sysconfig/network-scripts`</span> file *
+<span class="k">-</span> Allows us to make changes in the same file
+</code></pre></div>
+
+<h1>Network Bonding Modes</h1>
+<ul>
+<li>Network bonding in Linux is just a way to utilise multiple ethernet ports.</li>
+<li>Rather than having unique IPs for each port, we want to use the combined bandwidth.</li>
+<li>Following are the <strong>network bonding modes</strong></li>
+<li><strong>Switch Support</strong> refers to the capability of the network switch to support the said network mode.
+<img alt="switch and server" src="images/multiple_eth_ports_on_servers.excalidraw.png"></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>MODE</th>
+<th>Description</th>
+<th>Need Switch Support?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>balance-rr (round robin)</td>
+<td>sort of</td>
+</tr>
+<tr>
+<td>1</td>
+<td>active backup</td>
+<td>No</td>
+</tr>
+<tr>
+<td>2</td>
+<td>balance-Xor</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>broadcast</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>802.3ad</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>5</td>
+<td>balance-tlb</td>
+<td>No</td>
+</tr>
+<tr>
+<td>6</td>
+<td>balance-alb</td>
+<td>No</td>
+</tr>
+<tr>
+<td>1. <strong>MODE 0 - Balance Round Robin</strong> - Sequentially packets go through each port, for e.g.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><em>packet1 -&gt; port1, packet2 -&gt; port2, packet3 -&gt; port3</em> etc. Need a switch to support link aggregation.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. <strong>MODE 1 -  Active Backup</strong> - Only one port is active and it switches to the other port if current one fails. Doesn't require switch support as only 1 port is being used. Doesn't increase throughput.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. <strong>MODE 2 - Balance XOR</strong> - In short, maps particular clients to specific ports, using MAC addresses. but if we have switch support we use <strong>802.3ad</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. <strong>MODE 3 - Broadcast</strong> - specific use cases. <em>broadcasts</em> all the data from all ports at once.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <em>Standard for smart switches (supporting link agg.)</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. <strong>MODE 4 - 802.3ad</strong> - Industry standard if the switch supports <em>link aggregation</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. <strong>MODE 5 - Balance (transmit load balance)</strong> - Load balances the outward transmission, incoming is still through one port.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <em>Standard for Dumb switches</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. <strong>MODE 6 - Balance (all load balance)</strong> - Load balances incoming+outgoing. Least busy port get the traffic. Achieves this by constantly switching MAC addresses.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1>Configuring Network Bonds</h1>
+<p>Dependent upon the underlying system's network management tool.
+&lt;--redacted--&gt;</p>
+<h1>Understanding <strong>GPT v/s MBR</strong></h1>
+<p><strong>GPT is newer and more feature-rich than MBR</strong>
+- <strong>MBR</strong> stands for (Master Boot Record)
+- This system stores the partition index/table in a small chunk at the start of the drive.
+- It can create only four partitions.
+- Limited to <strong>2 Terabytes</strong></p>
+<ul>
+<li><strong>GPT</strong> stands for (GUID Partition Table)</li>
+<li>GUID stands for (Global Unique Identification)</li>
+<li>It stores copies of the partition data in multiple chunks across the drive.</li>
+<li>GPT also allocates a chunk in the beginning (like MBR) which makes it compatible with older systems which use BIOS, but it doesn't identify the partitions.
+<img alt="gpt vs mbr" src="images/gpt-vs-mbr.png"></li>
+</ul>
+<h1>Filesystem Hierarchy</h1>
+<ul>
+<li>We have a harddrive <code>/dev/sda1</code>. It has the root partition.</li>
+<li>Some are <strong>Virtual Filesystems</strong> for. e.g. <code>/proc/</code> &amp; <code>/sys/</code> to modify the running kernel</li>
+<li>Remote NFS/Samba</li>
+<li>USB Drive through <code>/media/USB1/</code> , for example.</li>
+<li>Another (second) harddrive will be mounted as for e.g. <code>/mnt/data/</code></li>
+</ul>
+<h1>Creating Partitions</h1>
+<ul>
+<li><strong>partd / gparted</strong> - on newer system, intuitive to use</li>
+<li><strong>fdisk</strong> - <em>Available on all systems, hence important to know</em></li>
+</ul>
+<p><strong># info tools -</strong>
+- <code>lsblk</code> - Lists all the block devices in the system.
+- <code>blkid</code> - to list all the block devices with the <strong>filesystem type</strong>
+- <code>sudo fdisk -l</code> - same as above</p>
+<h1>Formatting Filesystems</h1>
+<h2>Tools -</h2>
+<ol>
+<li><code>mkfs</code> - literally, make file system. <em>Used to format partitions with a particular filesystem format.</em>
+<img alt="filesystem types" src="images/filesystems.excalidraw.png"></li>
+</ol>
+<h1>Mounting Partitions</h1>
+<p>can do it manually using tools like -
+- <strong>mount / umount</strong>
+- <strong>/etc/fstab -- to do it automatically on boot</strong>
+- <strong><code>blkid</code></strong></p>
+<h2>/etc/fstab config format explanation</h2>
+<p>The format looks like this -</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">file</span><span class="w"> </span><span class="nx">system</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">mount</span><span class="w"> </span><span class="nx">point</span><span class="p">&gt;</span><span class="w">   </span><span class="p">&lt;</span><span class="k">type</span><span class="p">&gt;</span><span class="w">  </span><span class="p">&lt;</span><span class="nx">options</span><span class="p">&gt;</span><span class="w">       </span><span class="p">&lt;</span><span class="nx">dump</span><span class="p">&gt;</span><span class="w">  </span><span class="p">&lt;</span><span class="nx">pass</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>e.g. configuration -</p>
+<div class="highlight"><pre><span></span><code>/dev/sdb1    /mnt/10gig    ext4    defaults    0    2
+</code></pre></div>
+
+<ol>
+<li>\&lt;file system&gt; - specify the path to the device. (We can either use the <strong>UUID</strong>, from blkid for the device name)</li>
+<li>\&lt;mount point&gt; - specify the path at which the device will be mounted.</li>
+<li>\&lt;type&gt; - type of filesystem</li>
+<li>\&lt;options&gt;</li>
+<li>\&lt;dump&gt; - an old backup utility.</li>
+<li>&lt;pass&gt; - stands for <em>perform automatic system scan</em>, scans the filesystem for health.
+   <strong>1</strong> priority is for the <code>/</code> root partition.</li>
+</ol>
+<h1>Scanning Filesystems</h1>
+<ol>
+<li><strong>tune2fs</strong></li>
+<li><strong>/etc/fstab</strong></li>
+<li><strong>fsck</strong></li>
+</ol>
+<h2>How to setup the system to Scan the filesystem on boot, including the root fs.</h2>
+<h2>Steps -</h2>
+<ul>
+<li>Use <code>tune2fs</code> to check the 'max boot count' param, set to a suitable value.</li>
+<li>the system will automatically scan the device after the specified boot count.</li>
+<li>If you have to do it manually on your <em>root fs, you can also boot from a cd, or a usb with a live distro and run <code>fsck</code> on your main root storage drive.</em></li>
+</ul>
+<h1>LVM (Logical Volume Manager)</h1>
+<ul>
+<li>Takes <strong>Physical volumes</strong> --&gt; combines them into <strong>Volume groups</strong> --&gt; Carves out <strong>Logical volumes</strong> from the aggregated volumes.</li>
+<li>-&gt; Like a software SAN (Storage Area Network)</li>
+</ul>
+<h1>Building an LVM System</h1>
+<hr>
+<ul>
+<li><code>pvcreate</code> - to turn raw devices into physical volumes e.g.-
+  <code>bash
+  $ pvcreate /dev/sdb /dev/sdc /dev/sdd /dev/sde</code></li>
+<li><code>pvdisplay</code> - to display the physical volumes.</li>
+</ul>
+<hr>
+<ul>
+<li><code>vgcreate</code> - create a volume group (combined storage)
+  <code>bash
+  $ vgcreate bucket /dev/sdb /dev/sdc /dev/sdd /dev/sde</code></li>
+<li><code>vgdisplay</code> - to list volumes groups.</li>
+</ul>
+<hr>
+<ul>
+<li><code>lvcreate</code> - to carve out logical partitions from the volume group
+   <code>bash
+   $ lvcreate -L 32G -n BIG_SLICE bucket</code></li>
+<li><code>lvdisplay</code> - to display the logical volumes.</li>
+<li><code>lvextend</code> - to extend the storage in an existing logical volume.</li>
+</ul>
+<h3>LVMs are not redundant, if one physical devices crashes, data is lost. For this we implement RAID</h3>
+<h1>RAID - Redundant Array of Independent Disks or Drives</h1>
+<blockquote>
+<p><strong>Allows us to implement performance and redundancy.</strong></p>
+</blockquote>
+<h2>RAID levels</h2>
+<p><img alt="raid levels" src="images/raid-levels.png">
+1. <strong>RAID 0</strong> - Stripe array setup
+2. <strong>RAID 1</strong> - Mirror drives
+3. <strong>RAID 5</strong> - Parity Drive</p>
+<p># Configuring <strong>RAID</strong> with <code>mdadm</code>
+ - While setting up devices for RAID, it is good practice to use partitions which are slightly smaller than the raw device size, because if we want to replace that drive, we need to have enough storage on the new device.
+ - <strong>For e.g. 2 HDDs from 2 different manufacturers both say 100GB but in reality they could have slightly different number of sectors.</strong></p>
+<h2>*Steps -</h2>
+<ol>
+<li>Partition your physical drives, e.g. 9.9G partition for 10G drives. Using <code>fdisk</code></li>
+<li>While using <code>fdisk</code> , mark the drive as <em>Linux raid drive/partition</em></li>
+<li>Now let's use <code>mdadm</code> to actually create the RAID drive</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mdadm<span class="w"> </span>--create<span class="w"> </span>--verbose<span class="w"> </span>/dev/md0<span class="w"> </span>--level<span class="o">=</span><span class="m">5</span><span class="w"> </span>--raid-devices<span class="o">=</span><span class="m">4</span><span class="w"> </span>/dev/sdb1<span class="w"> </span>/dev/sdc1<span class="w"> </span>/dev/sdd1<span class="w"> </span>/dev/sde1
+</code></pre></div>
+
+<ol>
+<li>Check the output in <code>cat /proc/mdstat</code></li>
+<li>To save the configuration -</li>
+<li>perform a detailed scan to get the config.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mdadm<span class="w"> </span>--detail<span class="w"> </span>--scan
+</code></pre></div>
+
+<ol>
+<li>Now redirect this into the following file</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mdadm<span class="w"> </span>--detail<span class="w"> </span>--scan<span class="w"> </span>&gt;<span class="w"> </span>/etc/mdadm/mdadm.conf
+</code></pre></div>
+
+<ol>
+<li>Now we just treat it like any other block device -</li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkfs.ext4<span class="w"> </span>/dev/md0
+</code></pre></div>
+
+<h1>Installing Tarballs</h1>
+<p><em>Extract, Compile, Install</em></p>
+<ul>
+<li><code>make</code> - Just use make to run compilation commands from the <em>Makefile</em></li>
+<li>No way to update the program!</li>
+<li>Security concerns</li>
+</ul>
+<h1>Managing .deb Files</h1>
+<ul>
+<li>apt, apt-get, aptitude</li>
+<li><em>dpkg</em> doesn't resolve dependencies, <em>apt</em> does.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>apt</th>
+<th>aptitude</th>
+<th>apt-get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newer</td>
+<td>older</td>
+<td>oldest</td>
+</tr>
+<tr>
+<td>simpler</td>
+<td>still works</td>
+<td>still works!</td>
+</tr>
+<tr>
+<td>use this!</td>
+<td>don't use</td>
+<td>don't use</td>
+</tr>
+<tr>
+<td># Handling RPM packages</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1. <strong>YUM</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Yellowdog Updater Modified</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Handles dependencies</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- Updates repo when installing/upgrading</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. <strong>DNF</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- DaNdified YUM (no, really)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- In Fedora, will replace YUM</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. <strong>RPM</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- low level tool</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- doesn't resolve dependencies.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1>Configuring APT repositories</h1>
+<ul>
+<li>sources.list / sources.list.d</li>
+<li>GPG keys</li>
+<li>PPA - <strong>Personal package archive</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/etc/apt
+$<span class="w"> </span>ls
+apt.conf.d<span class="w"> </span>preferences.d<span class="w"> </span>sources.list<span class="w"> </span>sources.list.d<span class="w"> </span>trusted.gpg.d
+</code></pre></div>
+
+<p><em>We can add a repository entry in the end of the sources.list.d file or </em><em>create a new file.</em>*
+e.g.</p>
+<div class="highlight"><pre><span></span><code><span class="k">deb</span><span class="w"> </span><span class="s">https://deb.opera.com/opera-stable/</span><span class="w"> </span><span class="kp">stable</span><span class="w"> </span><span class="kp">non-free</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p>The above line is the entry for the opera browser apt repository.</p>
+</li>
+<li>
+<p><em>After updating we need to perform <code>apt update</code></em></p>
+</li>
+<li>We also get a warning that the <em>Opera repo is not signed</em></li>
+<li>To solve this, we need to download their GPG key and then add it using
+  <code>apt-key add -</code></li>
+</ul>
+<p># Adding a Repository using a <strong>PPA</strong></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:webupd8team/atom
+</code></pre></div>
+
+<h1>User Management</h1>
+<ul>
+<li><strong>useradd, userdel, passwd, usermod</strong></li>
+<li>Add a user to the sudo group, same as adding the user to the /etc/sudoers file -</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>username
+</code></pre></div>
+
+<h1>Local groups</h1>
+<ul>
+<li>primary groups - The default group, has the same name as the user</li>
+<li>secondary/supplementary groups.</li>
+<li><strong>groupadd, groupmod, groupdel</strong></li>
+<li><code>groups &lt;user_name&gt;</code> - to list the groups a user is in. <em>The first group listed is the </em><em>primary group</em>*</li>
+<li><code>usermod -a -G</code> - <strong>-a</strong> is for append, and <strong>-G</strong> is to specify supplimentary group, <strong>-g</strong> is to change primary group</li>
+</ul>
+<h2>Primary vs Secondary groups</h2>
+<p><em>If a user creates a file, by default the primary group also becomes the owning group of that file.</em></p>
+<h1>Querying User Accounts</h1>
+<ul>
+<li><strong>w, who, pinky, last, id, whoami</strong></li>
+<li><code>whoami</code> - Who are you</li>
+<li><code>who</code> - who's logged into your system</li>
+<li><code>pinky</code> - some more info with who</li>
+<li><code>id</code> - gives related ids</li>
+<li><code>last</code> - login/logout records of multiple users <em>(Important for remote servers)</em></li>
+</ul>
+<h1>Managing Group Password Files</h1>
+<ul>
+<li>Linux implements <strong>shadow files</strong> to store encrypted passwords. These files can only be accessed by the <em>root user, which is the system.</em></li>
+<li><strong>/etc/passwd, /etc/shadow, /etc/gshadow</strong></li>
+<li><strong>To edit passwd files we use a special command -</strong> <code>sudo vipw</code></li>
+<li><strong>To reflect these changes in the shadow file, we use -</strong> <code>sudo vipw -s</code></li>
+<li><code>sudo vigr</code> &amp; <code>sudo vigr -s</code> to edit group passwd and shadow files respectively.</li>
+</ul>
+<h1>Quotas - user and group quotas</h1>
+<ul>
+<li>soft and hard limits</li>
+<li>Soft limits will give a warning, Hard limits prevent the user from using the storage</li>
+<li><code>quotacheck/quotaon</code></li>
+</ul>
+<p><em>Mount a partition correctly to enable quotas</em>
+- add the <code>usrquota</code> option along with <em>defaults</em>
+- Quotas are not turned on by default
+- <code>sudo quotacheck -au</code> - Scan the existing files for a file owned by a particular user
+- <code>sudo quotaon -a</code> - To turn quotas on for all supported partitions
+- <code>sudo edquota bob</code> - To enable quotas for a particular user.
+- <strong>There are two types of quotas -</strong>
+  1. <em>blocks</em> - block storage
+  2. <em>inodes</em> - number of files (an inode is a file)</p>
+<h1>Identifying User Profiles</h1>
+<ul>
+<li><code>/etc/profile</code> - Is the settings for the login shell, not for user shells. It is used only once.</li>
+<li><code>/home/user/.profile</code> - or <code>.bash_profile</code> - applied after the sytem-wide settings.</li>
+</ul>
+<h1>STDIN, STDOUT, STDERR</h1>
+<h2>Input/Output Tips &amp; Tricks</h2>
+<ol>
+<li><strong>/dev/null</strong> -</li>
+<li>It's kind of a black hole</li>
+<li>If we copy / redirect anything to this location, it will disappear</li>
+<li><strong>tee</strong> -</li>
+<li>Outputs to STDOUT and also writes to a file</li>
+<li><strong>xargs</strong> -</li>
+<li><em>app1  --STDOUT--&gt; STDIN--&gt; xargs --&gt; app2+arguments</em></li>
+<li>takes the output from the first command and puts it as an argument in the second command.</li>
+</ol>
+<h2>Examples -</h2>
+<ul>
+<li><code>ls Documents ff &gt; /dev/null 2&gt;&amp;1</code>
+  <strong>2&gt;&amp;1 - means that the error will be redirected to STDOUT</strong></li>
+</ul>
+<h1>Text Manipulation with Command line tools</h1>
+<ul>
+<li><em>cut / paste</em></li>
+<li><em>sort</em></li>
+<li><em>wc</em> - wordcount</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>wc<span class="w"> </span>file1.txt
+<span class="m">4</span><span class="w">  </span><span class="m">4</span><span class="w"> </span>file1.txt
+$<span class="w"> </span>wc<span class="w"> </span>-m<span class="w"> </span>file1.txt
+<span class="m">27</span><span class="w"> </span>file1.txt
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>*4 - words*
+<span class="gs">*4 -lines*</span>
+*27 - characters*
+</code></pre></div>
+
+<ul>
+<li><em>cut</em> -</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cut<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span><span class="w"> </span>file1.txt
+l
+w
+f
+f
+</code></pre></div>
+
+<ul>
+<li><em>paste</em> - appends text line-by-line</li>
+</ul>
+<h1>Text Manipulation with <code>awk</code> &amp; <code>sed</code></h1>
+<ul>
+<li><strong>sed</strong> - Stream editor - Non-interactive editor</li>
+<li><strong>awk</strong> - Aho, Weinberger, Kernighan - Data extraction tool</li>
+</ul>
+<h1>Hard links and Soft links</h1>
+<ul>
+<li>Soft link is a symbolic link. It only points to the file name. If we rename the original file, the link will break.</li>
+<li>Hard links have different file names but point to the same part of the HardDrive</li>
+<li><code>ls -li</code> - hard links will have the same <em>inode</em>
+<strong>Hard links point to inodes, Soft links point to file names</strong></li>
+</ul>
+<h1><code>find</code> vs <code>locate</code></h1>
+<p>Locate maintains a database of all the files in it's cache, which is refreshed on a daily basis. To update this cache manually we use <code>updatedb</code> command.</p>
+<h1>Copying Files Over the Network</h1>
+<ul>
+<li>ssh, scp</li>
+<li>rsync</li>
+</ul>
+<p><code>scp &lt;remote_user&gt;@&lt;remote_host:&lt;file_path&gt; &lt;local_path&gt;</code></p>
+<h1>Managing services with <code>systemctl</code></h1>
+<ul>
+<li>status</li>
+<li>enable / disable</li>
+<li>start / stop</li>
+</ul>
+<h1>Maintaining SysV Runlevels</h1>
+<ul>
+<li>outdated and not used in modern distros
+<img alt="sysV runlevels" src="images/sysV-run-levels.png"></li>
+</ul>
+<h1>Maintaining SystemD Init</h1>
+<table>
+<thead>
+<tr>
+<th>Runlevel</th>
+<th>Boot Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>poweroff</td>
+</tr>
+<tr>
+<td>1</td>
+<td>rescue</td>
+</tr>
+<tr>
+<td>3</td>
+<td>multiuser</td>
+</tr>
+<tr>
+<td>5</td>
+<td>graphical</td>
+</tr>
+<tr>
+<td>6</td>
+<td>reboot</td>
+</tr>
+<tr>
+<td><strong>To set Boot Target for startup i.e. the default boot target</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>- Get the default boot target</td>
+<td></td>
+</tr>
+<tr>
+<td><code>systemctl get-default</code></td>
+<td></td>
+</tr>
+<tr>
+<td>- Set default</td>
+<td></td>
+</tr>
+<tr>
+<td><code>systemctl set-default multi-user.target</code></td>
+<td></td>
+</tr>
+<tr>
+<td>- To change the mode or target on a running system we use -</td>
+<td></td>
+</tr>
+<tr>
+<td><code>systemctl isolate multi-user</code></td>
+<td></td>
+</tr>
+<tr>
+<td>This would drop us right into the text only mode.</td>
+<td></td>
+</tr>
+<tr>
+<td># Managing Services with SysV</td>
+<td></td>
+</tr>
+<tr>
+<td>- Check services on the system</td>
+<td></td>
+</tr>
+<tr>
+<td><code>ls /etc/init.d</code></td>
+<td></td>
+</tr>
+<tr>
+<td>- <code>service sshd stop/status/start</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>chkconfig --list sshd</code> - To check the service behaviour for different runlevels.</li>
+<li><code>chkconfig sshd on</code> - will turn it on for all runlevels</li>
+<li><code>chkconfig --level 3 sshd on</code>  - will turn it on for level 3 only.</li>
+</ul>
+<h1>Managing Services with SystemD</h1>
+<blockquote>
+<p>using <code>systemctl</code>
+<em>SystemD service files might be scattered all over the place</em>
+- files ending with <code>.service</code> are systemd service files
+- use <code>locate</code> to search for .service files
+- regardless of where they are stored, we can use them using <code>systemctl status sshd</code></p>
+</blockquote>
+<h1>Understanding Network Server Roles</h1>
+<ul>
+<li>NTP, SSH, DNS, DHCP, Docker, Config</li>
+<li>These services would've been running on individual servers.</li>
+<li>Then as hardware got more powerful and compact, we could run all of these services on a single server.</li>
+<li>But this made it a single point of failure.</li>
+<li>Virtualisation and Containerisation provided the solution for running multiple services on a single server.</li>
+</ul>
+<h1>Understanding Web Servers and SSL</h1>
+<ul>
+<li>Sending a request to a server.</li>
+<li>The server sends back their certificate.</li>
+<li>The client browser checks the certificate with the Certificate Authority to verify.</li>
+<li>Certificate Authority is the trusted agent here.</li>
+</ul>
+<h1>Understanding Local Network Server Roles</h1>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Local</th>
+<th>Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>File</td>
+<td>samba --&gt; Windows<br>NFS -&gt; Linux, Mac, Win<br>Netatalk -&gt; Apple</td>
+<td>- Dropbox<br>- OneDrive<br>- Google Drive</td>
+</tr>
+<tr>
+<td>Print</td>
+<td>CUPS -&gt; Win, Mac, Linux<br>Netatalk -&gt; Apple</td>
+<td>- Google Print<br>- Air Print</td>
+</tr>
+<tr>
+<td>Mail</td>
+<td>Postfix, Exim, Sendmail</td>
+<td>- Gmail<br>- Outlook<br>- Yahoo</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td>Squid, Squidguard</td>
+<td>- OpenDNS<br>- Akamai</td>
+</tr>
+<tr>
+<td># Centralized Logging and Monitoring</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <strong>syslog</strong> - centralized logging server</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>- <strong>SNMP</strong> - protocol to pull logs</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Used for combining logs from multiple servers, instead of them storing their logs individually.</li>
+<li>Combined log files help us find patterns more easily, better troubleshooting.</li>
+</ul>
+<h2>SNMP -&gt; Simple Network Management Protocol</h2>
+<ul>
+<li>Mainly used for <em>pulling</em> data</li>
+<li>e.g. Seeing Interface Statistics for a router i.e. pulling logs from it.</li>
+</ul>
+<h1>Understanding VPNs</h1>
+<p>VPN i.e. Virtual Private Network is essentially creating a tunnel between two network or between a user and a network to communicate over the public internet without opening up the machines to the public internet.</p>
+<p><em>Tunnelling</em> can be setup using various protocols like -
+- OpenVPN
+- SSH
+- L2TP
+- IPSec</p>
+<h1>Clustering v/s Load-Balancing</h1>
+<ul>
+<li>A cluster divides up a task.</li>
+<li>A load-balancer distributes task among servers, the servers don't work together</li>
+</ul>
+<h1>System-wide Cron Jobs</h1>
+<ul>
+<li>* * * * *</li>
+<li>Minutes, Hours, Days, Month, day of the week.</li>
+<li>There are cron directories in the /etc location where you can put your script which will be executed according to the name of the folder .</li>
+<li><strong>Crontab</strong> is used for manual scheduling (for a user)</li>
+</ul>
+<h3>Personal Crontabs and At service</h3>
+<ul>
+<li><code>crontab -e</code> in this we don't have to specify the user</li>
+<li><code>at</code> is used for scheduling a <em>one off</em> task</li>
+<li><code>atq</code> to see the queued <em>at</em> tasks</li>
+<li>for e.g.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>at<span class="w"> </span>now<span class="w"> </span>+1<span class="w"> </span>minute
+at&gt;
+<span class="c1"># --- Press Ctrl+D to exit the at prompt ---</span>
+$<span class="w"> </span>atq
+</code></pre></div>
+
+<h1>Handling Processes</h1>
+<ol>
+<li>How to put a process in the <em>background</em></li>
+</ol>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sleep<span class="w"> </span><span class="m">1111</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="m">3071</span>
+</code></pre></div>
+
+<ul>
+<li>Using an <code>&amp;</code> in the end puts a process in the background and prints it's <em>job number</em> and <em>job id</em></li>
+<li>
+<p>We can list these jobs using <code>jobs</code></p>
+</li>
+<li>
+<p>To bring the process to the <em>foreground</em> we use <code>fg</code>-</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">fg</span><span class="w"> </span><span class="m">1</span>
+sleep<span class="w"> </span><span class="m">1111</span>
+</code></pre></div>
+
+<ol>
+<li>To again put the job in the background we use <strong>Ctrl+Z</strong> to stop the process followed by <code>bg 2</code></li>
+</ol>
+<p>If we logout of the current user, all the jobs are sent a <strong>hangup</strong> signal, which stops the running jobs.
+To avoid this we use the <code>nohup</code> command as a prefix to the job we want to run. i.e. <em>no hangup</em></p>
+<h1>Finding Local Devices</h1>
+<h2><code>dmesg</code> - This will show you things as they happen. for e.g. if you plug in a new device it will show up with some info in dmesg.</h2>
+<p><strong><code>ls</code> tools</strong> are used for listing/finding existing devices -</p>
+<ol>
+<li><code>lsblk</code> - lists block devices</li>
+<li><code>lscpu</code> - Information about your processor</li>
+<li><code>lsdev</code> - Connected devices information</li>
+<li><code>lspci</code> - Shows all the PCI devices</li>
+<li><code>lsusb</code> - lists all usb devices</li>
+</ol>
+<h1>Understanding Virtual Filesystems</h1>
+<blockquote>
+<p>There are three main folders to find information about the system.
+<em>proc</em> and <em>sys</em> both share information about the running kernel, while <em>dev</em> is for hardware devices.
+- <strong>/proc/</strong>
+- <strong>/sys/</strong>
+- <strong>/dev/</strong></p>
+</blockquote>
+<p>Current running processes are listed in the <code>/proc</code> directory. But so are some other things like system information. Which should've been in the more organized <code>/sys</code> directory. Over the years <code>/proc</code> has been used to store more info other than the processes.
+<code>/dev</code> stores information about the hardware devices.</p>
+<h1>Understanding UDEV</h1>
+<blockquote>
+<p><em>UDEV stands for </em>user space device manager<em>. uses </em>sysfs<em>, a virtual filesystem.</em>
+- Creates devices i.e. /dev/sd? based on solid hardware info like the UUID, so that the names aren't switched up between different devices. (might happen if we change the physical sequence of the devices. e.g. using a different SATA port.)
+- <code>udevadm</code> - udev administrator <em>e.g. -</em> <code>udevadm info /dev/sr0</code>
+- We can also setup some rules inside <code>/etc/udev/rules.d</code> and creating a <code>.rules</code> file.
+  e.g. -</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>KERNEL==&quot;sr0&quot;, SUBSYSTEM=&quot;block&quot;, SYMLINK=&quot;my_dvd&quot;
+</code></pre></div>
+
+<p>This rule will create a symlink in the /dev folder everytime the <code>sr0</code> device is detected.
+- <code>udevadm trigger</code> to update the rules.</p>
+        </section>
+
+        <br><br><br>
+
+        <footer>
+          <div class="adjust-width">
+            <div id="author-block" class="w3-light-grey w3-border">
+              <div id="author-info">
+                <a href="https://sahil-sagwekar2652.github.io"><img style="width: 60px; height: 60px;" src="https://www.gravatar.com/avatar/14d6aae5677b0a937900e452ab55d29effa852d31e3fbf971e20a89112441559?s=240" onerror="this.src='theme/images/avatar.png'" alt="Avatar"></a>
+                <div style="margin-left: 20px; margin-top: 15px;">
+                  <a href="https://sahil-sagwekar2652.github.io"><span id="author-name" class="w3-hover-text-dark-grey">Sahil Sagwekar</span></a>
+                  <p id="author-story">Hello world! I’m Sahil Sagwekar. Developer and FOSS enthusiast.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br><br><br>
+
+          <p style="font-size:10pt; font-style: italic;">Did you like this article? Share it with your friends!</p>
+          <div id="share" class="share">
+            <a href="http://www.facebook.com/sharer.php?u=https%3A//sahil-sagwekar2652.github.io/linux-server-system-config-and-operations.html&amp;t=Sahil%27s%20Blog%3A%20Linux%20-%20System%20Configuration%20and%20Operation%20notes" target="_blank" class="w3-btn w3-indigo">
+              <i class="fa fa-facebook"></i> <span>Facebook</span>
+            </a>
+            <a href="http://twitter.com/share?url=https%3A//sahil-sagwekar2652.github.io/linux-server-system-config-and-operations.html&amp;text=Sahil%27s%20Blog%3A%20Linux%20-%20System%20Configuration%20and%20Operation%20notes" target="_blank" class="w3-btn w3-blue">
+              <i class="fa fa-twitter"></i> <span>Twitter</span>
+            </a>
+            <a href="https://plus.google.com/share?url=https%3A//sahil-sagwekar2652.github.io/linux-server-system-config-and-operations.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="w3-btn w3-red">
+              <i class="fa fa-google-plus"></i> <span>Google</span>
+            </a>
+          </div>
+
+          <br><br><br>
+
+
+
+        </footer>
+      </div>
+    </article>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2023-2024 Sahil Sagwekar  | <a href="https://sahil-sagwekar2652.github.io/feeds/all.atom.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>
