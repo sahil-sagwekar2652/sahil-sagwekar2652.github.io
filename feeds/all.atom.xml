@@ -434,8 +434,7 @@
 &lt;li&gt;&lt;strong&gt;GPT&lt;/strong&gt; stands for (GUID Partition Table)&lt;/li&gt;
 &lt;li&gt;GUID stands for (Global Unique Identification)&lt;/li&gt;
 &lt;li&gt;It stores copies of the partition data in multiple chunks across the drive.&lt;/li&gt;
-&lt;li&gt;GPT also allocates a chunk in the beginning (like MBR) which makes it compatible with older systems which use BIOS, but it doesn't identify the partitions.
-&lt;img alt="gpt vs mbr" src="images/gpt-vs-mbr.png"&gt;&lt;/li&gt;
+&lt;li&gt;GPT also allocates a chunk in the beginning (like MBR) which makes it compatible with older systems which use BIOS, but it doesn't identify the partitions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Filesystem Hierarchy&lt;/h1&gt;
 &lt;ul&gt;
@@ -457,8 +456,12 @@
 &lt;h1&gt;Formatting Filesystems&lt;/h1&gt;
 &lt;h2&gt;Tools -&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;code&gt;mkfs&lt;/code&gt; - literally, make file system. &lt;em&gt;Used to format partitions with a particular filesystem format.&lt;/em&gt;
-&lt;img alt="filesystems" src="images/filesystems.excalidraw.png"&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mkfs&lt;/code&gt; - literally, make file system. &lt;em&gt;Used to format partitions with a particular filesystem format.&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;img src="images/filesystems.excalidraw.png" alt='filesystems' width=60%&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;Mounting Partitions&lt;/h1&gt;
 &lt;p&gt;can do it manually using tools like -
@@ -530,10 +533,11 @@
 &lt;p&gt;&lt;strong&gt;Allows us to implement performance and redundancy.&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;RAID levels&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="raid levels" src="images/raid-levels.png"&gt;
-1. &lt;strong&gt;RAID 0&lt;/strong&gt; - Stripe array setup
-2. &lt;strong&gt;RAID 1&lt;/strong&gt; - Mirror drives
-3. &lt;strong&gt;RAID 5&lt;/strong&gt; - Parity Drive&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;RAID 0&lt;/strong&gt; - Stripe array setup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAID 1&lt;/strong&gt; - Mirror drives&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAID 5&lt;/strong&gt; - Parity Drive&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;# Configuring &lt;strong&gt;RAID&lt;/strong&gt; with &lt;code&gt;mdadm&lt;/code&gt;
  - While setting up devices for RAID, it is good practice to use partitions which are slightly smaller than the raw device size, because if we want to replace that drive, we need to have enough storage on the new device.
  - &lt;strong&gt;For e.g. 2 HDDs from 2 different manufacturers both say 100GB but in reality they could have slightly different number of sectors.&lt;/strong&gt;&lt;/p&gt;

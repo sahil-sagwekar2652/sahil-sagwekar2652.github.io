@@ -191,7 +191,6 @@ Dependent upon the underlying system's network management tool.
 - GUID stands for (Global Unique Identification)
 - It stores copies of the partition data in multiple chunks across the drive.
 - GPT also allocates a chunk in the beginning (like MBR) which makes it compatible with older systems which use BIOS, but it doesn't identify the partitions.
-![gpt vs mbr](images/gpt-vs-mbr.png)
 
 # Filesystem Hierarchy
 - We have a harddrive `/dev/sda1`. It has the root partition.
@@ -211,7 +210,9 @@ Dependent upon the underlying system's network management tool.
 # Formatting Filesystems
 ## Tools -
 1. `mkfs` - literally, make file system. *Used to format partitions with a particular filesystem format.*
-![filesystems](images/filesystems.excalidraw.png)
+
+- <img src="images/filesystems.excalidraw.png" alt='filesystems' width=60%>
+
 # Mounting Partitions
 can do it manually using tools like -
 - **mount / umount**
@@ -279,8 +280,8 @@ e.g. configuration -
 
 # RAID - Redundant Array of Independent Disks or Drives
 > **Allows us to implement performance and redundancy.**
+
 ## RAID levels
-![raid levels](images/raid-levels.png)
 1. **RAID 0** - Stripe array setup
 2. **RAID 1** - Mirror drives
 3. **RAID 5** - Parity Drive
